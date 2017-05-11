@@ -6,6 +6,7 @@
 package byui.cit260.returnToRexburg.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 /**
  *
  * @author nataliadams
@@ -28,9 +29,35 @@ public class Player implements Serializable{
     }
 
     @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 41 * hash + Objects.hashCode(this.name);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Player other = (Player) obj;
+        if (!Objects.equals(this.name, other.name)) {
+            return false;
+        }
+        return true;
+    }
+    
+
+    @Override
     public String toString() {
         return "Player{" + "name=" + name + '}';
     }
     
-    //Hi, this is a test change
+    
 }
