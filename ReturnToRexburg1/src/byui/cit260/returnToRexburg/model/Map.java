@@ -17,7 +17,6 @@ public class Map implements Serializable{
     public Map() {
     }
 
-    //getter and setter
     public String getDescription() {
         return description;
     }

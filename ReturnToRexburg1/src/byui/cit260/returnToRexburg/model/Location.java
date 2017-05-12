@@ -21,11 +21,9 @@ public class Location implements Serializable {
     private int planetDepth;
     private String alienSpecies;
     
-    //constructor
     public Location() {
     }
 
-    //getters and setters
     public String getName() {
         return name;
     }

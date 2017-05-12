@@ -18,7 +18,6 @@ public class Game implements Serializable{
     public Game() {
     }
 
-    //getter and setter
     public String getDescription() {
         return description;
     }

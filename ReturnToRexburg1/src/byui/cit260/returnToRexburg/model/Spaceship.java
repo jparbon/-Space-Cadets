@@ -19,7 +19,6 @@ public class Spaceship implements Serializable{
     public Spaceship() {
     }
     
-    //getter and setter
     public String getName() {
         return name;
     }

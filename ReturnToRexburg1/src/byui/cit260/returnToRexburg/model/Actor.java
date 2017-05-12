@@ -24,8 +24,6 @@ public class Actor implements Serializable {
     public Actor() {
     }
     
-    //getters and setters
-
     public String getName() {
         return name;
     }
