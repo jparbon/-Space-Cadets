@@ -13,8 +13,7 @@ import java.io.Serializable;
 public class Map implements Serializable{
     
     private String description;
-
-   
+ 
     public Map() {
     }
 
