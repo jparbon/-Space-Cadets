@@ -8,10 +8,13 @@ package returntorexburg1;
 //import statements for each class
 import byui.cit260.returnToRexburg.model.Actor;
 import byui.cit260.returnToRexburg.model.Game;
+import byui.cit260.returnToRexburg.model.InventoryItem;
 import byui.cit260.returnToRexburg.model.Location;
 import byui.cit260.returnToRexburg.model.Map;
 import byui.cit260.returnToRexburg.model.Player;
+import byui.cit260.returnToRexburg.model.QuestionScene;
 import byui.cit260.returnToRexburg.model.Spaceship;
+import byui.cit260.returnToRexburg.model.Weapon;
 
 /**
  *
@@ -92,7 +95,42 @@ public class ReturnToRexburg1 {
        
        String shipInfo = shipOne.toString();
        System.out.println(shipOne);
+       
+    //Weapon class
+    
+        Weapon weaponOne = new Weapon();
         
+        weaponOne.setName("Phaser");
+        weaponOne.setDamageType("Electric");
+        weaponOne.setAttackBonus(10);
+        weaponOne.setDamageBonus(8);
+        weaponOne.setDefenseBonus(8);
+        
+        String weaponInfo = weaponOne.toString();
+        System.out.println(weaponOne);
+        
+    //InventoryItem class
+    
+        InventoryItem inventoryItemOne = new InventoryItem();
+        
+        inventoryItemOne.setInventoryType("health");
+        inventoryItemOne.setQuantityInStock(28);
+        inventoryItemOne.setRequiredAmount(49);
+        
+        String inventoryItemInfo = inventoryItemOne.toString();
+        System.out.println(inventoryItemOne);
+        
+    //QuestionScene class
+    
+        QuestionScene questionSceneOne = new QuestionScene();
+        
+        questionSceneOne.setName("Natali");
+        questionSceneOne.setType("Armor");
+        questionSceneOne.setQuestion("what is 2 + 2?");
+        questionSceneOne.setAnswer("4, correct!");
+        
+        String questionSceneInfo = questionSceneOne.toString();
+        System.out.println(questionSceneOne);
     }
 
 }   

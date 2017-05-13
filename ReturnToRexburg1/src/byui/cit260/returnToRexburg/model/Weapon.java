@@ -33,6 +33,30 @@ public class Weapon implements Serializable{
         this.name = name;
     }
 
+    public double getAttackBonus() {
+        return attackBonus;
+    }
+
+    public void setAttackBonus(double attackBonus) {
+        this.attackBonus = attackBonus;
+    }
+
+    public double getDamageBonus() {
+        return damageBonus;
+    }
+
+    public void setDamageBonus(double damageBonus) {
+        this.damageBonus = damageBonus;
+    }
+
+    public double getDefenseBonus() {
+        return defenseBonus;
+    }
+
+    public void setDefenseBonus(double defenseBonus) {
+        this.defenseBonus = defenseBonus;
+    }
+
     public String getDamageType() {
         return damageType;
     }
@@ -43,7 +67,7 @@ public class Weapon implements Serializable{
 
     @Override
     public int hashCode() {
-        int hash = 5;
+        int hash = 3;
         hash = 97 * hash + Objects.hashCode(this.name);
         hash = 97 * hash + (int) (Double.doubleToLongBits(this.attackBonus) ^ (Double.doubleToLongBits(this.attackBonus) >>> 32));
         hash = 97 * hash + (int) (Double.doubleToLongBits(this.damageBonus) ^ (Double.doubleToLongBits(this.damageBonus) >>> 32));
@@ -51,11 +75,13 @@ public class Weapon implements Serializable{
         hash = 97 * hash + Objects.hashCode(this.damageType);
         return hash;
     }
-    
+
     @Override
     public String toString() {
         return "Weapon{" + "name=" + name + ", attackBonus=" + attackBonus + ", damageBonus=" + damageBonus + ", defenseBonus=" + defenseBonus + ", damageType=" + damageType + '}';
     }
+    
+    
 
     @Override
     public boolean equals(Object obj) {
@@ -86,6 +112,7 @@ public class Weapon implements Serializable{
         }
         return true;
     }
+    
     
     
 }

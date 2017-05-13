@@ -70,7 +70,7 @@ public class QuestionScene extends RegularSceneType implements Serializable{
 
     @Override
     public String toString() {
-        return String.format("QuestionScene{%s, name=, type=, question=, answer=%s}", super.toString(), name, type, question, answer); 
+        return "QuestionScene{" + "name=" + name + ", type=" + type + ", question=" + question + ", answer=" + answer + '}';
     }
     
     
