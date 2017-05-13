@@ -37,8 +37,8 @@ public class ReturnToRexburg1 {
     //Actor class
     
         Actor actorOne = new Actor();
-        actorOne.setName("Bob");
-        actorOne.setPlayer("Rex");
+        actorOne.setName("Jen");
+        actorOne.setPlayer("Roxanne");
         actorOne.setMinimumHealth(10);
         actorOne.setMaximumHealth(100);
         actorOne.setAttack(5);
@@ -95,7 +95,5 @@ public class ReturnToRexburg1 {
         
     }
 
-
-    
 }   
     

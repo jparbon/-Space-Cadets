@@ -124,6 +124,13 @@ public class Location implements Serializable {
     }
 
    
-    //not sure methods???: gatherFuel, encounterAlien, travelToNewPlanet
+    //methods: gatherFuel, encounterAlienChance, travelToNewPlanet
+    /*When a player lands on a new planet or moon, he will be given the opportunity to gather fuel, he may encounter 
+    an alien, or he may travel to a new planet if he has enough fuel to travel.
+    */
+    
+      
+  
+    
     
 }
