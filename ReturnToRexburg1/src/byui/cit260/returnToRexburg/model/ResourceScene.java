@@ -28,6 +28,38 @@ public class ResourceScene {
     public void setAmount(int amount) {
         this.amount = amount;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 17 * hash + this.amount;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (super.equals(obj) == false) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final ResourceScene other = (ResourceScene) obj;
+        if (this.amount != other.amount) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "ResourceScene{" + "amount=" + amount + '}';
+    }
+    
+    
     
     
     

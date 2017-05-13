@@ -17,16 +17,22 @@ public class EncounterAlienScene {
     public EncounterAlienScene() {
     }
     
-    //Work in progress
-   double befriendAlien() {
-        return 0;
-    }
+    /*Work in progress
+    double befriendAlien() {
+    return 0;
+    }*/
    
-   //Work in progree
+   /*Work in progress
    double fightAlien() {
-        return 0;
-   }
+   return 0;
+   }*/
+
+    @Override
+    public String toString() {
+        return "EncounterAlienScene{" + '}';
+    }
     
+   
     
     
 }
