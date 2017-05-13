@@ -39,6 +39,8 @@ public class CombatScene {
     public void setAlienAttackOutput(int alienAttackOutput) {
         this.alienAttackOutput = alienAttackOutput;
     }
+    
+    
     // needs attack in actor defined before it will work.
    /* public int lightAttack() {
         playerAttackOutput = (int) ((Math.random() * 20) + player.attack + 2);
@@ -58,6 +60,42 @@ public class CombatScene {
     alienAttackOutput = (int) ((Math.random() * 20) + alien.attack);
     return alienAttackOutput;
     }*/
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 59 * hash + this.playerAttackOutput;
+        hash = 59 * hash + this.alienAttackOutput;
+        return hash;
+    }
+
+    @Override
+    public String toString() {
+        return "CombatScene{" + "playerAttackOutput=" + playerAttackOutput + ", alienAttackOutput=" + alienAttackOutput + '}';
+    }
+    
+    
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (super.equals(obj) == false) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final CombatScene other = (CombatScene) obj;
+        if (this.playerAttackOutput != other.playerAttackOutput) {
+            return false;
+        }
+        if (this.alienAttackOutput != other.alienAttackOutput) {
+            return false;
+        }
+        return true;
+    }
  
     
 }
