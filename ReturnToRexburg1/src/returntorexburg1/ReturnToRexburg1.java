@@ -12,6 +12,12 @@ import byui.cit260.returnToRexburg.model.Location;
 import byui.cit260.returnToRexburg.model.Map;
 import byui.cit260.returnToRexburg.model.Player;
 import byui.cit260.returnToRexburg.model.Spaceship;
+import byui.cit260.returnToRexburg.model.Alien;
+import byui.cit260.returnToRexburg.model.CombatScene;
+import byui.cit260.returnToRexburg.model.EncounterAlienScene;
+import byui.cit260.returnToRexburg.model.RegularSceneType;
+import byui.cit260.returnToRexburg.model.ResourceScene;
+
 
 /**
  *
@@ -92,7 +98,47 @@ public class ReturnToRexburg1 {
        
        String shipInfo = shipOne.toString();
        System.out.println(shipOne);
-        
+       
+       //Alien Class
+       
+       Alien alienOne = new Alien();
+       
+       alienOne.setWeakness("energy");
+       String alienInfo = alienOne.toString();
+       System.out.println(alienOne);
+       
+       
+      //Combat Class
+       
+       CombatScene combatOne = new CombatScene();
+       
+       combatOne.setPlayerAttackOutput(100);
+       combatOne.setAlienAttackOutput(100);
+       String combatInfo = combatOne.toString();
+       System.out.println(combatOne);
+       
+       //EncounterAlienScene Class
+       
+       EncounterAlienScene encounterOne = new EncounterAlienScene();
+       
+       String encounterInfo = encounterOne.toString();
+       System.out.println(encounterOne);
+       
+       //RegularSceneType Class
+       
+       RegularSceneType regularOne = new RegularSceneType();
+       
+       regularOne.setDescription("You see a barren wasteland");
+       String regularInfo = regularOne.toString();
+       System.out.println(regularOne);
+       
+       //ResourceScene Class
+       
+       ResourceScene resourceOne = new ResourceScene();
+       
+       resourceOne.setAmount(42);
+       String resourceInfo = resourceOne.toString();
+       System.out.println(resourceOne);
     }
 
 }   
