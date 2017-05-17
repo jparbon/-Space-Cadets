@@ -8,10 +8,18 @@ package returntorexburg1;
 //import statements for each class
 import byui.cit260.returnToRexburg.model.Actor;
 import byui.cit260.returnToRexburg.model.Game;
+import byui.cit260.returnToRexburg.model.InventoryItem;
 import byui.cit260.returnToRexburg.model.Location;
 import byui.cit260.returnToRexburg.model.Map;
-import byui.cit260.returnToRexburg.model.Player;
+import byui.cit260.returnToRexburg.model.QuestionScene;
 import byui.cit260.returnToRexburg.model.Spaceship;
+import byui.cit260.returnToRexburg.model.Weapon;
+import byui.cit260.returnToRexburg.model.Alien;
+import byui.cit260.returnToRexburg.model.CombatScene;
+import byui.cit260.returnToRexburg.model.EncounterAlienScene;
+import byui.cit260.returnToRexburg.model.RegularSceneType;
+import byui.cit260.returnToRexburg.model.ResourceScene;
+
 
 /**
  *
@@ -92,7 +100,85 @@ public class ReturnToRexburg1 {
        
        String shipInfo = shipOne.toString();
        System.out.println(shipOne);
+       
+
+    //Weapon class
+    
+        Weapon weaponOne = new Weapon();
         
+        weaponOne.setName("Phaser");
+        weaponOne.setDamageType("Electric");
+        weaponOne.setAttackBonus(10);
+        weaponOne.setDamageBonus(8);
+        weaponOne.setDefenseBonus(8);
+        
+        String weaponInfo = weaponOne.toString();
+        System.out.println(weaponOne);
+        
+    //InventoryItem class
+    
+        InventoryItem inventoryItemOne = new InventoryItem();
+        
+        inventoryItemOne.setInventoryType("health");
+        inventoryItemOne.setQuantityInStock(28);
+        inventoryItemOne.setRequiredAmount(49);
+        
+        String inventoryItemInfo = inventoryItemOne.toString();
+        System.out.println(inventoryItemOne);
+        
+    //QuestionScene class
+    
+        QuestionScene questionSceneOne = new QuestionScene();
+        
+        questionSceneOne.setName("Natali");
+        questionSceneOne.setType("Armor");
+        questionSceneOne.setQuestion("what is 2 + 2?");
+        questionSceneOne.setAnswer("4, correct!");
+        
+        String questionSceneInfo = questionSceneOne.toString();
+        System.out.println(questionSceneOne);
+
+       //Alien Class
+       
+       Alien alienOne = new Alien();
+       
+       alienOne.setWeakness("energy");
+       String alienInfo = alienOne.toString();
+       System.out.println(alienOne);
+       
+       
+      //Combat Class
+       
+       CombatScene combatOne = new CombatScene();
+       
+       combatOne.setPlayerAttackOutput(100);
+       combatOne.setAlienAttackOutput(100);
+       String combatInfo = combatOne.toString();
+       System.out.println(combatOne);
+       
+       //EncounterAlienScene Class
+       
+       EncounterAlienScene encounterOne = new EncounterAlienScene();
+       
+       String encounterInfo = encounterOne.toString();
+       System.out.println(encounterOne);
+       
+       //RegularSceneType Class
+       
+       RegularSceneType regularOne = new RegularSceneType();
+       
+       regularOne.setDescription("You see a barren wasteland");
+       String regularInfo = regularOne.toString();
+       System.out.println(regularOne);
+       
+       //ResourceScene Class
+       
+       ResourceScene resourceOne = new ResourceScene();
+       
+       resourceOne.setAmount(42);
+       String resourceInfo = resourceOne.toString();
+       System.out.println(resourceOne);
+
     }
 
 }   
