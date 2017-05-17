@@ -38,7 +38,6 @@ public class ReturnToRexburg1 {
     
         Actor actorOne = new Actor();
         actorOne.setName("Jen");
-        actorOne.setPlayer("Roxanne");
         actorOne.setMinimumHealth(10);
         actorOne.setMaximumHealth(100);
         actorOne.setAttack(5);
@@ -52,10 +51,11 @@ public class ReturnToRexburg1 {
         
     //Game class
     
-       Game gameDescription = new Game();
-       gameDescription.setDescription("This is a game!");
+       Game gameOne = new Game();
+       gameOne.setPlayer("Roxanne");
+       gameOne.setDescription("This is a game!");
         
-       String gameDescriptionInfo = gameDescription.toString();
+       String gameDescriptionInfo = gameOne.toString();
        System.out.println(gameDescriptionInfo);
 
        
