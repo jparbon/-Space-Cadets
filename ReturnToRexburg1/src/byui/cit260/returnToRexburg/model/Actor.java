@@ -16,7 +16,6 @@ public class Actor implements Serializable {
     
     //attributes: name, minimumHealth, maximumHealth, attack, damage, defense
     private String name;
-    private String player;
     private int minimumHealth;
     private int maximumHealth;
     private int attack;
@@ -32,14 +31,6 @@ public class Actor implements Serializable {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getPlayer() {
-        return player;
-    }
-
-    public void setPlayer(String player) {
-        this.player = player;
     }
     
     public int getMinimumHealth() {
@@ -86,7 +77,6 @@ public class Actor implements Serializable {
     public int hashCode() {
         int hash = 7;
         hash = 29 * hash + Objects.hashCode(this.name);
-        hash = 29 * hash + Objects.hashCode(this.player);
         hash = 29 * hash + this.minimumHealth;
         hash = 29 * hash + this.maximumHealth;
         hash = 29 * hash + this.attack;
@@ -125,15 +115,13 @@ public class Actor implements Serializable {
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
-        if (!Objects.equals(this.player, other.player)) {
-            return false;
-        }
+  
         return true;
     }
 
     @Override
     public String toString() {
-        return "Actor{" + "name=" + name + ", player=" + player + ", minimumHealth=" + minimumHealth + ", maximumHealth=" + maximumHealth + ", attack=" + attack + ", damage=" + damage + ", defense=" + defense + '}';
+        return "Actor{" + "name=" + name + ", minimumHealth=" + minimumHealth + ", maximumHealth=" + maximumHealth + ", attack=" + attack + ", damage=" + damage + ", defense=" + defense + '}';
     }
     
   

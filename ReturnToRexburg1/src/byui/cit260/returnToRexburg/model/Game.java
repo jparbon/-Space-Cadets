@@ -14,7 +14,7 @@ import java.util.Objects;
 public class Game implements Serializable{
   
     private String description;
-
+    private String player;
  
     public Game() {
     }
@@ -27,10 +27,19 @@ public class Game implements Serializable{
         this.description = description;
     }
 
+    public String getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(String player) {
+        this.player = player;
+    }
+
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 23 * hash + Objects.hashCode(this.description);
+        hash = 37 * hash + Objects.hashCode(this.description);
+        hash = 37 * hash + Objects.hashCode(this.player);
         return hash;
     }
 
@@ -49,13 +58,16 @@ public class Game implements Serializable{
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
+        if (!Objects.equals(this.player, other.player)) {
+            return false;
+        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "Game{" + "description=" + description + '}';
+        return "Game{" + "description=" + description + ", player=" + player + '}';
     }
- 
+   
     
 }
