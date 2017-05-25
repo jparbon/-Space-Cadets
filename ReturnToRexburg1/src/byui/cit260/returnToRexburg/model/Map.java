@@ -13,15 +13,19 @@ import java.util.Objects;
  */
 public class Map implements Serializable{
     
+    //class instance variables
     private String description;
  
+    //default constructor
     public Map() {
     }
-
+    
+    //getter
     public String getDescription() {
         return description;
     }
-
+    
+    //setter
     public void setDescription(String description) {
         this.description = description;
     }

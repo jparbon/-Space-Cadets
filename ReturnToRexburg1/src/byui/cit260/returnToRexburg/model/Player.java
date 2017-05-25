@@ -11,27 +11,40 @@ import java.util.Objects;
  *
  * @author nataliadams
  */
-public class Player implements Serializable{
+
+//Player class inherits from Actor class
+public class Player extends Actor implements Serializable{
+    
     //class instance variables
-    private String name;
+    private String currentWeaponEquipped;
+    private int totalNumberOfWeapons; 
 
-    public Player() {
+    //constructor
+    public Player() { 
     }
     
-    
-
-    public String getName() {
-        return name;
+    //getters and setters
+    public String getCurrentWeaponEquipped() {
+        return currentWeaponEquipped;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCurrentWeaponEquipped(String currentWeaponEquipped) {
+        this.currentWeaponEquipped = currentWeaponEquipped;
+    }
+
+    public int getTotalNumberOfWeapons() {
+        return totalNumberOfWeapons;
+    }
+
+    public void setTotalNumberOfWeapons(int totalNumberOfWeapons) {
+        this.totalNumberOfWeapons = totalNumberOfWeapons;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 41 * hash + Objects.hashCode(this.name);
+        hash = 53 * hash + Objects.hashCode(this.currentWeaponEquipped);
+        hash = 53 * hash + this.totalNumberOfWeapons;
         return hash;
     }
 
@@ -40,24 +53,30 @@ public class Player implements Serializable{
         if (this == obj) {
             return true;
         }
-        if (obj == null) {
-            return false;
+         //parent class can check
+        if (super.equals(obj) == false){
+            return false;    
         }
+        //if (obj == null) {
+        //    return false;
+        //}
+      
         if (getClass() != obj.getClass()) {
             return false;
         }
         final Player other = (Player) obj;
-        if (!Objects.equals(this.name, other.name)) {
+        if (this.totalNumberOfWeapons != other.totalNumberOfWeapons) {
+            return false;
+        }
+        if (!Objects.equals(this.currentWeaponEquipped, other.currentWeaponEquipped)) {
             return false;
         }
         return true;
     }
     
-
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + '}';
+        return "Player{" + super.toString() + "currentWeaponEquipped=" + currentWeaponEquipped + ", totalNumberOfWeapons=" + totalNumberOfWeapons + '}';
     }
-    
     
 }

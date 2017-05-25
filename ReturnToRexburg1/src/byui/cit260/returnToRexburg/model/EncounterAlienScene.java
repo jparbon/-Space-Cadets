@@ -11,28 +11,12 @@ import java.util.Objects;
  *
  * @author shear
  */
-public class EncounterAlienScene {
+
+//Inherits "description" from RegularSceneType.
+public class EncounterAlienScene extends RegularSceneType implements Serializable {
     
     //default constructor
     public EncounterAlienScene() {
     }
-    
-    /*Work in progress
-    double befriendAlien() {
-    return 0;
-    }*/
-   
-   /*Work in progress
-   double fightAlien() {
-   return 0;
-   }*/
-
-    @Override
-    public String toString() {
-        return "EncounterAlienScene{" + '}';
-    }
-    
-   
-    
-    
+  
 }

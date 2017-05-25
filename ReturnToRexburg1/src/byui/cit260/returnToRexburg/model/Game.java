@@ -13,12 +13,15 @@ import java.util.Objects;
  */
 public class Game implements Serializable{
   
+    //class instance variables
     private String description;
     private String player;
  
+    //default constructor
     public Game() {
     }
 
+    //getters and setters
     public String getDescription() {
         return description;
     }

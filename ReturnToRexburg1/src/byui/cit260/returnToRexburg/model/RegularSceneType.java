@@ -11,12 +11,14 @@ import java.util.Objects;
  *
  * @author caseyShear
  */
-public class RegularSceneType {
-     //class instance variables
+public class RegularSceneType implements Serializable {
+     
+    //class instance variables
     private String description;
 
     // default constructor
     public RegularSceneType() {
+        super();
     }
     
     //getter

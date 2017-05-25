@@ -14,17 +14,22 @@ import java.util.Objects;
  */
 public class Actor implements Serializable {
     
-    //attributes: name, minimumHealth, maximumHealth, attack, damage, defense
+    //class instance variables
     private String name;
-    private int minimumHealth;
+    private int currentHealth;
     private int maximumHealth;
-    private int attack;
-    private int damage;
-    private int defense;
+    private String currentLocation;
+    private int baseAttackValue;
+    private int baseDamageValue;
+    private int defenseValue;
 
+    //constructor
+    //Actor is the Super class; Player class inherits from Actor class.
     public Actor() {
+        super();
     }
     
+    //getters and setters
     public String getName() {
         return name;
     }
@@ -32,13 +37,13 @@ public class Actor implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
-    
-    public int getMinimumHealth() {
-        return minimumHealth;
+
+    public int getCurrentHealth() {
+        return currentHealth;
     }
 
-    public void setMinimumHealth(int minimumHealth) {
-        this.minimumHealth = minimumHealth;
+    public void setCurrentHealth(int currentHealth) {
+        this.currentHealth = currentHealth;
     }
 
     public int getMaximumHealth() {
@@ -49,39 +54,48 @@ public class Actor implements Serializable {
         this.maximumHealth = maximumHealth;
     }
 
-    public int getAttack() {
-        return attack;
+    public String getCurrentLocation() {
+        return currentLocation;
     }
 
-    public void setAttack(int attack) {
-        this.attack = attack;
+    public void setCurrentLocation(String currentLocation) {
+        this.currentLocation = currentLocation;
     }
 
-    public int getDamage() {
-        return damage;
+    public int getBaseAttackValue() {
+        return baseAttackValue;
     }
 
-    public void setDamage(int damage) {
-        this.damage = damage;
+    public void setBaseAttackValue(int baseAttackValue) {
+        this.baseAttackValue = baseAttackValue;
     }
 
-    public int getDefense() {
-        return defense;
+    public int getBaseDamageValue() {
+        return baseDamageValue;
     }
 
-    public void setDefense(int defense) {
-        this.defense = defense;
+    public void setBaseDamageValue(int baseDamageValue) {
+        this.baseDamageValue = baseDamageValue;
+    }
+
+    public int getDefenseValue() {
+        return defenseValue;
+    }
+
+    public void setDefenseValue(int defenseValue) {
+        this.defenseValue = defenseValue;
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 29 * hash + Objects.hashCode(this.name);
-        hash = 29 * hash + this.minimumHealth;
-        hash = 29 * hash + this.maximumHealth;
-        hash = 29 * hash + this.attack;
-        hash = 29 * hash + this.damage;
-        hash = 29 * hash + this.defense;
+        int hash = 3;
+        hash = 47 * hash + Objects.hashCode(this.name);
+        hash = 47 * hash + this.currentHealth;
+        hash = 47 * hash + this.maximumHealth;
+        hash = 47 * hash + Objects.hashCode(this.currentLocation);
+        hash = 47 * hash + this.baseAttackValue;
+        hash = 47 * hash + this.baseDamageValue;
+        hash = 47 * hash + this.defenseValue;
         return hash;
     }
 
@@ -97,32 +111,33 @@ public class Actor implements Serializable {
             return false;
         }
         final Actor other = (Actor) obj;
-        if (this.minimumHealth != other.minimumHealth) {
+        if (this.currentHealth != other.currentHealth) {
             return false;
         }
         if (this.maximumHealth != other.maximumHealth) {
             return false;
         }
-        if (this.attack != other.attack) {
+        if (this.currentLocation != other.currentLocation) {
             return false;
         }
-        if (this.damage != other.damage) {
+        if (this.baseAttackValue != other.baseAttackValue) {
             return false;
         }
-        if (this.defense != other.defense) {
+        if (this.baseDamageValue != other.baseDamageValue) {
+            return false;
+        }
+        if (this.defenseValue != other.defenseValue) {
             return false;
         }
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
-  
         return true;
-    }
+   
+   }
 
     @Override
     public String toString() {
-        return "Actor{" + "name=" + name + ", minimumHealth=" + minimumHealth + ", maximumHealth=" + maximumHealth + ", attack=" + attack + ", damage=" + damage + ", defense=" + defense + '}';
+        return "Actor{" + "name=" + name + ", currentHealth=" + currentHealth + ", maximumHealth=" + maximumHealth + ", currentLocation=" + currentLocation + ", baseAttackValue=" + baseAttackValue + ", baseDamageValue=" + baseDamageValue + ", defenseValue=" + defenseValue + '}';
     }
-    
-  
 }

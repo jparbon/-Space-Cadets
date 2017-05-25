@@ -14,7 +14,7 @@ import java.util.Objects;
 public class Spaceship implements Serializable{
 
     private String name;
-    private int minimumFuel;
+    private int currentFuel;
     private int maximumFuel;
  
     public Spaceship() {
@@ -28,12 +28,12 @@ public class Spaceship implements Serializable{
         this.name = name;
     }
 
-    public int getMinimumFuel() {
-        return minimumFuel;
+    public int getCurrentFuel() {
+        return currentFuel;
     }
 
-    public void setMinimumFuel(int minimumFuel) {
-        this.minimumFuel = minimumFuel;
+    public void setCurrentFuel(int minimumFuel) {
+        this.currentFuel = minimumFuel;
     }
 
     public int getMaximumFuel() {
@@ -48,7 +48,7 @@ public class Spaceship implements Serializable{
     public int hashCode() {
         int hash = 5;
         hash = 29 * hash + Objects.hashCode(this.name);
-        hash = 29 * hash + this.minimumFuel;
+        hash = 29 * hash + this.currentFuel;
         hash = 29 * hash + this.maximumFuel;
         return hash;
     }
@@ -65,7 +65,7 @@ public class Spaceship implements Serializable{
             return false;
         }
         final Spaceship other = (Spaceship) obj;
-        if (this.minimumFuel != other.minimumFuel) {
+        if (this.currentFuel != other.currentFuel) {
             return false;
         }
         if (this.maximumFuel != other.maximumFuel) {
@@ -79,7 +79,7 @@ public class Spaceship implements Serializable{
 
     @Override
     public String toString() {
-        return "Spaceship{" + "name=" + name + ", minimumFuel=" + minimumFuel + ", maximumFuel=" + maximumFuel + '}';
+        return "Spaceship{" + "name=" + name + ", minimumFuel=" + currentFuel + ", maximumFuel=" + maximumFuel + '}';
     }
    
     
