@@ -35,4 +35,7 @@ public class CombatControlTest {
         //fail("The test case is a prototype.");
     }
     
+    
+    
+    
 }
