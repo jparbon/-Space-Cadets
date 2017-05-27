@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package byui.cit260.returnToRexburg.control;
 
-import byui.cit260.returnToRexburg.control.ResourceControl;
+
+import java.util.Random;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -16,95 +18,137 @@ public class ResourceControlTest {
     
     public ResourceControlTest() {
     }
+
     
-    // Test of gatherFuel method, of class ResourceControl.
-    
+    /**
+     * Test of gatherFuel method, of class ResourceControl.
+     */
     @Test
-    public int gatherFuel() {
+    public void testGatherFuel() {
         System.out.println("gatherFuel");
-        //Test case #1
-        System.out.println("/tTest case #1");
-      
-        //input values for test case 1 - valid user input - top of boundary
+        
+
+        //Test Case #1 - this is a valid test
+        System.out.println("Test Case #1");
+        
+        //input values for Test Case #1 
         int userInput = 10;
         int locationDepth = 10;
         int surfaceHardness = 5;
-        int drillPower = 0;
-        int fuelEarned = 0;
+        int drillPower = 25;
+        int fuelEarned = 15;
+        int expResult = 0;
         
-        int expectedResult = 0; //the expected amount of fuel earned
-       
-        //create instance of ResourceControl class
+        //create instance of ResourceControl/ Random class
         ResourceControl instance = new ResourceControl();
-        
+        Random number = new Random(20); //create a new Random object and initialize with seed of 20
+     
         //call function to run test
-        int result = instance.gatherFuel(userInput, locationDepth, surfaceHardness, drillPower, fuelEarned);
+        instance.setRandom(number); //call the setRandom() method on the control class and pass it the Random object created in the test????
+        int result = instance.gatherFuel(userInput, locationDepth, surfaceHardness, drillPower, fuelEarned); 
         
-        //compare expected return value with actual return value
-        assertEquals(expectedResult, result, 0);
-        fail("The test case is a prototype.");
-    
-    
-  
-        //Test case #2
-        System.out.println("/tTest case #2");
-      
-        //input values for test case 2 - valid user input - bottom of boundary
-        userInput = 1;
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result);
+       
+        
+        //Test Case #2
+        System.out.println("Test Case #2");
+        
+        //input values for Test Case #2
+        userInput = 5;
         locationDepth = 10;
         surfaceHardness = 5;
-        
-        expectedResult = 0; //the expected amount of fuel earned
-      
+        drillPower = 0;
+        fuelEarned = 0;
+        expResult = 0;
         
         //call function to run test
-        result = instance.gatherFuel(userInput, locationDepth, surfaceHardness, drillPower, fuelEarned);
+        instance.gatherFuel(userInput, locationDepth, surfaceHardness, drillPower, fuelEarned); 
         
-        //compare expected return value with actual return value
-        assertEquals(expectedResult, result, 0);
-        fail("The test case is a prototype.");
+        
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result); 
+    
+        //Test Case #3
+        System.out.println("Test Case #3");
+        
+        //input values for Test Case #3
+        userInput = 21;
+        locationDepth = 10;
+        surfaceHardness = 5;
+        drillPower = 0;
+        fuelEarned = 0;
+        expResult = 0;
+        
+        //call function to run test
+        instance.gatherFuel(userInput, locationDepth, surfaceHardness, drillPower, fuelEarned); 
+      
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result); 
     
         
+        //Test Case #4
+        System.out.println("Test Case #4");
         
-        //Test case #3
-        System.out.println("/tTest case #3");
-      
-        //input values for test case 3 - invalid integer
+        //input values for Test Case #4
         userInput = 0;
         locationDepth = 10;
         surfaceHardness = 5;
-        
-        expectedResult = 0; //the expected amount of fuel earned
-      
+        drillPower = 0;
+        fuelEarned = 0;
+        expResult = 0;
         
         //call function to run test
-        result = instance.gatherFuel(userInput, locationDepth, surfaceHardness, drillPower, fuelEarned);
+        instance.gatherFuel(userInput, locationDepth, surfaceHardness, drillPower, fuelEarned); 
         
-        //compare expected return value with actual return value
-        assertEquals(expectedResult, result, 0);
-        fail("The test case is a prototype.");
-        
-        
-        //Test case #4
-        System.out.println("/tTest case #4");
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result); 
       
-        //input values for test case 4 - illegal character input
-        userInput = 'z';
+        
+        //Test Case #5
+        System.out.println("Test Case #5");
+        
+        //input values for Test Case #5
+        userInput = 1;
         locationDepth = 10;
         surfaceHardness = 5;
-        
-        expectedResult = 0; //the expected amount of fuel earned
-      
+        drillPower = 0;
+        fuelEarned = 0;
+        expResult = 0;
         
         //call function to run test
-        result = instance.gatherFuel(userInput, locationDepth, surfaceHardness, drillPower, fuelEarned);
+        instance.gatherFuel(userInput, locationDepth, surfaceHardness, drillPower, fuelEarned); 
         
-        //compare expected return value with actual return value
-        assertEquals(expectedResult, result, 0);
-        fail("The test case is a prototype.");
+        
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result); 
     
-        return fuelEarned;
-    }
+        
+        //Test Case #6
+        System.out.println("Test Case #6");
+        
+        //input values for Test Case #6
+        userInput = 'x';
+        locationDepth = 10;
+        surfaceHardness = 5;
+        drillPower = 0;
+        fuelEarned = 0;
+        expResult = 0;
+        
+        //call function to run test
+        instance.gatherFuel(userInput, locationDepth, surfaceHardness, drillPower, fuelEarned); 
+        
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result); 
+    
+        
+        
+    }  
+    
+    
+    
+    
+    
     
     
 }

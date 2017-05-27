@@ -27,7 +27,7 @@ public class CombatControlTest {
         int baseAttackValue = 5;
         int bonusToAttack = 5;
         int defenseValue = 10;
-        boolean expResult = true;
+        boolean expResult = false;
         boolean result = CombatControl.calculateAccuracy(userInput, baseAttackValue, bonusToAttack, defenseValue);
         assertEquals(expResult, result);
         //System.out.println("calculateAccuracy" + expResult + "/" + result);
