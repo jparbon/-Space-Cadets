@@ -22,7 +22,6 @@ public class AlienDefenseControl {
 
     public int calculateDefense(int defenseValue) {
         int defenseTotal = defenseValue;
-        //DefenseValue defenceValue = new DefenseValue();
         return defenseTotal;
     }
-}    
+}
