@@ -6,6 +6,7 @@
 package byui.cit260.returnToRexburg.control;
 
 import byui.cit260.returnToRexburg.model.Actor;
+
 import java.util.Random;
 
 /**
@@ -18,25 +19,40 @@ public class CombatControl {
 //calculateAccuracy(userInput, player.getBaseAttackValue(), player.getWeapon().getBonusToAttack(), 
 //alien.getDefenseValue()); 
 //alienDamage = getDamage();
+    
+    
 
     public static boolean calculateAccuracy(int userInput, int baseAttackValue, int bonusToAttack, int defenseValue) {
-        int LIGHT_ATTACK_BONUS = 2;
-        Random random = new Random();
-        boolean isAdding = random.nextBoolean();
-        int attackTotal = baseAttackValue + bonusToAttack + LIGHT_ATTACK_BONUS;
-        
-        if (isAdding == false) {
-            attackTotal = -attackTotal;
-        }
-        int attackOutput = userInput + attackTotal;
-        
-        if (attackOutput >= defenseValue) {
-            return true;
-        }
-        return false;
+    int LIGHT_ATTACK_BONUS = 2;
+    Random random = new Random();
+    boolean isAdding = random.nextBoolean();
+    int attackTotal = baseAttackValue + bonusToAttack + LIGHT_ATTACK_BONUS;
+    
+    if (isAdding == false) {
+    attackTotal = -attackTotal;
+    }
+    int attackOutput = userInput + attackTotal;
+    
+    if (attackOutput >= defenseValue) {
+    return true;
+    }
+    return false;
     }
 
+    public static boolean combat(int userInput, int player, int alien) {
+         if (player + userInput >= alien)
+         {
+             return true;
+         }
+         return false;
 
+    }
+    
+    /*public int calculateDefense(int defenseValue) {
+    int defenseTotal = defenseValue;
+    return defenseValue;
+    }*/
+}
 
 
 //public void lightAttack(double userInput, double actorAttack, double bonusToAttack, double bonusToDefense, 
@@ -104,7 +120,7 @@ while(actorOne.currentHealth > 0 || actorOne.currentHealth > 0)
                 return actorAttackOutput; 
 	}
 */ 
-}
+//}
     
   
     
