@@ -22,20 +22,32 @@ public class CombatControlTest {
      */
     @Test
     public void testCalculateAccuracy() {
-        System.out.println("calculateAccuracy");
-        int userInput = 18;
-        int baseAttackValue = 5;
-        int bonusToAttack = 5;
-        int defenseValue = 10;
-        boolean expResult = false;
-        boolean result = CombatControl.calculateAccuracy(userInput, baseAttackValue, bonusToAttack, defenseValue);
-        assertEquals(expResult, result);
-        //System.out.println("calculateAccuracy" + expResult + "/" + result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
+    System.out.println("calculateAccuracy");
+    int userInput = 18;
+    int baseAttackValue = 5;
+    int bonusToAttack = 5;
+    int defenseValue = 10;
+    boolean expResult = false;
+    boolean result = CombatControl.calculateAccuracy(userInput, baseAttackValue, bonusToAttack, defenseValue);
+    assertEquals(expResult, result);
+    //System.out.println("calculateAccuracy" + expResult + "/" + result);
+    // TODO review the generated test code and remove the default call to fail.
+    //fail("The test case is a prototype.");
     }
-    
-    
-    
-    
+
+    /**
+     * Test of combat method, of class CombatControl.
+     */
+    @Test
+    public void testCombat() {
+        System.out.println("combat");
+        int userInput = 9;
+        int player = 10;
+        int alien = 5;
+        boolean expResult = true;
+        boolean result = CombatControl.combat(userInput, player, alien);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");  
+    }
 }

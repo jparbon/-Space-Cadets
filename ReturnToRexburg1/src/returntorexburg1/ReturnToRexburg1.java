@@ -17,7 +17,6 @@ import byui.cit260.returnToRexburg.model.LocationScene;
 import byui.cit260.returnToRexburg.model.RegularSceneType;
 import byui.cit260.returnToRexburg.model.Weapon;
 
-
 /**
  *
  * @author nataliadams
@@ -53,7 +52,18 @@ public class ReturnToRexburg1 {
         String actorInfo = actorOne.toString();
         System.out.println(actorInfo);
        
+        //Test Alien Class
+        Actor testAlien = new Actor();
+        testAlien.setName("Roxanne");
+        testAlien.setCurrentHealth(20);
+        testAlien.setMaximumHealth(100);
+        testAlien.setCurrentLocation("Titan");
+        testAlien.setBaseAttackValue(50);
+        testAlien.setBaseDamageValue(30);
+        testAlien.setDefenseValue(70);
         
+        String alienInfo = testAlien.toString();
+        System.out.println(alienInfo);
         
     //Game class
     
