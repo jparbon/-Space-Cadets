@@ -22,9 +22,11 @@ public class ResourceControl {
     }
 
     //method for calculating fuel earned
-    public int gatherFuel(int userInput, int locationDepth, int surfaceHardness, int drillPower, int fuelEarned) {
+    public int gatherFuel(int userInput, int locationDepth, int surfaceHardness, int fuelEarned) {
 
         //check to see if the user input is valid; must be an integer between 1 and 10.
+        int drillPower;
+        
         if (userInput < 1 || userInput > 10) {
             return 0;
         } else {

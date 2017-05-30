@@ -45,7 +45,7 @@ public class ResourceControlTest {
      
         //call function to run test
         instance.setRandom(number); //call the setRandom() method on the control class and pass it the Random object created in the test????
-        int result = instance.gatherFuel(userInput, locationDepth, surfaceHardness, drillPower, fuelEarned); 
+        int result = instance.gatherFuel(userInput, locationDepth, surfaceHardness, fuelEarned); 
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result);
@@ -63,7 +63,7 @@ public class ResourceControlTest {
         expResult = 0;
         
         //call function to run test
-        instance.gatherFuel(userInput, locationDepth, surfaceHardness, drillPower, fuelEarned); 
+        instance.gatherFuel(userInput, locationDepth, surfaceHardness, fuelEarned); 
         
         
         //compare expected return value with actual value returned
@@ -81,7 +81,7 @@ public class ResourceControlTest {
         expResult = 0;
         
         //call function to run test
-        instance.gatherFuel(userInput, locationDepth, surfaceHardness, drillPower, fuelEarned); 
+        instance.gatherFuel(userInput, locationDepth, surfaceHardness, fuelEarned); 
       
         //compare expected return value with actual value returned
         assertEquals(expResult, result); 
@@ -99,7 +99,7 @@ public class ResourceControlTest {
         expResult = 0;
         
         //call function to run test
-        instance.gatherFuel(userInput, locationDepth, surfaceHardness, drillPower, fuelEarned); 
+        instance.gatherFuel(userInput, locationDepth, surfaceHardness, fuelEarned); 
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result); 
@@ -117,7 +117,7 @@ public class ResourceControlTest {
         expResult = 0;
         
         //call function to run test
-        instance.gatherFuel(userInput, locationDepth, surfaceHardness, drillPower, fuelEarned); 
+        instance.gatherFuel(userInput, locationDepth, surfaceHardness, fuelEarned); 
         
         
         //compare expected return value with actual value returned
@@ -136,7 +136,7 @@ public class ResourceControlTest {
         expResult = 0;
         
         //call function to run test
-        instance.gatherFuel(userInput, locationDepth, surfaceHardness, drillPower, fuelEarned); 
+        instance.gatherFuel(userInput, locationDepth, surfaceHardness, fuelEarned); 
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result); 
