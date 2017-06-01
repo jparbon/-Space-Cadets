@@ -5,10 +5,32 @@
  */
 package byui.cit260.returnToRexburg.control;
 
+import byui.cit260.returnToRexburg.model.Player;
+import returntorexburg1.ReturnToRexburg1;
+
 /**
  *
  * @author douglasarbon1
  */
 public class GameControl {
+
+    public static Player createPlayer(String name) {
+        
+        if (name == null) {
+            return null;
+        }
+        
+        Player player = new Player();
+        player.setName(name);
+        
+        ReturnToRexburg1.setPlayer(player); //save the player
+        
+        return player;
+    }
+    
+    
+    
+    
+    
     
 }

@@ -24,6 +24,8 @@ import byui.cit260.returnToRexburg.view.StartProgramView;
  */
 public class ReturnToRexburg1 {
 
+    private static Game currentGame = null;
+    private static Player player = null;
     /**
      * @param args the command line arguments
      */
@@ -36,12 +38,30 @@ public class ReturnToRexburg1 {
         
    */
     
-        public static void main(String[] args) {
+    public static void main(String[] args) {
     
-            //create StartProgramView original and display the StartProgramView
-            StartProgramView startProgramView = new StartProgramView();
-            startProgramView.displayStartProgramView();
-      
+    //create StartProgramView original and display the StartProgramView
+    StartProgramView startProgramView = new StartProgramView();
+    startProgramView.displayStartProgramView();
+            
+    
+    
+    }
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        ReturnToRexburg1.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        ReturnToRexburg1.player = player;
     }
 
 }   
