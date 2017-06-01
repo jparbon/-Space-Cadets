@@ -25,8 +25,27 @@ public class StartProgramView {
 
     public void displayBanner() {
         System.out.println(
-        //fix this later
-        "\n*description*"
+        "\n*******************************************************************"
+       +"\n*                                                                 *"
+       +"\n* You awaken to find yourself on Triton, one of Neptune’s moons.  *"         
+       +"\n* Your spaceship has crashed and you have lost all communication  *"         
+       +"\n* with Earth. As you look out the window, you notice a shiny      *"         
+       +"\n* metal box next to the spaceship. With your spacesuit still      *"
+       +"\n* intact, you open the door of the spaceship and retrieve the     *"         
+       +"\n* metal box. Secured safely within the box is a map, which        *"         
+       +"\n* provides you with the information to start you on your journey  *"         
+       +"\n* back to Earth. Knowing that you are a long way from home, you   *"         
+       +"\n* desperately want to make it back to Earth.                      *"         
+       +"\n*                                                                 *"         
+       +"\n* The goal of the game is for you to return to Earth safely. As   *"         
+       +"\n* you journey through space, you will gather the necessary fuel   *"         
+       +"\n* for your spaceship, and earn weapons and restore your health    *"         
+       +"\n* by defeating aliens.                                            *"         
+       +"\n*                                                                 *"         
+       +"\n* If you are successful, you will be able to return to Earth      *"         
+       +"\n* and you will win the game!                                      *"         
+       +"\n*                                                                 *"
+       +"\n*******************************************************************"
         );
     }
 
