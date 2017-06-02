@@ -45,7 +45,7 @@ public class StartProgramView {
        +"\n* to fly your spaceship back to Earth.                            *"         
        +"\n*                                                                 *"         
        +"\n* If you are successful, you will be able to return to Earth      *"         
-       +"\n* and you will win the game!                                      *"         
+       +"\n* safely and you will win the game!                               *"         
        +"\n*                                                                 *"
        +"\n*******************************************************************"
         );
@@ -108,14 +108,12 @@ public class StartProgramView {
         }
         
         //display next view
+        this.displayNextView(player);
         
         return true; //Success!
     
-
     }
- 
-
-    private void displayNextView(Player player) {
+ private void displayNextView(Player player) {
         
         //display a custom welcome message
         System.out.println("n==========================================="
@@ -129,13 +127,12 @@ public class StartProgramView {
         
         //Display the main menu view
         mainMenuView.displayMainMenuView();
-                
+    
+        
+    } 
+  
+}
    
-    }
-
     
-    
-}   
-
     
     

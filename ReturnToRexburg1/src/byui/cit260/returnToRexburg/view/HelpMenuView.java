@@ -22,11 +22,11 @@ public class HelpMenuView {
 
 G - What is the goal of the game?
 The goal of the game is to return to Earth safely by navigating your way through 
-space, fighting off dangerous alien creatures, and collecting helpful clues and 
-resources to help you along the way. When you land on a new planet or moon, you 
-will be able to gather more fuel,and determine whether or not you are ready to 
-fly to your next stop, on your way back to Earth. Along the way, you will 
-encounter alien creatures, who will try to stop you from returning home. 
+space. When you land on a new planet or moon, you will be able to gather more 
+fuel, and determine whether or not you are ready to fly to your next location, 
+on your way back to Earth. Along the way, you will encounter alien creatures, 
+who will try to thwart your efforts. In order to win the game, you will need to
+return safely on Earth, back in your hometown of Rexburg, Idaho.
 	
 M - How to Move
 You will be provided with a map of possible destinations, and will be prompted 
@@ -37,11 +37,11 @@ If you do not have enough fuel, you will need to gather more fuel.
 F - View Fuel Level
 Along your way, you should periodically check your fuel percentage to ensure 
 that you have enough fuel. If your current fuel level is less than 20%, 
-you will not be able to travel and will have to try to gain more fuel to 
+you will not be able to travel and will have to try to acquire more fuel to 
 continue your journey. 
  
 M - Main Menu
-The player will be directed back to the Main Menu.
+Return to the Main Menu.
 
 
 private String menu;
@@ -76,7 +76,7 @@ public boolean doAction(String choice) {
         case "M": //how to move
             this.viewHowToMove();
             break;
-        case "F": //dispaly current fuel level
+        case "F": //display current fuel level
             this.viewFuelLevel();
             break;
         case "M": //returns player to Main Menu
@@ -94,6 +94,8 @@ public boolean doAction(String choice) {
 -------------------------------------------------------------------------------
 
 STUB FUNCTIONS: 
+
+-------------------------------------------------------------------------------
 
 private void viewGoalOfGame() {
     System.out.println("*** viewGoalOfGame function called ***");
@@ -115,6 +117,8 @@ private void returnToMainMenu() {
 -------------------------------------------------------------------------------
 
 Implement the STUB FUNCTIONS: 
+
+-------------------------------------------------------------------------------
 
 private void viewGoalOfGame() {
     //create a new game
