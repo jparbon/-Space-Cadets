@@ -19,7 +19,7 @@ public class StartProgramView {
     
     public StartProgramView(){
         
-        this.promptMessage = "\nPlease enter your name: ";
+        this.promptMessage = "\nPlease enter your first name: ";
         //display the banner when view is created
         this.displayBanner();
         
@@ -40,9 +40,9 @@ public class StartProgramView {
        +"\n* desperately want to make it back to Earth.                      *"         
        +"\n*                                                                 *"         
        +"\n* The goal of the game is for you to return to Earth safely. As   *"         
-       +"\n* you journey through space, you will gather the necessary fuel   *"         
-       +"\n* for your spaceship, and earn weapons and restore your health    *"         
-       +"\n* by defeating aliens.                                            *"         
+       +"\n* you journey through space, you will encounter aliens on         *"         
+       +"\n* distant planets and moons, and will have to gather extra fuel   *"         
+       +"\n* to fly your spaceship back to Earth.                            *"         
        +"\n*                                                                 *"         
        +"\n* If you are successful, you will be able to return to Earth      *"         
        +"\n* and you will win the game!                                      *"         
@@ -81,7 +81,7 @@ public class StartProgramView {
             value = value.trim(); //trim off leading and trailing blanks
             
             if (value.length() < 1){ //value is blank
-                System.out.println("\nInvalid value: value cannot be blank");
+                System.out.println("\nInvalid value. The value cannot be blank.");
                 continue;
             }
             
@@ -94,8 +94,8 @@ public class StartProgramView {
         
         
         if (playersName.length() < 2){
-            System.out.println("\nInvalid players name: "
-            + "The name must be greater than one character in length");
+            System.out.println("\nInvalid player's name: "
+            + "The name must be greater than one character in length.");
         return false;
         }
         
@@ -120,7 +120,7 @@ public class StartProgramView {
         //display a custom welcome message
         System.out.println("n==========================================="
                         + "/n Welcome to the game " +  player.getName()
-                        + "/n We hope you have a lot of fun!"
+                        + "/n We hope you have fun playing the game!"
                         + "/n==========================================="
                         );
         
