@@ -5,8 +5,10 @@
  */
 package byui.cit260.returnToRexburg.view;
 
+import byui.cit260.returnToRexburg.control.GameControl;
 import byui.cit260.returnToRexburg.model.Player;
 import java.util.Scanner;
+import returntorexburg1.ReturnToRexburg1;
 
 /**
  *
@@ -36,7 +38,7 @@ public class MainMenuView {
    
     public void displayMainMenuView() {
         System.out.println(menu);
-       
+        
     }    
         
     
@@ -53,13 +55,14 @@ public class MainMenuView {
             value = keyboard.nextLine(); //get next line typed on keyboard
             value = value.trim(); //trim off leading and trailing blanks
             
-            if (value.length() < 1 && value.length() > 1){ //value is incorrect
-                System.out.println("\nInvalid value. The value is incorrect.");
+            if (value.length() < 1){ //value is blank
+                System.out.println("\nInvalid value. The value cannot be blank.");
                 continue;
             }
             
             break; //end the loop
         }
+        
         return value; //return the value entered
     }
     
@@ -90,7 +93,17 @@ public class MainMenuView {
 
     }
         private void startNewGame() {
-            System.out.println("*** startNewGame function called ***");
+            //create a new game
+            GameControl.createNewGame(ReturnToRexburg1.getPlayer());
+            
+            //create a new game
+            GameControl.createNewGame(ReturnToRexburg1.getPlayer());
+
+            //display the game menu
+            GameMenuView gameMenu = new GameMenuView();
+            gameMenu.displayMenu();
+            
+            
         }
 
         private void restoreExistingGame() {
@@ -106,40 +119,3 @@ public class MainMenuView {
         }
 
 }
-
-/*  
-
-
-
-
--------------------------------------------------------------------------------
-
-Implement the STUB FUNCTIONS (p. 46)
-
--------------------------------------------------------------------------------
-
-private void startNewGame() {
-    //create a new game
-    GameControl.createNewGame(ReturnToRexburg1.getPlayer());
-
-    //display the game menu
-    GameMenuView gameMenu = new GameMenuView();
-    gameMenu.displayMenu();
-
-}
-
-private void restoreExistingGame() {
-    System.out.println("*** restoreExistingGame function called ***");
-}
-
-private void displayHelpMenu() {
-    System.out.println("*** displayHelpMenu function called ***");
-}
-
-private void saveGame() {
-    System.out.println("*** saveGame function called ***");
-}
-
--------------------------------------------------------------------------------
-
-*/

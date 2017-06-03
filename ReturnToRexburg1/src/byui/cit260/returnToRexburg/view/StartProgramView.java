@@ -116,10 +116,10 @@ public class StartProgramView {
  private void displayNextView(Player player) {
         
         //display a custom welcome message
-        System.out.println("n==========================================="
-                        + "/n Welcome to the game " +  player.getName()
-                        + "/n We hope you have fun playing the game!"
-                        + "/n==========================================="
+        System.out.println("\n==========================================="
+                        + "\n Welcome to the game, " +  player.getName()
+                        + "\n We hope you have fun playing the game!"
+                        + "\n==========================================="
                         );
         
         //Create MainMenuView object

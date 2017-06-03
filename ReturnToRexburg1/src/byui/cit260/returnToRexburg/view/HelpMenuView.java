@@ -5,13 +5,108 @@
  */
 package byui.cit260.returnToRexburg.view;
 
+import byui.cit260.returnToRexburg.control.GameControl;
+import java.util.Scanner;
+import returntorexburg1.ReturnToRexburg1;
+
 /**
  *
  * @author douglasarbon1
  */
 public class HelpMenuView {
     
+    //class instance variable
+    private String menu;
+
+    //default constructor initialized with text to be displayed
+    public HelpMenuView() {
+        this.menu = "\n"
+                  + "\n---------------------------------------------"
+                  + "\n| Help Menu                                 |"
+                  + "\n---------------------------------------------"
+                  + "\nG - The goal of the game"
+                  + "\nM - How to move"
+                  + "\nF - View fuel level"
+                  + "\nM - Return to main menu"
+                  + "\n---------------------------------------------";
+               
+    }
+    
+   
+    public void displayHelpMenuView() {
+        System.out.println(menu);
+       
+    }    
+    
+
+    private String getMenuOption() {
+        
+        Scanner keyboard = new Scanner(System.in); //get infile for keyboard
+        String value = ""; //value to be returned
+        boolean valid = false; //initialize to not valid
+        
+        while (!valid) { //loop while an invalid value is entered
+            //System.out.println("\n" + this.promptMessage);
+            
+            value = keyboard.nextLine(); //get next line typed on keyboard
+            value = value.trim(); //trim off leading and trailing blanks
+            
+            if (value.length() < 1 && value.length() > 1){ //value is incorrect
+                System.out.println("\nInvalid value. The value is incorrect.");
+                continue;
+            }
+            
+            break; //end the loop
+        }
+        return value; //return the value entered
+    }
+    
+
+    public boolean doAction(String choice) {
+
+    choice = choice.toUpperCase(); //convert choice to uppercase
+
+    switch (choice) {
+        case "G": //goal of the game
+            this.viewGoalOfGame();
+            break;
+        case "L": //how to move
+            this.viewHowToMove();
+            break;
+        case "F": //display current fuel level
+            this.viewFuelLevel();
+            break;
+        case "M": //returns player to Main Menu
+            this.returnToMainMenu();
+            break;
+        default:
+            System.out.println("\n*** Invalid selection. *** Please, try again!");
+            break;
+    }       
+
+        return false;
+
+    }
+
+    
+        private void viewGoalOfGame() {
+        System.out.println("*** viewGoalOfGame function called ***");
+        }
+
+        private void viewHowToMove() {
+        System.out.println("*** viewHowToMove function called ***");
+        }
+
+        private void viewFuelLevel() {
+        System.out.println("*** viewFuelLevel function called ***");
+        }
+
+        private void returnToMainMenu() {
+        System.out.println("*** returnToMainMenu function called ***");
+    }
+
 }
+
 
 
 /* 
