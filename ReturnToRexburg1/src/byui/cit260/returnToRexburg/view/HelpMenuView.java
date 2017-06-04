@@ -21,7 +21,7 @@ import returntorexburg1.ReturnToRexburg1;
 public class HelpMenuView {
     
     //class instance variable
-    private String menu;
+    String menu;
 
     //default constructor initialized with text to be displayed
     public HelpMenuView() {
@@ -38,9 +38,29 @@ public class HelpMenuView {
     }
     
    
+    void displayMenu() {
+        System.out.println(menu);
+    }
+
+    
+    
     public void displayHelpMenuView() {
+        
         System.out.println(menu);
        
+        boolean done = false; //set flag to not done
+        do {
+            
+            String menuOption = this.getMenuOption();
+            if (menuOption.toUpperCase().equals ("Q")) //user wants to quit
+                return; //exit the game
+        
+            //do requested action and display next view
+            done = this.doAction(menuOption);
+       
+        } while (!done);
+        
+        
     }    
     
 
@@ -56,7 +76,7 @@ public class HelpMenuView {
             value = keyboard.nextLine(); //get next line typed on keyboard
             value = value.trim(); //trim off leading and trailing blanks
             
-            if (value.length() < 1 && value.length() > 1){ //value is incorrect
+            if (value.length() < 1 ){ //value is incorrect
                 System.out.println("\nInvalid value. The value is incorrect.");
                 continue;
             }
@@ -95,11 +115,12 @@ public class HelpMenuView {
 
     
         private void viewGoalOfGame() {
-        System.out.println("*** viewGoalOfGame function called ***");
+            HelpMenuView goalOfGame = new HelpMenuView();
+            goalOfGame.displayMenu();
         }
 
         private void viewHowToMove() {
-        System.out.println("*** viewHowToMove function called ***");
+        System.out.println("Select the letter L to move to a new location");
         }
 
         private void viewFuelLevel() {
@@ -110,6 +131,8 @@ public class HelpMenuView {
         System.out.println("*** returnToMainMenu function called ***");
     }
 
+      
+        
 }
 
 

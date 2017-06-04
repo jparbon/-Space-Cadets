@@ -6,6 +6,7 @@
 package byui.cit260.returnToRexburg.view;
 
 import byui.cit260.returnToRexburg.control.GameControl;
+import byui.cit260.returnToRexburg.view.GameMenuView;
 import java.util.Scanner;
 import returntorexburg1.ReturnToRexburg1;
 
@@ -43,7 +44,7 @@ public class MainMenuView {
         
         boolean done = false; //set flag to not done
         do {
-            //prompt for and get playersName
+            
             String menuOption = this.getMenuOption();
             if (menuOption.toUpperCase().equals ("Q")) //user wants to quit
                 return; //exit the game
@@ -109,28 +110,33 @@ public class MainMenuView {
             //create a new game
             GameControl.createNewGame(ReturnToRexburg1.getPlayer());
             
-            //create a new game
-            GameControl.createNewGame(ReturnToRexburg1.getPlayer());
-
             //display the game menu
             GameMenuView gameMenu = new GameMenuView();
-            gameMenu.displayMenu();
-            
+            gameMenu.displayMenu();    
             
         }
 
         private void restoreExistingGame() {
-            System.out.println("*** restoreExistingGame function called ***");
+            System.out.println("So you want to keep playing the game?");
         }
 
         private void displayHelpMenu() {
-            System.out.println("*** displayHelpMenu function called ***");
+           
+          
+            HelpMenuView helpMenu = new HelpMenuView();
+            helpMenu.displayMenu();
+            
         }
 
         private void saveGame() {
-            System.out.println("*** saveGame function called ***");
+            
+            GameMenuView saveGame = new GameMenuView();
+            saveGame.displayMenu();
         }
 
+    
+
+  
     
     }
 
