@@ -98,6 +98,8 @@ public class MainMenuView {
             case "S": //save the current game
                 this.saveGame();
                 break;
+            case "Q": //Quits the game
+                this.quitGame();
             default:
                 System.out.println("\n*** Invalid selection. *** Please, try again!");
                 break;
@@ -141,6 +143,10 @@ public class MainMenuView {
            // GameMenuView saveGame = new GameMenuView();
            // saveGame.displayMenu();
         //}
+
+    private void quitGame() {
+        System.out.println("\nQuit Game");
+    }
 
     
     
