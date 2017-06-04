@@ -21,7 +21,7 @@ import returntorexburg1.ReturnToRexburg1;
 public class HelpMenuView {
     
     //class instance variable
-    String menu;
+    private String menu;
 
     //default constructor initialized with text to be displayed
     public HelpMenuView() {
@@ -30,7 +30,7 @@ public class HelpMenuView {
                   + "\n| Help Menu                                 |"
                   + "\n---------------------------------------------"
                   + "\nG - The goal of the game"
-                  + "\nM - How to move"
+                  + "\nL - How to move"
                   + "\nF - View fuel level"
                   + "\nM - Return to main menu"
                   + "\n---------------------------------------------";
@@ -68,7 +68,7 @@ public class HelpMenuView {
         
         Scanner keyboard = new Scanner(System.in); //get infile for keyboard
         String value = ""; //value to be returned
-        boolean valid = false; //initialize to not valid
+        boolean valid = true; //initialize to not valid
         
         while (!valid) { //loop while an invalid value is entered
             //System.out.println("\n" + this.promptMessage);
@@ -115,8 +115,10 @@ public class HelpMenuView {
 
     
         private void viewGoalOfGame() {
-            HelpMenuView goalOfGame = new HelpMenuView();
-            goalOfGame.displayMenu();
+            
+            HelpMenuView goal = new HelpMenuView();
+            goal.displayMenu();
+          
         }
 
         private void viewHowToMove() {
@@ -146,7 +148,7 @@ on your way back to Earth. Along the way, you will encounter alien creatures,
 who will try to thwart your efforts. In order to win the game, you will need to
 return safely on Earth, back in your hometown of Rexburg, Idaho.
 	
-M - How to Move
+L - How to Move
 You will be provided with a map of possible destinations, and will be prompted 
 to select your next location. If you have enough fuel, you will be able to 
 travel to the next location and will be one step closer to home! 
@@ -159,82 +161,5 @@ you will not be able to travel and will have to try to acquire more fuel to
 continue your journey. 
  
 M - Main Menu
-Return to the Main Menu.
-private String menu;
-    public HelpMenuView() {
-        this.menu = "\n"
-                  + "\n---------------------------------------------"
-                  + "\n| Help Menu                                 |"
-                  + "\n---------------------------------------------"
-                  + "\nG - The goal of the game"
-                  + "\nM - How to move"
-                  + "\nF - View fuel level"
-                  + "\nM - Return to main menu"
-                  + "\n---------------------------------------------";
-               
-    }
-    
-    
-    public void displayHelpMenuView() {
-        System.out.println("/n*** displayMenu() function called ***");
-    }
-public boolean doAction(String choice) {
-    choice = choice.toUpperCase(); //convert choice to uppercase
-    switch (choice) {
-        case "G": //goal of the game
-            this.viewGoalOfGame();
-            break;
-        case "M": //how to move
-            this.viewHowToMove();
-            break;
-        case "F": //display current fuel level
-            this.viewFuelLevel();
-            break;
-        case "M": //returns player to Main Menu
-            this.returnToMainMenu();
-            break;
-        default:
-            System.out.println("\n*** Invalid selection. *** Please, try again!");
-            break;
-    }       
-    return false;
-}
--------------------------------------------------------------------------------
-STUB FUNCTIONS: 
--------------------------------------------------------------------------------
-private void viewGoalOfGame() {
-    System.out.println("*** viewGoalOfGame function called ***");
-}
-private void viewHowToMove() {
-    System.out.println("*** viewHowToMove function called ***");
-}
-private void viewFuelLevel() {
-    System.out.println("*** viewFuelLevel function called ***");
-}
-private void returnToMainMenu() {
-    System.out.println("*** returnToMainMenu function called ***");
-}
--------------------------------------------------------------------------------
-Implement the STUB FUNCTIONS: 
--------------------------------------------------------------------------------
-private void viewGoalOfGame() {
-    //create a new game
-    GameControl.viewGoalOfGame(????);
-    //display the help menu
-    HelpMenuView helpMenu = new HelpMenuView();
-    helpMenu.displayMenu();
-}
-private void viewHowToMove() {
-    System.out.println("*** viewHowToMove function called ***");
-}
-private void viewFuelLevel() {
-    System.out.println("*** viewFuelLevel function called ***");
-}
-private void returnToMainMenu() {
-    System.out.println("*** returnToMainMenu function called ***");
-}
--------------------------------------------------------------------------------
-*/
-
-   
-
+Return to the Main Menu.  
+   */
