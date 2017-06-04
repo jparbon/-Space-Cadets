@@ -5,6 +5,11 @@
  */
 package byui.cit260.returnToRexburg.view;
 
+/**
+ *
+ * @author douglasarbon1
+ */
+
 import byui.cit260.returnToRexburg.control.GameControl;
 import java.util.Scanner;
 import returntorexburg1.ReturnToRexburg1;
@@ -110,11 +115,6 @@ public class HelpMenuView {
 
 
 /* 
-
-
-
-
-
 G - What is the goal of the game?
 The goal of the game is to return to Earth safely by navigating your way through 
 space. When you land on a new planet or moon, you will be able to gather more 
@@ -137,10 +137,7 @@ continue your journey.
  
 M - Main Menu
 Return to the Main Menu.
-
-
 private String menu;
-
     public HelpMenuView() {
         this.menu = "\n"
                   + "\n---------------------------------------------"
@@ -158,12 +155,8 @@ private String menu;
     public void displayHelpMenuView() {
         System.out.println("/n*** displayMenu() function called ***");
     }
-
-
 public boolean doAction(String choice) {
-
     choice = choice.toUpperCase(); //convert choice to uppercase
-
     switch (choice) {
         case "G": //goal of the game
             this.viewGoalOfGame();
@@ -181,63 +174,44 @@ public boolean doAction(String choice) {
             System.out.println("\n*** Invalid selection. *** Please, try again!");
             break;
     }       
-
     return false;
-
 }
-
 -------------------------------------------------------------------------------
-
 STUB FUNCTIONS: 
-
 -------------------------------------------------------------------------------
-
 private void viewGoalOfGame() {
     System.out.println("*** viewGoalOfGame function called ***");
 }
-
 private void viewHowToMove() {
     System.out.println("*** viewHowToMove function called ***");
 }
-
 private void viewFuelLevel() {
     System.out.println("*** viewFuelLevel function called ***");
 }
-
 private void returnToMainMenu() {
     System.out.println("*** returnToMainMenu function called ***");
 }
-
-
 -------------------------------------------------------------------------------
-
 Implement the STUB FUNCTIONS: 
-
 -------------------------------------------------------------------------------
-
 private void viewGoalOfGame() {
     //create a new game
     GameControl.viewGoalOfGame(????);
-
     //display the help menu
     HelpMenuView helpMenu = new HelpMenuView();
     helpMenu.displayMenu();
-
 }
-
 private void viewHowToMove() {
     System.out.println("*** viewHowToMove function called ***");
 }
-
 private void viewFuelLevel() {
     System.out.println("*** viewFuelLevel function called ***");
 }
-
 private void returnToMainMenu() {
     System.out.println("*** returnToMainMenu function called ***");
 }
-
 -------------------------------------------------------------------------------
-
-
 */
+
+   
+

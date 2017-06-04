@@ -6,19 +6,20 @@
 package byui.cit260.returnToRexburg.view;
 
 import byui.cit260.returnToRexburg.control.GameControl;
-import byui.cit260.returnToRexburg.model.Player;
 import java.util.Scanner;
 import returntorexburg1.ReturnToRexburg1;
+
 
 /**
  *
  * @author douglasarbon1
  */
 
+
 public class MainMenuView {
     
     //class instance variable
-    private String menu;
+    String menu;
 
     //default constructor initialized with text to be displayed
     public MainMenuView() {
@@ -32,16 +33,28 @@ public class MainMenuView {
                   + "\nS - Save game"
                   + "\nQ - Quit"
                   + "\n---------------------------------------------";
-               
+            
     }
     
-   
+     
     public void displayMainMenuView() {
+        
         System.out.println(menu);
         
+        boolean done = false; //set flag to not done
+        do {
+            //prompt for and get playersName
+            String menuOption = this.getMenuOption();
+            if (menuOption.toUpperCase().equals ("Q")) //user wants to quit
+                return; //exit the game
+        
+            //do requested action and display next view
+            done = this.doAction(menuOption);
+       
+        } while (!done);
+             
     }    
         
-    
 
     private String getMenuOption() {
         
@@ -118,4 +131,9 @@ public class MainMenuView {
             System.out.println("*** saveGame function called ***");
         }
 
-}
+    
+    }
+
+    
+
+

@@ -7,6 +7,7 @@ package byui.cit260.returnToRexburg.view;
 
 import byui.cit260.returnToRexburg.control.GameControl;
 import byui.cit260.returnToRexburg.model.Player;
+import static java.awt.SystemColor.menu;
 import java.util.Scanner;
 
 /**
@@ -113,13 +114,14 @@ public class StartProgramView {
         return true; //Success!
     
     }
- private void displayNextView(Player player) {
+ 
+    private void displayNextView(Player player) {
         
         //display a custom welcome message
         System.out.println("\n==========================================="
-                        + "\n Welcome to the game, " +  player.getName()
-                        + "\n We hope you have fun playing the game!"
-                        + "\n==========================================="
+                         + "\n Welcome to the game, " +  player.getName() + "!"
+                         + "\n We hope you have fun playing the game!"
+                         + "\n==========================================="
                         );
         
         //Create MainMenuView object
@@ -127,12 +129,10 @@ public class StartProgramView {
         
         //Display the main menu view
         mainMenuView.displayMainMenuView();
-    
+     
         
     } 
+
   
+    
 }
-   
-    
-    
-    
