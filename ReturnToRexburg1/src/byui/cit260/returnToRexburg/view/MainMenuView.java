@@ -106,33 +106,41 @@ public class MainMenuView {
     return false;
 
     }
-        private void startNewGame() {
+        //private void startNewGame() {
             //create a new game
-            GameControl.createNewGame(ReturnToRexburg1.getPlayer());
+           // GameControl.createNewGame(ReturnToRexburg1.getPlayer());
             
             //display the game menu
-            GameMenuView gameMenu = new GameMenuView();
-            gameMenu.displayMenu();    
+           // GameMenuView gameMenu = new GameMenuView();
+            //gameMenu.displayMenu();    
             
-        }
+        //}
 
+        private void startNewGame() {
+            System.out.println("create and start a new game?");
+        }
+        
         private void restoreExistingGame() {
             System.out.println("So you want to keep playing the game?");
         }
 
+        private void saveGame() {
+            System.out.println("save the current game?");
+        }
+        
         private void displayHelpMenu() {
            
           
             HelpMenuView helpMenu = new HelpMenuView();
-            helpMenu.displayMenu();
+            helpMenu.displayHelpMenuView();
             
         }
 
-        private void saveGame() {
+        //private void saveGame() {
             
-            GameMenuView saveGame = new GameMenuView();
-            saveGame.displayMenu();
-        }
+           // GameMenuView saveGame = new GameMenuView();
+           // saveGame.displayMenu();
+        //}
 
     
     

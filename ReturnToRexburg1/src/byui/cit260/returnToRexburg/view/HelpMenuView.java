@@ -21,7 +21,7 @@ import returntorexburg1.ReturnToRexburg1;
 public class HelpMenuView {
     
     //class instance variable
-    private String menu;
+    String menu;
 
     //default constructor initialized with text to be displayed
     public HelpMenuView() {
@@ -68,7 +68,7 @@ public class HelpMenuView {
         
         Scanner keyboard = new Scanner(System.in); //get infile for keyboard
         String value = ""; //value to be returned
-        boolean valid = true; //initialize to not valid
+        boolean valid = false; //initialize to not valid
         
         while (!valid) { //loop while an invalid value is entered
             //System.out.println("\n" + this.promptMessage);
@@ -114,23 +114,46 @@ public class HelpMenuView {
     }
 
     
-        private void viewGoalOfGame() {
+        //private void viewGoalOfGame() {
             
-            HelpMenuView goal = new HelpMenuView();
-            goal.displayMenu();
+         //   HelpMenuView goal = new HelpMenuView();
+           // goal.displayHelpMenuView();
           
-        }
+        //}
 
+   //private void displayMainMenu() {
+           
+          
+           // MainMenuView mainMenu = new MainMenuView();
+           // mainMenu.displayMainMenuView();
+    //}
+        private void viewGoalOfGame() {
+        System.out.println("The goal of the game is to return to Earth safely by navigating your way through \n" +
+"space. When you land on a new planet or moon, you will be able to gather more \n" +
+"fuel, and determine whether or not you are ready to fly to your next location, \n" +
+"on your way back to Earth. Along the way, you will encounter alien creatures, \n" +
+"who will try to thwart your efforts. In order to win the game, you will need to\n" +
+"return safely on Earth, back in your hometown of Rexburg, Idaho.");
+        }
+        
         private void viewHowToMove() {
-        System.out.println("Select the letter L to move to a new location");
+        System.out.println("You will be provided with a map of possible destinations, and will be prompted \n" +
+"to select your next location. If you have enough fuel, you will be able to \n" +
+"travel to the next location and will be one step closer to home! \n" +
+"If you do not have enough fuel, you will need to gather more fuel.");
         }
 
         private void viewFuelLevel() {
-        System.out.println("*** viewFuelLevel function called ***");
+        System.out.println("Along your way, you should periodically check your fuel percentage to ensure \n" +
+"that you have enough fuel. If your current fuel level is less than 20%, \n" +
+"you will not be able to travel and will have to try to acquire more fuel to \n" +
+"continue your journey.");
         }
 
         private void returnToMainMenu() {
-        System.out.println("*** returnToMainMenu function called ***");
+            MainMenuView mainMenu = new MainMenuView();
+            mainMenu.displayMainMenuView();
+        //System.out.println("*** returnToMainMenu function called ***");
     }
 
       
