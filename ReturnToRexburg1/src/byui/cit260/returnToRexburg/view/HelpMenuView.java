@@ -46,18 +46,20 @@ public class HelpMenuView {
     
     public void displayHelpMenuView() {
         
-        System.out.println(menu);
+        
        
         boolean done = false; //set flag to not done
         do {
             
+            System.out.println(menu);
             String menuOption = this.getMenuOption();
             if (menuOption.toUpperCase().equals ("Q")) //user wants to quit
                 return; //exit the game
         
             //do requested action and display next view
             done = this.doAction(menuOption);
-       
+            
+            
         } while (!done);
         
         
@@ -102,8 +104,7 @@ public class HelpMenuView {
             this.viewFuelLevel();
             break;
         case "M": //returns player to Main Menu
-            this.returnToMainMenu();
-            break;
+            return true; 
         default:
             System.out.println("\n*** Invalid selection. *** Please, try again!");
             break;

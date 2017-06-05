@@ -91,6 +91,7 @@ public class StartProgramView {
         return value; //return the value entered
     }
 
+    
     private boolean doAction(String playersName) {
         
         
@@ -115,6 +116,7 @@ public class StartProgramView {
     
     }
  
+    
     private void displayNextView(Player player) {
         
         //display a custom welcome message

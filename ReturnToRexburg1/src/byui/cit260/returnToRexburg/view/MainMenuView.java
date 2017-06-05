@@ -40,18 +40,19 @@ public class MainMenuView {
      
     public void displayMainMenuView() {
         
-        System.out.println(menu);
+        
         
         boolean done = false; //set flag to not done
         do {
             
+             System.out.println(menu);
             String menuOption = this.getMenuOption();
             if (menuOption.toUpperCase().equals ("Q")) //user wants to quit
                 return; //exit the game
         
             //do requested action and display next view
             done = this.doAction(menuOption);
-       
+           
         } while (!done);
              
     }    
@@ -99,7 +100,7 @@ public class MainMenuView {
                 this.saveGame();
                 break;
             case "Q": //Quits the game
-                this.quitGame();
+                return true;
             default:
                 System.out.println("\n*** Invalid selection. *** Please, try again!");
                 break;
