@@ -30,8 +30,8 @@ public class HelpMenuView {
                   + "\n| Help Menu                                 |"
                   + "\n---------------------------------------------"
                   + "\nG - The goal of the game"
-                  + "\nL - How to move"
-                  + "\nF - View fuel level"
+                  + "\nL - How to move through space"
+                  + "\nF - View fuel percentage"
                   + "\nM - Return to main menu"
                   + "\n---------------------------------------------";
                
@@ -115,75 +115,62 @@ public class HelpMenuView {
     }
 
     
-        //private void viewGoalOfGame() {
-            
-         //   HelpMenuView goal = new HelpMenuView();
-           // goal.displayHelpMenuView();
-          
-        //}
-
-   //private void displayMainMenu() {
-           
-          
-           // MainMenuView mainMenu = new MainMenuView();
-           // mainMenu.displayMainMenuView();
-    //}
+  
         private void viewGoalOfGame() {
-        System.out.println("The goal of the game is to return to Earth safely by navigating your way through \n" +
-"space. When you land on a new planet or moon, you will be able to gather more \n" +
-"fuel, and determine whether or not you are ready to fly to your next location, \n" +
-"on your way back to Earth. Along the way, you will encounter alien creatures, \n" +
-"who will try to thwart your efforts. In order to win the game, you will need to\n" +
-"return safely on Earth, back in your hometown of Rexburg, Idaho.");
+        System.out.println(
+              "\n**************************************************************"   
+            + "\n The goal of the game is to return to Earth safely"
+            + "\n by navigating your way through space. When you land on a new" 
+            + "\n planet or moon, you will be able to gather more fuel, and" 
+            + "\n should check to see if you have enough fuel to travel to another"
+            + "\n location. You will also be given questions to answer, and when"
+            + "\n you answer the question correctly, you will be awarded a"
+            + "\n trophy, which will be added to your collection. You can"
+            + "\n either use your trophies to exchange for fuel, or keep them"
+            + "\n to show off to your friends back in Rexburg!" 
+            + "\n"          
+            + "\n In order to win the game, you will need to gather enough fuel" 
+            + "\n to fly back to Earth, and safely land in Rexburg, Idaho."
+            + "\n*************************************************************"
+            );
         }
         
         private void viewHowToMove() {
-        System.out.println("You will be provided with a map of possible destinations, and will be prompted \n" +
-"to select your next location. If you have enough fuel, you will be able to \n" +
-"travel to the next location and will be one step closer to home! \n" +
-"If you do not have enough fuel, you will need to gather more fuel.");
+        System.out.println(
+              "\n**************************************************************"  
+            + "\n You will be provided with a map of possible "
+            + "\n destinations, and will be prompted to select your next" 
+            + "\n location. If you have enough fuel, you will be able to travel" 
+            + "\n to another location and will be one step closer to home!"
+            + "\n"          
+            + "\n If you do not have enough fuel, you will need to drill for"
+            + "\n more fuel to fly your spaceship."
+            + "\n**************************************************************"      
+            );
         }
 
         private void viewFuelLevel() {
-        System.out.println("Along your way, you should periodically check your fuel percentage to ensure \n" +
-"that you have enough fuel. If your current fuel level is less than 20%, \n" +
-"you will not be able to travel and will have to try to acquire more fuel to \n" +
-"continue your journey.");
+        System.out.println(
+              "\n**************************************************************"    
+            + "\n While you journey through space, you should "
+            + "\n periodically check your fuel percentage to ensure that you" 
+            + "\n have enough fuel to travel to your next destination. "
+            + "\n"
+            + "\n If your current fuel level is less than 20%," 
+            + "\n you will not be able to travel and you will have to !"
+            + "\n either drill for more fuel, or answer a question correctly"
+            + "\n to have the chance to earn more fuel."
+            + "\n**************************************************************"
+            );    
         }
+        
 
         private void returnToMainMenu() {
             MainMenuView mainMenu = new MainMenuView();
             mainMenu.displayMainMenuView();
-        //System.out.println("*** returnToMainMenu function called ***");
+        
     }
-
-      
+     
         
 }
 
-
-
-/* 
-G - What is the goal of the game?
-The goal of the game is to return to Earth safely by navigating your way through 
-space. When you land on a new planet or moon, you will be able to gather more 
-fuel, and determine whether or not you are ready to fly to your next location, 
-on your way back to Earth. Along the way, you will encounter alien creatures, 
-who will try to thwart your efforts. In order to win the game, you will need to
-return safely on Earth, back in your hometown of Rexburg, Idaho.
-	
-L - How to Move
-You will be provided with a map of possible destinations, and will be prompted 
-to select your next location. If you have enough fuel, you will be able to 
-travel to the next location and will be one step closer to home! 
-If you do not have enough fuel, you will need to gather more fuel.
- 
-F - View Fuel Level
-Along your way, you should periodically check your fuel percentage to ensure 
-that you have enough fuel. If your current fuel level is less than 20%, 
-you will not be able to travel and will have to try to acquire more fuel to 
-continue your journey. 
- 
-M - Main Menu
-Return to the Main Menu.  
-   */

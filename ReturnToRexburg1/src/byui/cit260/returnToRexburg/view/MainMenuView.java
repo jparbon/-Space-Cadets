@@ -5,10 +5,10 @@
  */
 package byui.cit260.returnToRexburg.view;
 
-import byui.cit260.returnToRexburg.control.GameControl;
-import byui.cit260.returnToRexburg.view.GameMenuView;
+
+
 import java.util.Scanner;
-import returntorexburg1.ReturnToRexburg1;
+
 
 
 /**
@@ -45,7 +45,7 @@ public class MainMenuView {
         boolean done = false; //set flag to not done
         do {
             
-             System.out.println(menu);
+            System.out.println(menu);
             String menuOption = this.getMenuOption();
             if (menuOption.toUpperCase().equals ("Q")) //user wants to quit
                 return; //exit the game
