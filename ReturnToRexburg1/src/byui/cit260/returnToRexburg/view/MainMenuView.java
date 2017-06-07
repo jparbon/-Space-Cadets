@@ -29,7 +29,7 @@ public class MainMenuView {
                   + "\n| Main Menu                                 |"
                   + "\n---------------------------------------------"
                   + "\nN - Start new game"
-                  + "\nN - Alien menu"
+                  + "\nA - Alien menu"
                   + "\nR - Restore existing game"
                   + "\nH - Get help on how to play the game"
                   + "\nS - Save game"

@@ -87,6 +87,7 @@ public class AlienMenuView {
             this.viewPassbyalien();
             break;
         case "A": //Answer question
+            this.EncounterAlienView();
             break;
         case "M": //returns player to Main Menu
             return true; 
@@ -105,27 +106,17 @@ public class AlienMenuView {
         System.out.println(
               "\n**************************************************************"   
             + "\n You have passed by the alien safely"
-            + "\n*************************************************************"
+            + "\n**************************************************************"
             );
         }
         
-private static void displayEncounterAlienView() {
-            //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        private void EncounterAlienView() {
+           
+          
+            EncounterAlienView encounterAlien = new EncounterAlienView();
+            encounterAlien.displayEncounterAlienView();
+            
         }
         
-        //private void viewAnswerQuestion() {
-        //System.out.println(
-             // "\n**************************************************************"  
-            //+ "\n You will be provided with a map of possible "
-            //+ "\n**************************************************************"      
-           // );
-        
-
-        //private void returnToMainMenu() {
-         //   MainMenuView mainMenu = new MainMenuView();
-         //   mainMenu.displayMainMenuView();
-
-    //void displayAlineMenuView() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 }
-    
+        
