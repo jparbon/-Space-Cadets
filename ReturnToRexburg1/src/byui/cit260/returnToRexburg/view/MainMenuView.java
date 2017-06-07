@@ -29,6 +29,7 @@ public class MainMenuView {
                   + "\n| Main Menu                                 |"
                   + "\n---------------------------------------------"
                   + "\nN - Start new game"
+                  + "\nN - Alien menu"
                   + "\nR - Restore existing game"
                   + "\nH - Get help on how to play the game"
                   + "\nS - Save game"
@@ -90,6 +91,9 @@ public class MainMenuView {
             case "N": //create and start a new game
                 this.startNewGame();
                 break;
+            case "A": //display alien menu
+                this.AlienMenuView();
+                break;
             case "R": //get and start an existing game
                 this.restoreExistingGame();
                 break;
@@ -109,19 +113,12 @@ public class MainMenuView {
     return false;
 
     }
-        //private void startNewGame() {
-            //create a new game
-           // GameControl.createNewGame(ReturnToRexburg1.getPlayer());
-            
-            //display the game menu
-           // GameMenuView gameMenu = new GameMenuView();
-            //gameMenu.displayMenu();    
-            
-        //}
+    
 
         private void startNewGame() {
             System.out.println("create and start a new game?");
         }
+        
         
         private void restoreExistingGame() {
             System.out.println("So you want to keep playing the game?");
@@ -139,19 +136,25 @@ public class MainMenuView {
             
         }
 
-        //private void saveGame() {
-            
-           // GameMenuView saveGame = new GameMenuView();
-           // saveGame.displayMenu();
-        //}
-
-    private void quitGame() {
-        System.out.println("\nQuit Game");
+        private void AlienMenuView() {
+           
+          
+            AlienMenuView alienMenuView = new AlienMenuView();
+            alienMenuView.displayAlienMenuView();
+        
     }
 
-    
-    
+    private static class alienMenuView {
+
+        private static void displayAlienMenuView() {
+            //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        public alienMenuView() {
+        }
     }
+  
+}
 
     
 
