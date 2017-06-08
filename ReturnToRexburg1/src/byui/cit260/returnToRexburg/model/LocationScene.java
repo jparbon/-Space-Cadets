@@ -17,31 +17,20 @@ import java.util.Objects;
 public class LocationScene extends RegularSceneType implements Serializable {
  
     //class instance variables
-    private String name;
-    private String mapLocation;
+    private String locationName;
     private int surfaceHardness;
     private int planetDepth;
-    private String alienSpecies;
-    
+
     //constructor
     public LocationScene() {
     }
 
-    //getters and setters
-    public String getName() {
-        return name;
+    public String getLocationName() {
+        return locationName;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getMapLocation() {
-        return mapLocation;
-    }
-
-    public void setMapLocation(String mapLocation) {
-        this.mapLocation = mapLocation;
+    public void setLocationName(String locationName) {
+        this.locationName = locationName;
     }
 
     public int getSurfaceHardness() {
@@ -60,22 +49,12 @@ public class LocationScene extends RegularSceneType implements Serializable {
         this.planetDepth = planetDepth;
     }
 
-    public String getAlienSpecies() {
-        return alienSpecies;
-    }
-
-    public void setAlienSpecies(String alienSpecies) {
-        this.alienSpecies = alienSpecies;
-    }
-
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 89 * hash + Objects.hashCode(this.name);
-        hash = 89 * hash + Objects.hashCode(this.mapLocation);
-        hash = 89 * hash + this.surfaceHardness;
-        hash = 89 * hash + this.planetDepth;
-        hash = 89 * hash + Objects.hashCode(this.alienSpecies);
+        int hash = 7;
+        hash = 23 * hash + Objects.hashCode(this.locationName);
+        hash = 23 * hash + this.surfaceHardness;
+        hash = 23 * hash + this.planetDepth;
         return hash;
     }
 
@@ -84,14 +63,9 @@ public class LocationScene extends RegularSceneType implements Serializable {
         if (this == obj) {
             return true;
         }
-         //parent class can check
-        if (super.equals(obj) == false){
-            return false;    
+        if (obj == null) {
+            return false;
         }
-        //if (obj == null) {
-        //    return false;
-        //}
-       
         if (getClass() != obj.getClass()) {
             return false;
         }
@@ -102,13 +76,7 @@ public class LocationScene extends RegularSceneType implements Serializable {
         if (this.planetDepth != other.planetDepth) {
             return false;
         }
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        if (!Objects.equals(this.mapLocation, other.mapLocation)) {
-            return false;
-        }
-        if (!Objects.equals(this.alienSpecies, other.alienSpecies)) {
+        if (!Objects.equals(this.locationName, other.locationName)) {
             return false;
         }
         return true;
@@ -116,9 +84,11 @@ public class LocationScene extends RegularSceneType implements Serializable {
 
     @Override
     public String toString() {
-        return "LocationScene{" + "name=" + name + ", mapLocation=" + mapLocation + ", surfaceHardness=" + surfaceHardness + ", planetDepth=" + planetDepth + ", alienSpecies=" + alienSpecies + '}';
+        return "LocationScene{" + "locationName=" + locationName + ", surfaceHardness=" + surfaceHardness + ", planetDepth=" + planetDepth + '}';
     }
- 
+
+    
+    
 }
 
 

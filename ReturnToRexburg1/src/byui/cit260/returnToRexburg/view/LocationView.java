@@ -112,10 +112,8 @@ public class LocationView {
         }
         
         private void viewDrillForFuel() {
-            System.out.println("\n This calls drill for fuel view.");
-
-            //DrillForFuelView drillForFuel = new DrillForFuelView();
-            //drillForFuel.displayDrillForFuelView();
+            DrillForFuelView drillForFuel = new DrillForFuelView();
+            drillForFuel.displayDrillForFuelView();
         }
 
         private void viewFuelLevel() {
