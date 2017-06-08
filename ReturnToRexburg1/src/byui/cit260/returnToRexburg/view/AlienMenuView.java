@@ -24,9 +24,9 @@ public class AlienMenuView {
                   + "\n---------------------------------------------"
                   + "\n| Alien Menu                                 |"
                   + "\n---------------------------------------------"
-                  + "\nP - Pass by alien"
+                  + "\nP - Pass by Alien"
                   + "\nA - Answer Question"
-                  + "\nM - Main Menu"
+                  + "\nM - Return to Game Menu"
                   + "\n---------------------------------------------";
                
     }
@@ -89,7 +89,7 @@ public class AlienMenuView {
         case "A": //Answer question
             this.EncounterAlienView();
             break;
-        case "M": //returns player to Main Menu
+        case "M": //returns player to Game Menu
             return true; 
         default:
             System.out.println("\n*** Invalid selection. *** Please, try again!");

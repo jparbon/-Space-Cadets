@@ -28,11 +28,11 @@ public class MainMenuView {
                   + "\n---------------------------------------------"
                   + "\n| Main Menu                                 |"
                   + "\n---------------------------------------------"
-                  + "\nN - Start new game"
-                  + "\nA - Alien menu"
-                  + "\nR - Restore existing game"
-                  + "\nH - Get help on how to play the game"
-                  + "\nS - Save game"
+                  + "\nN - Start New Game"
+                  + "\nG - Game Menu"
+                  + "\nR - Restore Existing Game"
+                  + "\nH - Help on How to Play the Game"
+                  + "\nS - Save Game"
                   + "\nQ - Quit"
                   + "\n---------------------------------------------";
             
@@ -91,19 +91,19 @@ public class MainMenuView {
             case "N": //create and start a new game
                 this.startNewGame();
                 break;
-            case "A": //display alien menu
-                this.AlienMenuView();
+            case "G": //display game menu
+                this.GameMenuView();
                 break;
             case "R": //get and start an existing game
                 this.restoreExistingGame();
                 break;
-            case "H": //display Help Menu
+            case "H": //display help menu
                 this.displayHelpMenu();
                 break;
             case "S": //save the current game
                 this.saveGame();
                 break;
-            case "Q": //Quits the game
+            case "Q": //quits the game
                 return true;
             default:
                 System.out.println("\n*** Invalid selection. *** Please, try again!");
@@ -136,25 +136,26 @@ public class MainMenuView {
             
         }
 
-        private void AlienMenuView() {
+        private void GameMenuView() {
            
           
-            AlienMenuView alienMenuView = new AlienMenuView();
-            alienMenuView.displayAlienMenuView();
+            GameMenuView gameMenuView = new GameMenuView();
+            gameMenuView.displayGameMenuView();
         
     }
 
-    private static class alienMenuView {
-
-        private static void displayAlienMenuView() {
-            //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        public alienMenuView() {
-        }
+    //private void GameMenuView() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-  
-}
+
+    //private static class alienMenuView {
+
+        //private static void displayAlienMenuView() {
+            //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //}
+
+        //public alienMenuView() {
+        //}
 
     
 

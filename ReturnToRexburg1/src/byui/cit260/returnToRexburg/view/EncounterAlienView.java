@@ -25,7 +25,7 @@ public class EncounterAlienView {
                   + "\n---------------------------------------------"
                   + "\nT - True"
                   + "\nF - False"
-                  + "\nM - Alien Menu"
+                  + "\nM - Return to Alien Menu"
                   + "\n---------------------------------------------";
                
     }
@@ -87,7 +87,7 @@ public class EncounterAlienView {
         case "F": //False
             this.checkAnswer(false);
             break;
-        case "M": //returns player to Main Menu
+        case "M": //returns player to Alien Menu
             return true; 
         default:
             System.out.println("\n*** Invalid selection. *** Please, try again!");

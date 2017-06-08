@@ -29,10 +29,10 @@ public class HelpMenuView {
                   + "\n---------------------------------------------"
                   + "\n| Help Menu                                 |"
                   + "\n---------------------------------------------"
-                  + "\nG - The goal of the game"
-                  + "\nL - How to move through space"
-                  + "\nF - View fuel percentage"
-                  + "\nM - Return to main menu"
+                  + "\nG - The Goal of the Game"
+                  + "\nL - How to Move Through Space"
+                  + "\nF - View Fuel Percentage"
+                  + "\nM - Return to Main Menu"
                   + "\n---------------------------------------------";
                
     }
