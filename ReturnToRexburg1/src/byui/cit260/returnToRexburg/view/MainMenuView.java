@@ -5,88 +5,77 @@
  */
 package byui.cit260.returnToRexburg.view;
 
-
-
 import java.util.Scanner;
-
-
 
 /**
  *
  * @author douglasarbon1
  */
-
-
 public class MainMenuView {
-    
+
     //class instance variable
     String menu;
 
     //default constructor initialized with text to be displayed
     public MainMenuView() {
         this.menu = "\n"
-                  + "\n---------------------------------------------"
-                  + "\n| Main Menu                                 |"
-                  + "\n---------------------------------------------"
-                  + "\nN - Start New Game"
-                  + "\nG - Game Menu"
-                  + "\nR - Restore Existing Game"
-                  + "\nH - Help on How to Play the Game"
-                  + "\nS - Save Game"
-                  + "\nQ - Quit"
-                  + "\n---------------------------------------------";
-            
+                + "\n---------------------------------------------"
+                + "\n| Main Menu                                 |"
+                + "\n---------------------------------------------"
+                + "\nN - Start New Game"
+                + "\nG - Game Menu"
+                + "\nR - Restore Existing Game"
+                + "\nH - Help on How to Play the Game"
+                + "\nS - Save Game"
+                + "\nQ - Quit"
+                + "\n---------------------------------------------";
     }
-    
-     
+
     public void displayMainMenuView() {
-        
-        
-        
+
         boolean done = false; //set flag to not done
         do {
-            
+
             System.out.println(menu);
             String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals ("Q")) //user wants to quit
+            if (menuOption.toUpperCase().equals("Q")) //user wants to quit
+            {
                 return; //exit the game
-        
+            }
             //do requested action and display next view
             done = this.doAction(menuOption);
-           
+
         } while (!done);
-             
-    }    
-        
+
+    }
 
     private String getMenuOption() {
-        
+
         Scanner keyboard = new Scanner(System.in); //get infile for keyboard
         String value = ""; //value to be returned
         boolean valid = false; //initialize to not valid
-        
+
         while (!valid) { //loop while an invalid value is entered
             //System.out.println("\n" + this.promptMessage);
-            
+
             value = keyboard.nextLine(); //get next line typed on keyboard
             value = value.trim(); //trim off leading and trailing blanks
-            
-            if (value.length() < 1){ //value is blank
+
+            if (value.length() < 1) { //value is blank
                 System.out.println("\nInvalid value. The value cannot be blank.");
                 continue;
             }
-            
+
             break; //end the loop
         }
-        
+
         return value; //return the value entered
     }
-    
 
     private boolean doAction(String choice) {
-        
+
         choice = choice.toUpperCase(); //convert choice to uppercase
-        
+
         switch (choice) {
             case "N": //create and start a new game
                 this.startNewGame();
@@ -108,55 +97,46 @@ public class MainMenuView {
             default:
                 System.out.println("\n*** Invalid selection. *** Please, try again!");
                 break;
-    }       
+        }
 
-    return false;
+        return false;
 
     }
-    
 
-        private void startNewGame() {
-            System.out.println("create and start a new game?");
-        }
-        
-        
-        private void restoreExistingGame() {
-            System.out.println("So you want to keep playing the game?");
-        }
+    private void startNewGame() {
+        System.out.println("create and start a new game?");
+    }
 
-        private void saveGame() {
-            System.out.println("save the current game?");
-        }
-        
-        private void displayHelpMenu() {
-           
-          
-            HelpMenuView helpMenu = new HelpMenuView();
-            helpMenu.displayHelpMenuView();
-            
-        }
+    private void restoreExistingGame() {
+        System.out.println("So you want to keep playing the game?");
+    }
 
-        private void GameMenuView() {
-           
-          
-            GameMenuView gameMenuView = new GameMenuView();
-            gameMenuView.displayGameMenuView();
-        
+    private void saveGame() {
+        System.out.println("save the current game?");
+    }
+
+    private void displayHelpMenu() {
+
+        HelpMenuView helpMenu = new HelpMenuView();
+        helpMenu.displayHelpMenuView();
+
+    }
+
+    private void GameMenuView() {
+
+        GameMenuView gameMenuView = new GameMenuView();
+        gameMenuView.displayGameMenuView();
+
     }
 
     //private void GameMenuView() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+}
 
-    //private static class alienMenuView {
-
-        //private static void displayAlienMenuView() {
-            //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        //}
-
-        //public alienMenuView() {
-        //}
-
-    
-
+//private static class alienMenuView {
+//private static void displayAlienMenuView() {
+//throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//}
+//public alienMenuView() {
+//}
 
