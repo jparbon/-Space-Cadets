@@ -54,17 +54,17 @@ public class DrillForFuelView {
 
             //prompt for and get user input as an integer between 1 and 10
             int userInput = getInput();
-            if (userInput >= 11 || userInput < 1) //user enters invalid number
-            {
+            if (userInput >= 11 || userInput < 1){ //user enters invalid number
+            
                 System.out.println("\n Not a valid input. Try again!");
                 continue; //continues prompting for correct input
             }
 
             //do requested action and display next view
             done = this.doAction(userInput);
-
-        } while (!done);
-
+        } 
+        
+        while (!done);
     }
 
     public int getInput() {
