@@ -45,6 +45,7 @@ public class DrillForFuelView {
 
     }
 
+    
     //displays the drill for fuel view
     public void displayDrillForFuelView() {
 
@@ -61,7 +62,7 @@ public class DrillForFuelView {
             }
 
             //do requested action and display next view
-            done = this.doAction(userInput);
+            //done = this.doAction(userInput);
         } 
         
         while (!done);
@@ -88,25 +89,22 @@ public class DrillForFuelView {
 
     }
 
-    private boolean doAction(int userInput) {
+    
+    
+    //private boolean doAction(int userInput) {
 
-        //call the gatherFuel() control method
-        ResourceControl resource = new ResourceControl();
-        //resource.gatherFuel(locationName, surfaceHardness, int planetDepth);
+        //create a new resource control instance called resource
+        //ResourceControl resource = new ResourceControl();
+        //call the gatherFuel() method from the ResourceControl class
+        //resource.gatherFuel(int userInput, int locationDepth, int SurfaceHardness, int fuelEarned){
+            
+            //return fuelEarned;
+        
+    }    
 
-        if (userInput == 0) {
-            System.out.println();
-            return false;
-        }
-
-        //display next view
-        this.displayNextView(userInput);
-
-        return true; //success!
-
-    }
-
-    private void displayNextView(int fuelEarned) {
+    
+    /*@Override
+    public void displayFuelEarnedView(int fuelEarned) {
 
         //display the message to the player
         if (fuelEarned >= 1) {
@@ -122,7 +120,9 @@ public class DrillForFuelView {
     //private int nextInt() {
     //    return ResourceControl.userInput;
     //}
-}
+
+*/
+
 
 
 /*

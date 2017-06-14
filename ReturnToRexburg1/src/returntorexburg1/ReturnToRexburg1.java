@@ -11,11 +11,9 @@ import byui.cit260.returnToRexburg.model.Game;
 import byui.cit260.returnToRexburg.model.Player;
 import byui.cit260.returnToRexburg.model.Map;
 import byui.cit260.returnToRexburg.model.Spaceship;
-import byui.cit260.returnToRexburg.model.CombatScene;
 import byui.cit260.returnToRexburg.model.EncounterAlienScene;
 import byui.cit260.returnToRexburg.model.LocationScene;
 import byui.cit260.returnToRexburg.model.RegularSceneType;
-import byui.cit260.returnToRexburg.model.Weapon;
 import byui.cit260.returnToRexburg.view.StartProgramView;
 
 /**
@@ -42,7 +40,7 @@ public class ReturnToRexburg1 {
     
     //create StartProgramView original and display the StartProgramView
     StartProgramView startProgramView = new StartProgramView();
-    startProgramView.displayStartProgramView();
+    startProgramView.display();
             
     
     

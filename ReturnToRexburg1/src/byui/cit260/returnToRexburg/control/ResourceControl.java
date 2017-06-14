@@ -13,7 +13,7 @@ import java.util.Random;
  */
 public class ResourceControl {
 
-    //Random whole number generator (1-20)
+    //Random whole number generator (1-30); seed of 30
     private Random random = new Random();
     
     //this is only for testing

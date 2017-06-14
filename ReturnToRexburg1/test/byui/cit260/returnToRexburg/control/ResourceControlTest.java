@@ -32,16 +32,16 @@ public class ResourceControlTest {
         System.out.println("Test Case #1");
         
         //input values for Test Case #1 
-        int userInput = 10;
+        int userInput = 1;
         int locationDepth = 10;
         int surfaceHardness = 5;
-        int drillPower = 25;
-        int fuelEarned = 15;
+        int drillPower = 26;
+        int fuelEarned = 16;
         int expResult = 0;
         
         //create instance of ResourceControl/ Random class
         ResourceControl instance = new ResourceControl();
-        Random number = new Random(20); //create a new Random object and initialize with seed of 20
+        Random number = new Random(30); //create a new Random object 
      
         //call function to run test
         instance.setRandom(number); //call the setRandom() method on the control class and pass it the Random object created in the test????
@@ -55,11 +55,11 @@ public class ResourceControlTest {
         System.out.println("Test Case #2");
         
         //input values for Test Case #2
-        userInput = 5;
+        userInput = 10;
         locationDepth = 10;
         surfaceHardness = 5;
-        drillPower = 0;
-        fuelEarned = 0;
+        drillPower = 35;
+        fuelEarned = 25;
         expResult = 0;
         
         //call function to run test
@@ -109,11 +109,11 @@ public class ResourceControlTest {
         System.out.println("Test Case #5");
         
         //input values for Test Case #5
-        userInput = 1;
+        userInput = 8;
         locationDepth = 10;
         surfaceHardness = 5;
-        drillPower = 0;
-        fuelEarned = 0;
+        drillPower = 33;
+        fuelEarned = 23;
         expResult = 0;
         
         //call function to run test

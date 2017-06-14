@@ -12,14 +12,12 @@ import java.util.Scanner;
  *
  * @author Robbie
  */
-public class EncounterAlienView {
+public class EncounterAlienView extends View {
 
-    //class instance variable
-    String menu;
 
     //default constructor initialized with text to be displayed
     public EncounterAlienView() {
-        this.menu = "\n"
+        super ( "\n"
                 + "\n---------------------------------------------"
                 + "\n| Alien Trivia                              |"
                 + "\n| Is the sky blue?                          |"
@@ -27,53 +25,15 @@ public class EncounterAlienView {
                 + "\nT - True"
                 + "\nF - False"
                 + "\nM - Return to Alien Menu"
-                + "\n---------------------------------------------";
+                + "\n---------------------------------------------");
 
     }
 
-    void displayMenu() {
-        System.out.println(menu);
-    }
+    //void displayMenu() {
+        //System.out.println(super);
+    //}
 
-    public void displayEncounterAlienView() {
-
-        boolean done = false; //set flag to not done
-        do {
-
-            System.out.println(menu);
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) //user wants to quit
-            {
-                return; //exit the game
-            }
-            //do requested action and display next view
-            done = this.doAction(menuOption);
-
-        } while (!done);
-    }
-
-    private String getMenuOption() {
-
-        Scanner keyboard = new Scanner(System.in); //get infile for keyboard
-        String value = ""; //value to be returned
-        boolean valid = false; //initialize to not valid
-
-        while (!valid) { //loop while an invalid value is entered
-            //System.out.println("\n" + this.promptMessage);
-
-            value = keyboard.nextLine(); //get next line typed on keyboard
-            value = value.trim(); //trim off leading and trailing blanks
-
-            if (value.length() < 1) { //value is incorrect
-                System.out.println("\nInvalid value. The value is incorrect.");
-                continue;
-            }
-
-            break; //end the loop
-        }
-        return value; //return the value entered
-    }
-
+    @Override
     public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); //convert choice to uppercase
@@ -116,7 +76,7 @@ public class EncounterAlienView {
 
     private void returnToMainMenuView() {
         MainMenuView mainMenu = new MainMenuView();
-        mainMenu.displayMainMenuView();
+        mainMenu.display();
     }
 
 }

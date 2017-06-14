@@ -15,14 +15,13 @@ import java.util.Scanner;
  *
  * @author douglasarbon1
  */
-public class LocationView {
+public class LocationView extends View {
 
-    //class instance variable
-    String menu;
+    
 
     //default constructor initialized with text to be displayed
     public LocationView() {
-        this.menu = "\n"
+        super ( "\n"
                 + "\n---------------------------------------------"
                 + "\n| Location Menu                                 |"
                 + "\n---------------------------------------------"
@@ -31,53 +30,15 @@ public class LocationView {
                 + "\nF - View fuel percentage"
                 + "\nT - View trophy count"
                 + "\nM - Return to main menu"
-                + "\n---------------------------------------------";
+                + "\n---------------------------------------------");
     }
 
-    void displayMenu() {
-        System.out.println(menu);
-    }
+    //void displayMenu() {
+    //    System.out.println(menu);
+    //}
 
-    public void displayLocationView() {
-
-        boolean done = false; //set flag to not done
-        do {
-
-            System.out.println(menu);
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) //user wants to quit
-            {
-                return; //exit the game
-            }
-            //do requested action and display next view
-            done = this.doAction(menuOption);
-
-        } while (!done);
-
-    }
-
-    private String getMenuOption() {
-
-        Scanner keyboard = new Scanner(System.in); //get infile for keyboard
-        String value = ""; //value to be returned
-        boolean valid = false; //initialize to not valid
-
-        while (!valid) { //loop while an invalid value is entered
-            //System.out.println("\n" + this.promptMessage);
-
-            value = keyboard.nextLine(); //get next line typed on keyboard
-            value = value.trim(); //trim off leading and trailing blanks
-
-            if (value.length() < 1) { //value is incorrect
-                System.out.println("\nInvalid value. The value is incorrect.");
-                continue;
-            }
-
-            break; //end the loop
-        }
-        return value; //return the value entered
-    }
-
+   
+    @Override
     public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); //convert choice to uppercase
@@ -126,7 +87,7 @@ public class LocationView {
 
     private void returnToMainMenu() {
         MainMenuView mainMenu = new MainMenuView();
-        mainMenu.displayMainMenuView();
+        mainMenu.display();
     }
 
 }
