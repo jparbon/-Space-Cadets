@@ -21,6 +21,7 @@ public class GameMenuView extends View {
                 + "\n---------------------------------------------"
                 + "\nA - Alien Menu"
                 + "\nL - Location Menu"
+                + "\nT - Trophy Menu"
                 + "\nM - Return to Main Menu"
                 + "\n---------------------------------------------");
 
@@ -40,6 +41,9 @@ public class GameMenuView extends View {
                 break;
             case "L": //display location menu    
                 this.LocationView();
+                break;
+            case "T": //display trophey room menu    
+                this.TrophyRoomView();
                 break;
             case "M": //returns player to Main Menu
                 return true;
@@ -70,14 +74,13 @@ public class GameMenuView extends View {
         location.display();
     }
 
-    private static class alienMenuView {
-
-    private static void displayAlienMenuView() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public alienMenuView() {
-    }
+    
+    private void TrophyRoomView() {
+        TrophyRoomView roomView = new TrophyRoomView();
+        roomView.display();
     }
 
 }
+    
+
+
