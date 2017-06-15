@@ -67,7 +67,7 @@ public abstract class View implements ViewInterface {
     
     @Override
     public boolean doAction(String choice) {
-        System.out.println("\n We called this function.");
+        System.out.println("\n Define own doaction.");
         return true;
     }
    

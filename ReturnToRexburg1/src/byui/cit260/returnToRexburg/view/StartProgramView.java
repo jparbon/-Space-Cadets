@@ -16,11 +16,9 @@ import java.util.Scanner;
  */
 public class StartProgramView extends View {
 
-    private String promptMessage;
-
     public StartProgramView() {
+        super("\nPlease enter your first name: ");
 
-        this.promptMessage = "\nPlease enter your first name: ";
         //display the banner when view is created
         this.displayBanner();
 
@@ -52,8 +50,6 @@ public class StartProgramView extends View {
         );
     }
 
-  
-
     private void displayNextView(Player player) {
 
         //display a custom welcome message
@@ -69,6 +65,14 @@ public class StartProgramView extends View {
         //Display the main menu view
         mainMenuView.display();
 
+    }
+
+    @Override
+    public boolean doAction(String choice) {
+        Player player = new Player();
+        player.setName(choice);
+        displayNextView(player);
+        return true;
     }
 
 }
