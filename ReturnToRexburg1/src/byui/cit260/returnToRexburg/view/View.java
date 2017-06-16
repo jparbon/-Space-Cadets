@@ -20,7 +20,7 @@ public abstract class View implements ViewInterface {
     }
     
     public View(String message) {
-        this.displayMessage = message;
+        displayMessage = message;
     }
 
     @Override
@@ -30,12 +30,12 @@ public abstract class View implements ViewInterface {
         do {
 
             //prompt for and get player's name
-            String choice = this.getInput();
+            String choice = getInput();
             if (choice.toUpperCase().equals("Q")) //user wants to quit
                 return; //exit the game
             
             //do requested action and display next view
-            done = this.doAction(choice);
+            done = doAction(choice);
 
         } while (!done);
 

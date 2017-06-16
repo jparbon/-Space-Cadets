@@ -14,33 +14,31 @@ import byui.cit260.returnToRexburg.model.LocationScene;
  *
  * @author douglasarbon1
  */
-public class DrillForFuelView extends IntView {
+public abstract class DrillForFuelView extends IntView {
 
     public DrillForFuelView() {
 
         super("\n Enter a number between 1 and 10.");
         //display the banner when the view is created
-        this.displayBanner();
-
+        displayBanner("Mars", 10, 5);
     }
 
-    public void displayBanner() {
-        //LocationScene location = new LocationScene();
-        //location.setLocationName(locationName);
+    public void displayBanner(String locationName, int planetDepth, int surfaceHardness) {
+        LocationScene location = new LocationScene();
+        location.setLocationName(locationName);
         
-        //LocationScene depth = new LocationScene();
-        //depth.setPlanetDepth(planetDepth);
+        LocationScene depth = new LocationScene();
+        depth.setPlanetDepth(planetDepth);
         
-        //LocationScene hardness = new LocationScene();
-        //hardness.setSurfaceHardness(surfaceHardness);
-        
+        LocationScene hardness = new LocationScene();
+        hardness.setSurfaceHardness(surfaceHardness);
         
         System.out.println(
-                "\n*****************************************************"
+               "\n*****************************************************"
                 + "\n"
-                + "\n You have safely landed on *** ."
-                + "\n The Planet Depth is *** ."
-                + "\n The Surface Hardness is *** ."
+                + "\n You have safely landed on " + locationName + "!"
+                + "\n The Planet Depth is " + planetDepth + "."
+                + "\n The Surface Hardness is " + surfaceHardness + "."
                 + "\n"
                 + "\n In order to drill for more fuel, you will need to use"
                 + "\n the drills on your spaceship. The power of the drills"
@@ -51,18 +49,78 @@ public class DrillForFuelView extends IntView {
                 + "\n"
                 + "\n******************************************************"
         );
-
     }
 
+    
   
-    public int getInput() {
+    @Override
+    public int doAction(int fuelEarned) {
+        
+        //create a new resource control instance called resource
+        ResourceControl resource = new ResourceControl();
+        
+        //call the gatherFuel() method from the ResourceControl class
+        resource.gatherFuel(10, 5, 10, fuelEarned);  
+        return fuelEarned;
+        }   
+  
+     
+    @Override
+    public void display() {
+        
+        //ResourceControl resource = new ResourceControl();
+        //resource.gatherFuel(int userInput, int planetDepth, int surfaceHardness, int fuelEarned);
+       
+
+        //display the message to the player
+        if (ResourceControl.fuelEarned >= 1) {
+            System.out.println("\n==============================================="
+                    + "\n Congratulations! You have earned " + ResourceControl.fuelEarned
+                    + "\n gallons of fuel!"
+            );
+        } else {
+            System.out.println("\n Sorry, you did not earn any fuel. Please try again!");
+        }
+    }  
+
+
+    
+}    
+
+
+/*
+
+ //displays the drill for fuel view
+    public void displayDrillForFuelView() {
+
+        //System.out.println("This calls the displayDrillForFuelView");
+        boolean done = false; //set flag to not done
+        do {
+
+            //prompt for and get user input as an integer between 1 and 10
+            int userInput = getInput();
+            if (userInput >= 11 || userInput < 1) { //user enters invalid number
+
+                System.out.println("\n Not a valid input. Try again!");
+                continue; //continues prompting for correct input
+            }
+
+            //do requested action and display next view
+            //done = this.doAction(userInput);
+        } while (!done);
+    }
+
+
+
+
+public int getInput() {
 
         Scanner userInputScanner = new Scanner(System.in);
         int value = userInputScanner.nextInt();
         boolean valid = false; //initialize to not valid
 
         while (!valid) { //loop while an invalid value is entered
-            System.out.println("\n" + this.displayMessage);
+            System.out.println("\n" + this.promptMessage);
 
             //if (value < 1) {  //value is blank
             //    System.out.println("\n Invalid entry. The value cannot be blank.");
@@ -75,33 +133,6 @@ public class DrillForFuelView extends IntView {
         return value; //return the value entered   
 
     }
-    
-    
-    @Override
-    public int doAction(int userInput) {
 
-        //create a new resource control instance called resource
-        ResourceControl resource = new ResourceControl();
-        //call the gatherFuel() method from the ResourceControl class
-        resource.gatherFuel(userInput, 0, 0, fuelEarned);  
-        return fuelEarned;
-        
-        }   
-    
 
-    public void displayFuelEarnedView(ResourceControl fuelEarned) {
-
-        
-        //display the message to the player
-        if (ResourceControl.fuelEarned >= 1) {
-            System.out.println("\n==============================================="
-                    + "\n Congratulations! You have earned " + fuelEarned
-                    + "\n gallons of fuel!"
-            );
-        } else {
-            System.out.println("\n Sorry, you did not earn any fuel. Please try again!");
-        }
-    }  
-
-}    
-
+*/

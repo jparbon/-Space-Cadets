@@ -71,7 +71,12 @@ public class LocationView extends View {
     }
 
     private void viewDrillForFuel() {
-        DrillForFuelView drillForFuel = new DrillForFuelView();
+        DrillForFuelView drillForFuel = new DrillForFuelView() {
+            @Override
+            public int doAction(int userInput) {
+                return userInput;
+            }
+        };
         drillForFuel.display();
     }
 

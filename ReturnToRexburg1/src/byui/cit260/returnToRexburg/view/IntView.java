@@ -15,25 +15,32 @@ public abstract class IntView implements IntViewInterface {
     
     protected String displayMessage;
     
-    public IntView() {
-        
+    public IntView() {  
     }
     
     public IntView(String message) {
-        this.displayMessage = message;
+        displayMessage = message;
     }
 
     @Override
+    //displays the drill for fuel view
     public void display() {
 
+        //System.out.println("This calls the displayDrillForFuelView");
         boolean done = false; //set flag to not done
         do {
 
-            //prompt for and get user input
-            int userInput = this.getInput();
-            
-        } while (!done);
+            //prompt for and get user input as an integer between 1 and 10
+            int userInput = getInput();
+            if (userInput >= 11 || userInput < 1) { //user enters invalid number
 
+                System.out.println("\n Not a valid input. Try again!");
+                continue; //continues prompting for correct input
+            }
+
+            //do requested action and display next view
+            //done = this.doAction(userInput);
+        } while (!done);
     }
     
     @Override
@@ -44,12 +51,12 @@ public abstract class IntView implements IntViewInterface {
         boolean valid = false; //initialize to not valid
 
         while (!valid) { //loop while an invalid value is entered
-            System.out.println("\n" + this.displayMessage);
+            System.out.println("\n" + displayMessage);
 
-            //if (value < 1) {  //value is blank
-            //    System.out.println("\n Invalid entry. The value cannot be blank.");
-            //    continue;
-            //}
+            if (value < 1) {  //value is blank
+                System.out.println("\n Invalid entry. The value cannot be blank.");
+                continue;
+            }
             break; //end the loop
 
         }
@@ -58,10 +65,9 @@ public abstract class IntView implements IntViewInterface {
 
     }
     
-    @Override
-    public int doAction(int userInput) {
-        return userInput;
-    }
+    //@Override
+    //public int doAction(int userInput) {
+    //    return userInput;
+    //}
    
 }
-
