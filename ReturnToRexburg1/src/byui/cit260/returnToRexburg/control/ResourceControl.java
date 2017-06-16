@@ -13,6 +13,8 @@ import java.util.Random;
  */
 public class ResourceControl {
 
+    public static int fuelEarned;
+
     //Random whole number generator (1-30); seed of 30
     private Random random = new Random();
     

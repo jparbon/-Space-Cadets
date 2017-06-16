@@ -17,8 +17,6 @@ import java.util.Scanner;
  */
 public class LocationView extends View {
 
-    
-
     //default constructor initialized with text to be displayed
     public LocationView() {
         super ( "\n"
@@ -74,7 +72,7 @@ public class LocationView extends View {
 
     private void viewDrillForFuel() {
         DrillForFuelView drillForFuel = new DrillForFuelView();
-        drillForFuel.displayDrillForFuelView();
+        drillForFuel.display();
     }
 
     private void viewFuelLevel() {

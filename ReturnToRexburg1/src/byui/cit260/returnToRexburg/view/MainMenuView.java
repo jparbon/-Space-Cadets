@@ -11,6 +11,7 @@ import java.util.Scanner;
  *
  * @author douglasarbon1
  */
+
 public class MainMenuView extends View {
 
    
@@ -63,7 +64,7 @@ public class MainMenuView extends View {
     }
 
     private void startNewGame() {
-        System.out.println("create and start a new game?");
+        System.out.println("Create and start a new game?");
     }
 
     private void restoreExistingGame() {
