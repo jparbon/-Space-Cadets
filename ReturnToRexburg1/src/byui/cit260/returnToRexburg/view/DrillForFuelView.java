@@ -84,6 +84,11 @@ public abstract class DrillForFuelView extends IntView {
     }  
 
 
+    private void returnToMainMenu() {
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.display();
+
+    }
     
 }    
 
