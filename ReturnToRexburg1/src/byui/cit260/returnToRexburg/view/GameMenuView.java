@@ -22,6 +22,7 @@ public class GameMenuView extends View {
                 + "\nA - Alien Menu"
                 + "\nL - Location Menu"
                 + "\nT - Trophy Menu"
+                + "\nX - Map Menu"
                 + "\nM - Return to Main Menu"
                 + "\n---------------------------------------------");
 
@@ -44,6 +45,9 @@ public class GameMenuView extends View {
                 break;
             case "T": //display trophey room menu    
                 this.TrophyRoomView();
+                break;
+            case "X": //display trophey room menu    
+                this.ViewMapView();
                 break;
             case "M": //returns player to Main Menu
                 return true;
@@ -78,6 +82,11 @@ public class GameMenuView extends View {
     private void TrophyRoomView() {
         TrophyRoomView roomView = new TrophyRoomView();
         roomView.display();
+    }
+    
+    private void ViewMapView() {
+        ViewMapView mapLocation = new ViewMapView();
+        mapLocation.display();
     }
 
 }
