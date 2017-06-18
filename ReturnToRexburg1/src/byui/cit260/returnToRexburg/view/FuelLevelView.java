@@ -56,7 +56,7 @@ public class FuelLevelView extends View{
     }
     
      
-         private void returnToMainMenu() {
+    private void returnToMainMenu() {
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.display();
 
