@@ -86,17 +86,16 @@ public class GameMenuView extends View {
         TrophyRoomView roomView = new TrophyRoomView();
         roomView.display();
     }
-    
-    
-     private void FuelLevelView() {
-        FuelLevelView fuelView = new FuelLevelView();
-        fuelView.display();
-    }
      
      
     private void ViewMapView() {
         ViewMapView mapLocation = new ViewMapView();
         mapLocation.display();
+    }
+    
+    private void FuelLevelView() {
+        FuelLevelView fuelView = new FuelLevelView();
+        fuelView.display();
     }
 
 }
