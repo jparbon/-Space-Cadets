@@ -18,13 +18,15 @@ public abstract class DrillForFuelView extends IntView {
 
     public DrillForFuelView() {
 
-        super("\n Enter a number between 1 and 10.");
+        super("\nEnter a number between 1 and 10.");
         //display the banner when the view is created
         displayBanner("Mars", 10, 5);
     }
 
     public void displayBanner(String locationName, int planetDepth, int surfaceHardness) {
+            
         LocationScene location = new LocationScene();
+
         location.setLocationName(locationName);
         
         LocationScene depth = new LocationScene();
