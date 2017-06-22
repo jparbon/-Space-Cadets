@@ -26,7 +26,7 @@ public abstract class DrillForFuelView extends IntView {
     public void displayBanner(String name, int depth, int hardness) {
             
         LocationScene location = new LocationScene();
-        location.setname(name);
+        //location.setName(name);
         
         //LocationScene planetDepth = new LocationScene();
         //depth.setDepth(depth);

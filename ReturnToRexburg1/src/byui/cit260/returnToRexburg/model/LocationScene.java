@@ -99,29 +99,48 @@ public class LocationScene extends RegularSceneType implements Serializable {
         setLocationAnswer(locationAnswer);
         
     } 
+
+    public String getLocationName() {
+        return locationName;
+    }
+
+    public void setLocationName(String locationName) {
+        this.locationName = locationName;
+    }
+
+    public int getSurfaceHardness() {
+        return surfaceHardness;
+    }
+
+    public void setSurfaceHardness(int surfaceHardness) {
+        this.surfaceHardness = surfaceHardness;
+    }
+
+    public int getPlanetDepth() {
+        return planetDepth;
+    }
+
+    public void setPlanetDepth(int planetDepth) {
+        this.planetDepth = planetDepth;
+    }
+
+    public String getLocationQuestion() {
+        return locationQuestion;
+    }
+
+    public void setLocationQuestion(String locationQuestion) {
+        this.locationQuestion = locationQuestion;
+    }
+
+    public String getLocationAnswer() {
+        return locationAnswer;
+    }
+
+    public void setLocationAnswer(String locationAnswer) {
+        this.locationAnswer = locationAnswer;
+    }
     
-    
-
-    private void setLocationName(String locationName) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void setSurfaceHardness(int surfaceHardness) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void setPlanetDepth(int planetDepth) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void setLocationQuestion(String locationQuestion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void setLocationAnswer(String locationAnswer) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+   
     public String getLocation() {
         return location;
     }
@@ -227,24 +246,7 @@ public class LocationScene extends RegularSceneType implements Serializable {
     public String toString() {
         return "LocationScene{" + "locationName=" + locationName + ", surfaceHardness=" + surfaceHardness + ", planetDepth=" + planetDepth + ", locationQuestion=" + locationQuestion + ", locationAnswer=" + locationAnswer + ", location=" + location + ", hardness=" + hardness + ", depth=" + depth + ", question=" + question + ", answer=" + answer + '}';
     }
-
-    public void setname(String name) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-           
-        
+     
 }
     
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
-    
-
+  

@@ -12,7 +12,7 @@ import java.util.Objects;
  * @author nataliadams
  */
 
-//Player class inherits from Actor class
+
 public class Player implements Serializable{
     //class instance variables
     private String name;
@@ -21,13 +21,45 @@ public class Player implements Serializable{
     public Player() { 
       
     }
-    
-    public void setName(String name) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+    public String getName() {
+        return name;
     }
 
-    public String getName(String name) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setName(String name) {
+        this.name = name;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 79 * hash + Objects.hashCode(this.name);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Player other = (Player) obj;
+        if (!Objects.equals(this.name, other.name)) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Player{" + "name=" + name + '}';
+    }
+    
+    
     
 }
