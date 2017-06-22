@@ -10,51 +10,171 @@ package byui.cit260.returnToRexburg.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.ArrayList;
+
 /**
  *
  * @author douglasarbon1
  */
+
+//need to use an Array List?
+
 public class LocationScene extends RegularSceneType implements Serializable {
  
     //class instance variables
     private String locationName;
     private int surfaceHardness;
     private int planetDepth;
+    private String locationQuestion;
+    private String locationAnswer;
+    private String location;
+    private int hardness;
+    private int depth;
+    private int question;
+    private int answer;
+    
+//public ArrayList<Locations> addLocation() {    
+    
+    //ArrayList<Locations> location = new ArrayList<>();
+    //}
+    
+    //default constructor
+    public LocationScene(String locationName, int surfaceHardness, int planetDepth, String locationQuestion, String  locationAnswer) {
+        locationName = new String(locationName);
+        this.location = location;
+        surfaceHardness = new Integer(surfaceHardness);
+        this.hardness = hardness;
+        planetDepth = new Integer(planetDepth);
+        this.depth = depth;
+        locationQuestion = new String(locationQuestion);
+        this.question = question;
+        locationAnswer = new String(locationAnswer);
+        this.answer = answer;
+        
+    }
+ 
+    public static Actor[] createActorList() {
+    // create array(list) of actor
+    
+    
+        Actor[] actor = new Actor[26];
 
-    //constructor
+        //list of actors
+        actor[0] = new Actor("Neptune", "Rex");
+        actor[1] = new Actor("Triton", "Orbit Triton");
+        actor[2] = new Actor("Proteus", "Pebrelz"); 
+        actor[3] = new Actor("Titan", "Tyap");
+        actor[4] = new Actor("F-Ring", "Tredduhr"); 
+        actor[5] = new Actor("Rhea", "Blubot");
+        actor[6] = new Actor("Prometheus", "Rwadhi"); 
+        actor[7] = new Actor("Pandora", "Comelius");
+        actor[8] = new Actor("Oberon", "Oberocliptian"); 
+        actor[9] = new Actor("Ariel", "Aristices");
+        actor[10] = new Actor("Wunda", "Woolenep"); 
+        actor[11] = new Actor("Mab", "Mabonean");
+        actor[12] = new Actor("Great Red Spot", "Poxibeast"); 
+        actor[13] = new Actor("Lo", "Lava Monster");
+        actor[14] = new Actor("Europa", "Silician"); 
+        actor[15] = new Actor("Ganymede", "Gigantor");
+        actor[16] = new Actor("Callisto", "Callipso");
+        actor[17] = new Actor("Arabia Terra", "Azarius");
+        actor[18] = new Actor("Planum Boreum", "Atinecle"); 
+        actor[19] = new Actor("Amazonis Planitia", "Mutator");
+        actor[20] = new Actor("Syrtis", "Plactodil"); 
+        actor[21] = new Actor("Tharsis", "Toriador");
+        actor[22] = new Actor("Phobos", "Aracnophilian"); 
+        actor[23] = new Actor("Aitken", "Rabitus");
+        actor[24] = new Actor("Montes Rook", "Verminius"); 
+        actor[25] = new Actor("Earth", "Rexburg");
+        
+        return actor;
+    }
+   
+    //convenience constructor
     public LocationScene() {
+        setLocationName(locationName);
+        setSurfaceHardness(surfaceHardness);
+        setPlanetDepth(planetDepth);
+        setLocationQuestion(locationQuestion);
+        setLocationAnswer(locationAnswer);
+        
+    } 
+    
+    
+
+    private void setLocationName(String locationName) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public String getLocationName() {
-        return locationName;
+    private void setSurfaceHardness(int surfaceHardness) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public void setLocationName(String locationName) {
-        this.locationName = locationName;
+    private void setPlanetDepth(int planetDepth) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public int getSurfaceHardness() {
-        return surfaceHardness;
+    private void setLocationQuestion(String locationQuestion) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public void setSurfaceHardness(int surfaceHardness) {
-        this.surfaceHardness = surfaceHardness;
+    private void setLocationAnswer(String locationAnswer) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public int getPlanetDepth() {
-        return planetDepth;
+    public String getLocation() {
+        return location;
     }
 
-    public void setPlanetDepth(int planetDepth) {
-        this.planetDepth = planetDepth;
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public int getHardness() {
+        return hardness;
+    }
+
+    public void setHardness(int hardness) {
+        this.hardness = hardness;
+    }
+
+    public int getDepth() {
+        return depth;
+    }
+
+    public void setDepth(int depth) {
+        this.depth = depth;
+    }
+
+    public int getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(int question) {
+        this.question = question;
+    }
+
+    public int getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(int answer) {
+        this.answer = answer;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 23 * hash + Objects.hashCode(this.locationName);
-        hash = 23 * hash + this.surfaceHardness;
-        hash = 23 * hash + this.planetDepth;
+        hash = 89 * hash + Objects.hashCode(this.locationName);
+        hash = 89 * hash + this.surfaceHardness;
+        hash = 89 * hash + this.planetDepth;
+        hash = 89 * hash + Objects.hashCode(this.locationQuestion);
+        hash = 89 * hash + Objects.hashCode(this.locationAnswer);
+        hash = 89 * hash + Objects.hashCode(this.location);
+        hash = 89 * hash + this.hardness;
+        hash = 89 * hash + this.depth;
+        hash = 89 * hash + this.question;
+        hash = 89 * hash + this.answer;
         return hash;
     }
 
@@ -76,7 +196,28 @@ public class LocationScene extends RegularSceneType implements Serializable {
         if (this.planetDepth != other.planetDepth) {
             return false;
         }
+        if (this.hardness != other.hardness) {
+            return false;
+        }
+        if (this.depth != other.depth) {
+            return false;
+        }
+        if (this.question != other.question) {
+            return false;
+        }
+        if (this.answer != other.answer) {
+            return false;
+        }
         if (!Objects.equals(this.locationName, other.locationName)) {
+            return false;
+        }
+        if (!Objects.equals(this.locationQuestion, other.locationQuestion)) {
+            return false;
+        }
+        if (!Objects.equals(this.locationAnswer, other.locationAnswer)) {
+            return false;
+        }
+        if (!Objects.equals(this.location, other.location)) {
             return false;
         }
         return true;
@@ -84,12 +225,24 @@ public class LocationScene extends RegularSceneType implements Serializable {
 
     @Override
     public String toString() {
-        return "LocationScene{" + "locationName=" + locationName + ", surfaceHardness=" + surfaceHardness + ", planetDepth=" + planetDepth + '}';
+        return "LocationScene{" + "locationName=" + locationName + ", surfaceHardness=" + surfaceHardness + ", planetDepth=" + planetDepth + ", locationQuestion=" + locationQuestion + ", locationAnswer=" + locationAnswer + ", location=" + location + ", hardness=" + hardness + ", depth=" + depth + ", question=" + question + ", answer=" + answer + '}';
     }
 
-    
-    
+    public void setname(String name) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+           
+        
 }
+    
+    
+    
+    
+    
+    
+    
+    
+
 
 
 

@@ -5,7 +5,10 @@
  */
 package byui.cit260.returnToRexburg.control;
 
+import byui.cit260.returnToRexburg.model.Game;
+import byui.cit260.returnToRexburg.model.Map;
 import byui.cit260.returnToRexburg.model.Player;
+import byui.cit260.returnToRexburg.model.Spaceship;
 import returntorexburg1.ReturnToRexburg1;
 
 /**
@@ -29,7 +32,21 @@ public class GameControl {
     }
 
     public static void createNewGame(Player player) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //System.out.println("This calls the start new game");
+        Game game = new Game(); // create new game
+        ReturnToRexburg1.setCurrentGame(game); //save in ReturnToRexburg1
+        
+        game.setPlayer(player); //save player in game
+        
+        Spaceship spaceship = new Spaceship(); //create new spaceship
+        game.setSpaceship(spaceship); //save ship in game
+        
+        Map map = MapControl.createMap(); //create and initialize new map
+        game.setMap(map); //save map in game
+        
+        //move actors to starting position in the map
+        MapControl.moveActorsToStartingLocation(map);
+       
     }
       
     

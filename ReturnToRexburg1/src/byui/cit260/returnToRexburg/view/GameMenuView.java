@@ -29,9 +29,7 @@ public class GameMenuView extends View {
 
     }
 
-   
-
-   
+    
     @Override
     public boolean doAction(String choice) {
 
@@ -49,6 +47,7 @@ public class GameMenuView extends View {
                 break;
             case "F": //display fuel menu
                 this.FuelLevelView();
+                break;
             case "X": //display trophy room menu    
                 this.ViewMapView();
                 break;

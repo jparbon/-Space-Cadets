@@ -16,6 +16,8 @@ public class Game implements Serializable{
     //class instance variables
     private String description;
     private String player;
+    private Spaceship spaceship;
+    private Map map;
  
     //default constructor
     public Game() {
@@ -38,6 +40,16 @@ public class Game implements Serializable{
         this.player = player;
     }
 
+    public Spaceship getSpaceship() {
+        return spaceship;
+    }
+
+    public void setSpaceship(Spaceship spaceship) {
+        this.spaceship = spaceship;
+    }
+
+   
+    
     @Override
     public int hashCode() {
         int hash = 5;
@@ -70,6 +82,14 @@ public class Game implements Serializable{
     @Override
     public String toString() {
         return "Game{" + "description=" + description + ", player=" + player + '}';
+    }
+
+    public void setPlayer(Player player) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setMap(Map map) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
    
     

@@ -16,7 +16,8 @@ public class ResourceControl {
     public static int fuelEarned;
 
     //Random whole number generator (1-30); seed of 30
-    private Random random = new Random(30);
+    private Random random = new Random();
+    int value = random.nextInt(30);
     
     //this is only for testing
     protected void setRandom(Random newRandom) {

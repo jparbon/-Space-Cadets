@@ -5,7 +5,9 @@
  */
 package byui.cit260.returnToRexburg.view;
 
+import byui.cit260.returnToRexburg.control.GameControl;
 import java.util.Scanner;
+import returntorexburg1.ReturnToRexburg1;
 
 /**
  *
@@ -64,7 +66,12 @@ public class MainMenuView extends View {
     }
 
     private void startNewGame() {
-        System.out.println("Create and start a new game?");
+        //create new game
+        GameControl.createNewGame(ReturnToRexburg1.getPlayer());
+        
+        //display the game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
 
     private void restoreExistingGame() {

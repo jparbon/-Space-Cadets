@@ -18,6 +18,9 @@ public class Spaceship implements Serializable{
     private int maximumFuel;
  
     public Spaceship() {
+        this.name = "\nRoxy";
+        this.currentFuel = 0;
+        this.maximumFuel = 100;
     }
     
     public String getName() {
