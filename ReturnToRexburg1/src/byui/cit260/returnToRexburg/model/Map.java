@@ -5,6 +5,7 @@
  */
 package byui.cit260.returnToRexburg.model;
 
+import byui.cit260.returnToRexburg.control.GameControl;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -19,13 +20,15 @@ public class Map implements Serializable{
     
     //class instance variables
     private String description;
-    private LocationScene[] locationScene;
+    private LocationScene[] locations;
+    private int numberOfRows;
   
     //default constructor
     public Map() {
     }
+    
     //one-dimensional map; list of locations
-    /*public Map(int numberOfRows){
+    public Map(int numberOfRows){
         if (numberOfRows < 1) {
             System.out.println("The number of rows must be > zero.");
             return;
@@ -46,26 +49,26 @@ public class Map implements Serializable{
            locations[row] = location;
         } 
     }
+    /*    
+    private static LocationScene[] createScenes() {
+        LocationScene[] location = new LocationScene[Map.locationScene().length];
         
-    private static Scene[] createScene() {
-        Scene[] scenes = new Scene[SceneType.values().length];
-        
-        Scene startingScene = new Scene();
+        LocationScene startingScene = new LocationScene();
         startingScene.setDescription(
                   "You have landed on Neptune."
                 + "\n......"
         );
-        startingScene.setMapSymbol("");
-        scenes[SceneType.start.ordinal()] = startingScene;
+        startingScene.setMapSymbol("1");
+        location[RegularSceneType.start.ordinal()] = location;
         
-        Scene finishScene = new Scene();
+        LocationScene finishScene = new LocationScene();
         finishScene.setDescription(
                  "Congratulations!"
                 +"----"
         );
         finishScene.setMapSymbol("");  
         
-        return scenes;
+        return location;
         
     }
     
@@ -74,9 +77,6 @@ public class Map implements Serializable{
         
         //start point
         locations[0].setScene(scenes[SceneType.])
-        
-        
-    
     
     }
     
@@ -84,14 +84,13 @@ public class Map implements Serializable{
         //create the map
         Map map = new Map();
         //create the scenes for the game
-        Scene[] scenes = createScenes();
+        LocationScene[] scenes = createScenes();
         //assign scenes to locations
         GameControl.assignScenesToLocations(map, scenes);
         
         return map;
     }    
-    */
-    
+    */ 
         //create Array(list) of locations and information for each location
       
         

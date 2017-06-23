@@ -237,6 +237,14 @@ public class LocationScene extends RegularSceneType implements Serializable {
     public String toString() {
         return "LocationScene{" + "locationName=" + locationName + ", surfaceHardness=" + surfaceHardness + ", planetDepth=" + planetDepth + ", locationQuestion=" + locationQuestion + ", locationAnswer=" + locationAnswer + ", location=" + location + ", hardness=" + hardness + ", depth=" + depth + ", question=" + question + ", answer=" + answer + '}';
     }
+
+    void setRow(int row) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void setVisited(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
      
 }
     

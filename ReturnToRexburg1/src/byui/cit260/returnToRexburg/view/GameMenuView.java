@@ -15,7 +15,7 @@ public class GameMenuView extends View {
 
     //default constructor initialized with text to be displayed
     public GameMenuView() {
-            super ("\n"
+            super ("\nCongratulations! You have started a new game."
                 + "\n---------------------------------------------"
                 + "\n| Game Menu                                 |"
                 + "\n---------------------------------------------"

@@ -6,6 +6,7 @@
 package byui.cit260.returnToRexburg.control;
 
 import byui.cit260.returnToRexburg.model.Game;
+import byui.cit260.returnToRexburg.model.LocationScene;
 import byui.cit260.returnToRexburg.model.Map;
 import byui.cit260.returnToRexburg.model.Player;
 import byui.cit260.returnToRexburg.model.Spaceship;
@@ -31,6 +32,7 @@ public class GameControl {
         return player;
     }
 
+    //implement createNewGame control function to save all objects needed to play the game
     public static void createNewGame(Player player) {
         //System.out.println("This calls the start new game");
         Game game = new Game(); // create new game
@@ -47,6 +49,10 @@ public class GameControl {
         //move actors to starting position in the map
         MapControl.moveActorsToStartingLocation(map);
        
+    }
+
+    public static void assignScenesToLocations(Map map, LocationScene[] scenes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
       
     

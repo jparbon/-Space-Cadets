@@ -5,13 +5,14 @@
  */
 package byui.cit260.returnToRexburg.model;
 
+import byui.cit260.returnToRexburg.view.View;
 import java.io.Serializable;
 import java.util.Objects;
 /**
  *
  * @author douglasarbon1
  */
-public class Game implements Serializable{
+public class Game extends View implements Serializable{
   
     //class instance variables
     private String description;
@@ -48,7 +49,12 @@ public class Game implements Serializable{
         this.spaceship = spaceship;
     }
 
+    public Map getMap() {
+        return map;
+    }
+
    
+    
     
     @Override
     public int hashCode() {
@@ -84,13 +90,16 @@ public class Game implements Serializable{
         return "Game{" + "description=" + description + ", player=" + player + '}';
     }
 
-    public void setPlayer(Player player) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+    
+    
+    public void setMap(Map map) {
+        
     }
 
-    public void setMap(Map map) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setPlayer(Player player) {
+        System.out.println("This set the player.");
     }
-   
+
     
 }

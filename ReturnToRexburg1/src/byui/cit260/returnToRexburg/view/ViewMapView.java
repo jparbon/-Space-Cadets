@@ -58,11 +58,9 @@ public class ViewMapView extends View {
         choice = choice.toUpperCase(); //convert choice to uppercase
 
         switch (choice) {
-            //case "X": //View locations
-                //this.viewCurrentLocations();
-                //break;
             case "M": //Returns Player to Game Menu
                 return true;
+                
             default:
                 System.out.println("\n*** Invalid selection. *** Please, try again!");
                 break;
@@ -72,15 +70,10 @@ public class ViewMapView extends View {
 
     }
     
-    private void viewAllLocations() {
-        System.out.println(
-                "\n**************************************************************"
-                + "\n Before Last Location"
-                + "\n Last Location"
-                + "\n CURRENT LOCATION"
-                + "\n Next Location"
-                + "\n**************************************************************"
-        );
+    private void displayMap() {
+       LocationView locations = new LocationView();
+       locations.display();
+       
     }
     
     private void returnToMainMenu() {
