@@ -16,12 +16,40 @@ public class ViewMapView extends View {
     public ViewMapView() {
         super ( "\n"
                 + "\n---------------------------------------------"
-                + "\n| View Map Menu                      |"
-                + "\n---------------------------------------------"
-                + "\nX - View Locations"
                 + "\nM - Return to Game Menu"
-                + "\n---------------------------------------------");
+                + "\n---------------------------------------------"  
+                + "\n" //
+                + "\n|   Here are the locations in the game.     |"       
+                + "\n---------------------------------------------"
+        );
 
+    }
+    
+    
+    private class Locations {
+            private int numberValue;
+            private String stringValue;
+            
+            public Locations(int number, String string){
+                setNumberValue(number);
+                setStringValue(string);
+            }
+            
+            public void setNumberValue(int value){
+                numberValue = value;
+            }
+           
+            public int getNumberValue(){
+                return numberValue;
+            }
+            
+            public void setStringValue(String value){
+                stringValue = value;
+            }
+           
+            public String getStringValue(){
+                return stringValue;
+            }
     }
     
     @Override
@@ -30,21 +58,21 @@ public class ViewMapView extends View {
         choice = choice.toUpperCase(); //convert choice to uppercase
 
         switch (choice) {
-            case "X": //View Acquried Trophies
-                this.viewCurrentLocations();
-                break;
+            //case "X": //View locations
+                //this.viewCurrentLocations();
+                //break;
             case "M": //Returns Player to Game Menu
                 return true;
             default:
                 System.out.println("\n*** Invalid selection. *** Please, try again!");
                 break;
-        }
+    }
 
         return false;
 
     }
     
-    private void viewCurrentLocations() {
+    private void viewAllLocations() {
         System.out.println(
                 "\n**************************************************************"
                 + "\n Before Last Location"
@@ -55,9 +83,9 @@ public class ViewMapView extends View {
         );
     }
     
-        private void returnToMainMenu() {
+    private void returnToMainMenu() {
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.display();
-     }
+    }
     
 }

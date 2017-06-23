@@ -59,7 +59,4 @@ public class Player implements Serializable{
     public String toString() {
         return "Player{" + "name=" + name + '}';
     }
-    
-    
-    
 }

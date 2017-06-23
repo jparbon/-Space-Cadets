@@ -48,7 +48,7 @@ public class GameMenuView extends View {
             case "F": //display fuel menu
                 this.FuelLevelView();
                 break;
-            case "X": //display trophy room menu    
+            case "X": //display map     
                 this.ViewMapView();
                 break;
             case "M": //returns player to Main Menu

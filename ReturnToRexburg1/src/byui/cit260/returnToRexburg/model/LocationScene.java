@@ -10,14 +10,11 @@ package byui.cit260.returnToRexburg.model;
 
 import java.io.Serializable;
 import java.util.Objects;
-import java.util.ArrayList;
 
 /**
  *
  * @author douglasarbon1
  */
-
-//need to use an Array List?
 
 public class LocationScene extends RegularSceneType implements Serializable {
  
@@ -33,29 +30,23 @@ public class LocationScene extends RegularSceneType implements Serializable {
     private int question;
     private int answer;
     
-//public ArrayList<Locations> addLocation() {    
-    
-    //ArrayList<Locations> location = new ArrayList<>();
-    //}
-    
     //default constructor
     public LocationScene(String locationName, int surfaceHardness, int planetDepth, String locationQuestion, String  locationAnswer) {
         locationName = new String(locationName);
-        this.location = location;
+        this.locationName = locationName;
         surfaceHardness = new Integer(surfaceHardness);
-        this.hardness = hardness;
+        this.surfaceHardness = surfaceHardness;
         planetDepth = new Integer(planetDepth);
-        this.depth = depth;
+        this.planetDepth = planetDepth;
         locationQuestion = new String(locationQuestion);
-        this.question = question;
+        this.locationQuestion = locationQuestion;
         locationAnswer = new String(locationAnswer);
-        this.answer = answer;
+        this.locationAnswer = locationAnswer;
         
     }
  
     public static Actor[] createActorList() {
     // create array(list) of actor
-    
     
         Actor[] actor = new Actor[26];
 

@@ -19,19 +19,122 @@ public class Map implements Serializable{
     
     //class instance variables
     private String description;
-    //private LocationScene[] locationScene;
+    private LocationScene[] locationScene;
   
     //default constructor
     public Map() {
     }
+    //one-dimensional map; list of locations
+    /*public Map(int numberOfRows){
+        if (numberOfRows < 1) {
+            System.out.println("The number of rows must be > zero.");
+            return;
+        }
     
-    public class createLocationList{
+        this.numberOfRows = numberOfRows;
+        
+        //create 1-D array for location objects
+        this.locations = new LocationScene[numberOfRows];
+        
+        for (int row = 0; row < numberOfRows; row++) {
+           //create and initialize new LocationScene object instance 
+           LocationScene location = new LocationScene();
+           location.setRow(row);
+           location.setVisited(false);
+           
+           //assign the Location object to the current position in array
+           locations[row] = location;
+        } 
+    }
+        
+    private static Scene[] createScene() {
+        Scene[] scenes = new Scene[SceneType.values().length];
+        
+        Scene startingScene = new Scene();
+        startingScene.setDescription(
+                  "You have landed on Neptune."
+                + "\n......"
+        );
+        startingScene.setMapSymbol("");
+        scenes[SceneType.start.ordinal()] = startingScene;
+        
+        Scene finishScene = new Scene();
+        finishScene.setDescription(
+                 "Congratulations!"
+                +"----"
+        );
+        finishScene.setMapSymbol("");  
+        
+        return scenes;
+        
+    }
+    
+    private static void assignScenesToLocations(Map map, Scene[] scenes){
+        Location[] locations = map.getLocations();
+        
+        //start point
+        locations[0].setScene(scenes[SceneType.])
+        
+        
+    
+    
+    }
+    
+    public static Map createMap() {
+        //create the map
+        Map map = new Map();
+        //create the scenes for the game
+        Scene[] scenes = createScenes();
+        //assign scenes to locations
+        GameControl.assignScenesToLocations(map, scenes);
+        
+        return map;
+    }    
+    */
+    
         //create Array(list) of locations and information for each location
-        ArrayList<LocationScene> location = new ArrayList<LocationScene>(26);
+      
         
+     public static LocationScene[] createLocationList() {
+    // create array(list) of 25 locations
         
-        //LocationScene[] location = new LocationScene[26];
-        /*
+     
+        
+        int[] myIntList = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 
+                            14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26};
+       
+        ArrayList<Integer> myArrayList = new ArrayList<Integer>();
+        
+        myArrayList.add(1);  //index 0
+        myArrayList.add(2);   //index 1
+        myArrayList.add(3);  //index 2
+        myArrayList.add(4);   //index 3
+        myArrayList.add(5);  //index 4
+        myArrayList.add(6);   //index 5
+        myArrayList.add(7);  //index 6
+        myArrayList.add(8);   //index 7
+        myArrayList.add(9);  //index 8
+        myArrayList.add(10);   //index 9
+        myArrayList.add(11);  //index 10
+        myArrayList.add(12);   //index 11
+        myArrayList.add(13);  //index 12
+        myArrayList.add(14);   //index 13
+        myArrayList.add(15);  //index 14
+        myArrayList.add(16);   //index 15
+        myArrayList.add(17);  //index 16
+        myArrayList.add(18);   //index 17
+        myArrayList.add(19);  //index 18
+        myArrayList.add(20);   //index 19
+        myArrayList.add(21);  //index 20
+        myArrayList.add(22);   //index 21
+        myArrayList.add(23);  //index 22
+        myArrayList.add(24);   //index 23
+        myArrayList.add(25);  //index 24
+        myArrayList.add(26);   //index 25
+        myArrayList.add(27);  //index 26
+    
+        LocationScene[] location = new LocationScene[26];
+        
         location[0] = new LocationScene("Neptune", 0, 0, "question", "answer");
         location[1] = new LocationScene("Triton", 0, 0, "question", "answer");
         location[2] = new LocationScene("Proteus", 0, 0, "question", "answer");
@@ -59,54 +162,16 @@ public class Map implements Serializable{
         location[24] = new LocationScene("Montes Rook", 0, 0, "question", "answer");
         location[25] = new LocationScene("Earth", 0, 0, "question", "answer");    
         
-    }
-        */
-           
-        
-        //define the ArrayList
-        /*
-        location.add("Neptune");  //index 0
-        location.add("Triton");   //index 1
-        location.add("Proteus");  //index 2
-        location.add("Titan");   //index 3
-        location.add("F-Ring");  //index 4
-        location.add("Triton");   //index 5
-        location.add("Rhea");  //index 6
-        location.add("Prometheus");   //index 7
-        location.add("Pandora");  //index 8
-        location.add("Oberon");   //index 9
-        location.add("Ariel");  //index 10
-        location.add("Wunda");   //index 11
-        location.add("Mab");  //index 12
-        location.add("Great Red Spot");   //index 13
-        location.add("Lo");  //index 14
-        location.add("Europa");   //index 15
-        location.add("Ganymede");  //index 16
-        location.add("Callisto");   //index 17
-        location.add("Arabia Terra");  //index 18
-        location.add("Planum Boreum");   //index 19
-        location.add("Amazonis Planitia");  //index 20
-        location.add("Syrtis");   //index 21
-        location.add("Tharsis");  //index 22
-        location.add("Phobos");   //index 23
-        location.add("Aitken");  //index 24
-        location.add("Montes Rook");   //index 25
-        location.add("Earth");  //index 26
-        
-        for(int i = 0; i < location.size(); i++);
-        
         return location;
-   
     }
-    */
-    
+
     //getter
     public String getDescription() {
         return description;
     }
         
     //setter
-    //public void setDescription(String description) {
+    public void setDescription(String description) {
         //this.description = description;
     }
 
@@ -139,5 +204,4 @@ public class Map implements Serializable{
     public String toString() {
         return "Map{" + "description=" + description + '}';
     }
-   
-}
+} 
