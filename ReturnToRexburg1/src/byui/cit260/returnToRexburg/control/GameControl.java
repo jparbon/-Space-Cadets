@@ -19,16 +19,16 @@ import returntorexburg1.ReturnToRexburg1;
 public class GameControl {
 
     public static Player createPlayer(String name) {
-        
+
         if (name == null) {
             return null;
         }
-        
+
         Player player = new Player();
         player.setName(name);
-        
+
         ReturnToRexburg1.setPlayer(player); //save the player
-        
+
         return player;
     }
 
@@ -37,30 +37,28 @@ public class GameControl {
         //System.out.println("This calls the start new game");
         Game game = new Game(); // create new game
         ReturnToRexburg1.setCurrentGame(game); //save in ReturnToRexburg1
-        
+
         game.setPlayer(player); //save player in game
-        
+
         Spaceship spaceship = new Spaceship(); //create new spaceship
         game.setSpaceship(spaceship); //save ship in game
-        
+
         Map map = MapControl.createMap(); //create and initialize new map
         game.setMap(map); //save map in game
-        
+
         //move actors to starting position in the map
         MapControl.moveActorsToStartingLocation(map);
-       
+
     }
 
     //public static void assignScenesToLocations(Map map, LocationScene[] scenes) {
     //    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     //}
-      
-    public static void createMap(Game game){
+    public static void createMap(Game game) {
         Map map = MapControl.createMap();
         game.setMap(map);
     }
-    
+
     //move actors to starting position in the map; the first location
     //MapControl.moveActorsToStartingLocation(map);
-    
 }

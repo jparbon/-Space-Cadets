@@ -18,7 +18,7 @@ public class ResourceControl {
     //Random whole number generator (1-30); seed of 30
     private Random random = new Random();
     int value = random.nextInt(30);
-    
+
     //this is only for testing
     protected void setRandom(Random newRandom) {
         random = newRandom;
@@ -29,7 +29,7 @@ public class ResourceControl {
 
         //check to see if the user input is valid; must be an integer between 1 and 10.
         int drillPower;
-        
+
         if (userInput < 1 || userInput > 10) {
             return 0;
         } else {

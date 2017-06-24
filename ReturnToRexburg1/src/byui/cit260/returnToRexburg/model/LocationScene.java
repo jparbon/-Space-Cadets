@@ -7,7 +7,6 @@
  */
 package byui.cit260.returnToRexburg.model;
 
-
 import byui.cit260.returnToRexburg.view.Scene;
 import java.io.Serializable;
 import java.util.Objects;
@@ -16,9 +15,8 @@ import java.util.Objects;
  *
  * @author douglasarbon1
  */
-
 public class LocationScene extends RegularSceneType implements Serializable {
- 
+
     //class instance variables
     private String locationName;
     private int surfaceHardness;
@@ -32,9 +30,9 @@ public class LocationScene extends RegularSceneType implements Serializable {
     private int answer;
     private Scene scene;
     private String name;
-    
+
     //default constructor
-    public LocationScene(String locationName, int surfaceHardness, int planetDepth, String locationQuestion, String  locationAnswer) {
+    public LocationScene(String locationName, int surfaceHardness, int planetDepth, String locationQuestion, String locationAnswer) {
         locationName = new String(locationName);
         this.locationName = locationName;
         surfaceHardness = new Integer(surfaceHardness);
@@ -45,59 +43,59 @@ public class LocationScene extends RegularSceneType implements Serializable {
         this.locationQuestion = locationQuestion;
         locationAnswer = new String(locationAnswer);
         this.locationAnswer = locationAnswer;
-        
-    }
- 
-    //convenience constructor
-    public LocationScene(String locationName){
-       name = locationName;
+
     }
 
-   
-    public Scene getScene(){
+    //convenience constructor
+    public LocationScene(String locationName) {
+        name = locationName;
+    }
+
+    public Scene getScene() {
         return scene;
     }
-    
-    public void setScene(Scene locationScene){
+
+    public void setScene(Scene locationScene) {
         scene = locationScene;
-        
+
     }
+
     public static Actor[] createActorList() {
-    // create array(list) of actor
-    
+        // create array(list) of actor
+
         Actor[] actor = new Actor[26];
 
         //list of actors
         actor[0] = new Actor("Neptune", "Rex");
         actor[1] = new Actor("Triton", "Orbit Triton");
-        actor[2] = new Actor("Proteus", "Pebrelz"); 
+        actor[2] = new Actor("Proteus", "Pebrelz");
         actor[3] = new Actor("Titan", "Tyap");
-        actor[4] = new Actor("F-Ring", "Tredduhr"); 
+        actor[4] = new Actor("F-Ring", "Tredduhr");
         actor[5] = new Actor("Rhea", "Blubot");
-        actor[6] = new Actor("Prometheus", "Rwadhi"); 
+        actor[6] = new Actor("Prometheus", "Rwadhi");
         actor[7] = new Actor("Pandora", "Comelius");
-        actor[8] = new Actor("Oberon", "Oberocliptian"); 
+        actor[8] = new Actor("Oberon", "Oberocliptian");
         actor[9] = new Actor("Ariel", "Aristices");
-        actor[10] = new Actor("Wunda", "Woolenep"); 
+        actor[10] = new Actor("Wunda", "Woolenep");
         actor[11] = new Actor("Mab", "Mabonean");
-        actor[12] = new Actor("Great Red Spot", "Poxibeast"); 
+        actor[12] = new Actor("Great Red Spot", "Poxibeast");
         actor[13] = new Actor("Lo", "Lava Monster");
-        actor[14] = new Actor("Europa", "Silician"); 
+        actor[14] = new Actor("Europa", "Silician");
         actor[15] = new Actor("Ganymede", "Gigantor");
         actor[16] = new Actor("Callisto", "Callipso");
         actor[17] = new Actor("Arabia Terra", "Azarius");
-        actor[18] = new Actor("Planum Boreum", "Atinecle"); 
+        actor[18] = new Actor("Planum Boreum", "Atinecle");
         actor[19] = new Actor("Amazonis Planitia", "Mutator");
-        actor[20] = new Actor("Syrtis", "Plactodil"); 
+        actor[20] = new Actor("Syrtis", "Plactodil");
         actor[21] = new Actor("Tharsis", "Toriador");
-        actor[22] = new Actor("Phobos", "Aracnophilian"); 
+        actor[22] = new Actor("Phobos", "Aracnophilian");
         actor[23] = new Actor("Aitken", "Rabitus");
-        actor[24] = new Actor("Montes Rook", "Verminius"); 
+        actor[24] = new Actor("Montes Rook", "Verminius");
         actor[25] = new Actor("Earth", "Rexburg");
-        
+
         return actor;
     }
-   
+
     //convenience constructor
     public LocationScene() {
         setLocationName(locationName);
@@ -105,8 +103,8 @@ public class LocationScene extends RegularSceneType implements Serializable {
         setPlanetDepth(planetDepth);
         setLocationQuestion(locationQuestion);
         setLocationAnswer(locationAnswer);
-        
-    } 
+
+    }
 
     public String getLocationName() {
         return locationName;
@@ -147,8 +145,7 @@ public class LocationScene extends RegularSceneType implements Serializable {
     public void setLocationAnswer(String locationAnswer) {
         this.locationAnswer = locationAnswer;
     }
-    
-   
+
     public String getLocation() {
         return location;
     }
@@ -266,7 +263,5 @@ public class LocationScene extends RegularSceneType implements Serializable {
     public String getName() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-     
+
 }
-    
-  

@@ -19,7 +19,7 @@ public class LocationView extends View {
 
     //default constructor initialized with text to be displayed
     public LocationView() {
-        super ( "\n"
+        super("\n"
                 + "\n---------------------------------------------"
                 + "\n| Location Menu                                 |"
                 + "\n---------------------------------------------"
@@ -34,8 +34,6 @@ public class LocationView extends View {
     //void displayMenu() {
     //    System.out.println(menu);
     //}
-
-   
     @Override
     public boolean doAction(String choice) {
 

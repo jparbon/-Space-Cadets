@@ -21,7 +21,7 @@ public class HelpMenuView extends View {
 
     //default constructor initialized with text to be displayed
     public HelpMenuView() {
-            super ( "\n"
+        super("\n"
                 + "\n---------------------------------------------"
                 + "\n| Help Menu                                 |"
                 + "\n---------------------------------------------"
@@ -36,8 +36,6 @@ public class HelpMenuView extends View {
     //void displayMenu() {
     //    System.out.println(menu);
     //}
-
- 
     @Override
     public boolean doAction(String choice) {
 

@@ -14,60 +14,60 @@ import returntorexburg1.ReturnToRexburg1;
  *
  * @author shear
  */
-
 public class MapView extends View {
-    
+
     //default constructor initialized with text to be displayed
     public MapView() {
-        super ( "\n"
+        super("\n"
                 + "\n---------------------------------------------"
                 + "\nG - Return to Game Menu"
-                + "\n---------------------------------------------"  
-                + "\n" 
-                + "\n|   Here are the locations in the game.     |"       
+                + "\n---------------------------------------------"
+                + "\n"
+                + "\n|   Here are the locations in the game.     |"
                 + "\n---------------------------------------------"
         );
 
     }
-    
-    private void displayMap(){
+
+    private void displayMap() {
         Game game = ReturnToRexburg1.getCurrentGame();
         Map map = game.getMap();
-        LocationScene[] locations = map. getLocations();
-        
-        for (int i=0; i< locations.length; i++){
+        LocationScene[] locations = map.getLocations();
+
+        for (int i = 0; i < locations.length; i++) {
             System.out.println("Locations " + locations[i].getName() + ": "
-            + locations[i].getScene().getDescription());
+                    + locations[i].getScene().getDescription());
         }
-        
+
     }
-    
+
     private class Locations {
-            private int numberValue;
-            private String stringValue;
-            
-            public Locations(int number, String string){
-                setNumberValue(number);
-                setStringValue(string);
-            }
-            
-            public void setNumberValue(int value){
-                numberValue = value;
-            }
-           
-            public int getNumberValue(){
-                return numberValue;
-            }
-            
-            public void setStringValue(String value){
-                stringValue = value;
-            }
-           
-            public String getStringValue(){
-                return stringValue;
-            }
+
+        private int numberValue;
+        private String stringValue;
+
+        public Locations(int number, String string) {
+            setNumberValue(number);
+            setStringValue(string);
+        }
+
+        public void setNumberValue(int value) {
+            numberValue = value;
+        }
+
+        public int getNumberValue() {
+            return numberValue;
+        }
+
+        public void setStringValue(String value) {
+            stringValue = value;
+        }
+
+        public String getStringValue() {
+            return stringValue;
+        }
     }
-    
+
     @Override
     public boolean doAction(String choice) {
 
@@ -76,19 +76,19 @@ public class MapView extends View {
         switch (choice) {
             case "G": //Returns Player to Game Menu
                 return true;
-                
+
             default:
                 System.out.println("\n*** Invalid selection. *** Please, try again!");
                 break;
-    }
+        }
 
         return false;
 
     }
-    
+
     private void returnToMainMenu() {
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.display();
     }
-    
+
 }

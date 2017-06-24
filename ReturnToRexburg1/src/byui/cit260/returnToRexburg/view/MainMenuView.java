@@ -13,13 +13,11 @@ import returntorexburg1.ReturnToRexburg1;
  *
  * @author douglasarbon1
  */
-
 public class MainMenuView extends View {
 
-   
     //default constructor initialized with text to be displayed
     public MainMenuView() {
-            super("\n"
+        super("\n"
                 + "\n---------------------------------------------"
                 + "\n| Main Menu                                 |"
                 + "\n---------------------------------------------"
@@ -31,14 +29,13 @@ public class MainMenuView extends View {
                 + "\n---------------------------------------------");
     }
 
-   
     @Override
     public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); //convert choice to uppercase
 
         switch (choice) {
-            
+
             case "N": //display game menu
                 this.GameMenuView();
                 this.startNewGame();
@@ -66,7 +63,7 @@ public class MainMenuView extends View {
     private void startNewGame() {
         //create new game
         GameControl.createNewGame(ReturnToRexburg1.getPlayer());
-        
+
         //display the game menu
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();

@@ -8,19 +8,20 @@ package byui.cit260.returnToRexburg.model;
 import byui.cit260.returnToRexburg.view.View;
 import java.io.Serializable;
 import java.util.Objects;
+
 /**
  *
  * @author douglasarbon1
  */
-public class Game extends View implements Serializable{
-  
+public class Game extends View implements Serializable {
+
     //class instance variables
     private String description;
     private String player;
     private Spaceship spaceship;
     private Map map;
     private Map newMap;
- 
+
     //default constructor
     public Game() {
     }
@@ -54,9 +55,6 @@ public class Game extends View implements Serializable{
         return map;
     }
 
-   
-    
-    
     @Override
     public int hashCode() {
         int hash = 5;
@@ -91,7 +89,6 @@ public class Game extends View implements Serializable{
         return "Game{" + "description=" + description + ", player=" + player + '}';
     }
 
-
     public void setMap(Map map) {
         map = newMap;
     }
@@ -100,5 +97,4 @@ public class Game extends View implements Serializable{
         System.out.println("This set the player.");
     }
 
-    
 }

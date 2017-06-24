@@ -15,7 +15,7 @@ public class GameMenuView extends View {
 
     //default constructor initialized with text to be displayed
     public GameMenuView() {
-            super ("\nCongratulations! You have started a new game."
+        super("\nCongratulations! You have started a new game."
                 + "\n---------------------------------------------"
                 + "\n| Game Menu                                 |"
                 + "\n---------------------------------------------"
@@ -26,10 +26,8 @@ public class GameMenuView extends View {
                 + "\nX - Map Menu"
                 + "\nM - Return to Main Menu"
                 + "\n---------------------------------------------");
-
     }
 
-    
     @Override
     public boolean doAction(String choice) {
 
@@ -49,7 +47,7 @@ public class GameMenuView extends View {
                 this.FuelLevelView();
                 break;
             case "X": //display map     
-                this.ViewMapView();
+                this.MapView();
                 break;
             case "M": //returns player to Main Menu
                 return true;
@@ -59,20 +57,17 @@ public class GameMenuView extends View {
         }
 
         return false;
-
     }
 
     private void AlienMenuView() {
 
         AlienMenuView alienMenuView = new AlienMenuView();
         alienMenuView.display();
-
     }
 
     private void returnToMainMenu() {
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.display();
-
     }
 
     private void LocationView() {
@@ -80,24 +75,19 @@ public class GameMenuView extends View {
         location.display();
     }
 
-    
     private void TrophyRoomView() {
         TrophyRoomView roomView = new TrophyRoomView();
         roomView.display();
     }
-     
-     
-    private void ViewMapView() {
-        ViewMapView mapLocation = new ViewMapView();
+
+    private void MapView() {
+        MapView mapLocation = new MapView();
         mapLocation.display();
     }
-    
+
     private void FuelLevelView() {
         FuelLevelView fuelView = new FuelLevelView();
         fuelView.display();
     }
 
 }
-    
-
-

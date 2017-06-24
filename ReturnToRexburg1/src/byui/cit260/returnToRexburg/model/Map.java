@@ -11,23 +11,21 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Arrays;
 
-
 /**
  *
  * @author douglasarbon1
  */
-public class Map implements Serializable{
-    
+public class Map implements Serializable {
+
     //class instance variables
     private String description;
     private LocationScene[] locations;
     private int numberOfRows;
-  
+
     //default constructor
     public Map() {
     }
-    
-    
+
     /*//one-dimensional map; list of locations
     public Map(int numberOfRows){
         if (numberOfRows < 1) {
@@ -91,25 +89,24 @@ public class Map implements Serializable{
         
         return map;
     }    
-    */ 
-        //create Array(list) of locations and information for each location
-      
-    public LocationScene[] getLocations(){
+     */
+    //create Array(list) of locations and information for each location
+    public LocationScene[] getLocations() {
         return locations;
     }
-    
-    public void setLocations(LocationScene[] locations){
+
+    public void setLocations(LocationScene[] locations) {
         this.locations = locations;
     }
-    
+
     public static LocationScene[] createLocationList() {
-    // create array(list) of 25 locations
-         
-        int[] myIntList = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 
-                            14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26};
-       
+        // create array(list) of 25 locations
+
+        int[] myIntList = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+            14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26};
+
         ArrayList<Integer> myArrayList = new ArrayList<Integer>();
-        
+
         myArrayList.add(1);  //index 0
         myArrayList.add(2);   //index 1
         myArrayList.add(3);  //index 2
@@ -137,9 +134,9 @@ public class Map implements Serializable{
         myArrayList.add(25);  //index 24
         myArrayList.add(26);   //index 25
         myArrayList.add(27);  //index 26
-    
+
         LocationScene[] location = new LocationScene[26];
-        
+
         location[0] = new LocationScene("Neptune", 0, 0, "question", "answer");
         location[1] = new LocationScene("Triton", 0, 0, "question", "answer");
         location[2] = new LocationScene("Proteus", 0, 0, "question", "answer");
@@ -165,8 +162,8 @@ public class Map implements Serializable{
         location[22] = new LocationScene("Phobos", 0, 0, "question", "answer");
         location[23] = new LocationScene("Aitken", 0, 0, "question", "answer");
         location[24] = new LocationScene("Montes Rook", 0, 0, "question", "answer");
-        location[25] = new LocationScene("Earth", 0, 0, "question", "answer");    
-        
+        location[25] = new LocationScene("Earth", 0, 0, "question", "answer");
+
         return location;
     }
 
@@ -174,7 +171,7 @@ public class Map implements Serializable{
     public String getDescription() {
         return description;
     }
-        
+
     //setter
     public void setDescription(String description) {
         //this.description = description;
@@ -209,4 +206,4 @@ public class Map implements Serializable{
     public String toString() {
         return "Map{" + "description=" + description + '}';
     }
-} 
+}
