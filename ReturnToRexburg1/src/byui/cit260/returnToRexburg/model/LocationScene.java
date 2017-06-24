@@ -8,6 +8,7 @@
 package byui.cit260.returnToRexburg.model;
 
 
+import byui.cit260.returnToRexburg.view.Scene;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -29,6 +30,8 @@ public class LocationScene extends RegularSceneType implements Serializable {
     private int depth;
     private int question;
     private int answer;
+    private Scene scene;
+    private String name;
     
     //default constructor
     public LocationScene(String locationName, int surfaceHardness, int planetDepth, String locationQuestion, String  locationAnswer) {
@@ -45,6 +48,20 @@ public class LocationScene extends RegularSceneType implements Serializable {
         
     }
  
+    //convenience constructor
+    public LocationScene(String locationName){
+       name = locationName;
+    }
+
+   
+    public Scene getScene(){
+        return scene;
+    }
+    
+    public void setScene(Scene locationScene){
+        scene = locationScene;
+        
+    }
     public static Actor[] createActorList() {
     // create array(list) of actor
     
@@ -243,6 +260,10 @@ public class LocationScene extends RegularSceneType implements Serializable {
     }
 
     void setVisited(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String getName() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
      

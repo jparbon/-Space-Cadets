@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Arrays;
-import java.util.Iterator;
+
 
 /**
  *
@@ -27,7 +27,8 @@ public class Map implements Serializable{
     public Map() {
     }
     
-    //one-dimensional map; list of locations
+    
+    /*//one-dimensional map; list of locations
     public Map(int numberOfRows){
         if (numberOfRows < 1) {
             System.out.println("The number of rows must be > zero.");
@@ -49,7 +50,7 @@ public class Map implements Serializable{
            locations[row] = location;
         } 
     }
-    /*    
+       
     private static LocationScene[] createScenes() {
         LocationScene[] location = new LocationScene[Map.locationScene().length];
         
@@ -93,12 +94,17 @@ public class Map implements Serializable{
     */ 
         //create Array(list) of locations and information for each location
       
-        
-     public static LocationScene[] createLocationList() {
+    public LocationScene[] getLocations(){
+        return locations;
+    }
+    
+    public void setLocations(LocationScene[] locations){
+        this.locations = locations;
+    }
+    
+    public static LocationScene[] createLocationList() {
     // create array(list) of 25 locations
-        
-     
-        
+         
         int[] myIntList = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 
                             14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26};
        

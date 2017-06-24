@@ -19,6 +19,7 @@ public class Game extends View implements Serializable{
     private String player;
     private Spaceship spaceship;
     private Map map;
+    private Map newMap;
  
     //default constructor
     public Game() {
@@ -91,10 +92,8 @@ public class Game extends View implements Serializable{
     }
 
 
-    
-    
     public void setMap(Map map) {
-        
+        map = newMap;
     }
 
     public void setPlayer(Player player) {

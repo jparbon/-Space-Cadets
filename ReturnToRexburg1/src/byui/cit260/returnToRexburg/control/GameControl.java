@@ -51,9 +51,16 @@ public class GameControl {
        
     }
 
-    public static void assignScenesToLocations(Map map, LocationScene[] scenes) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    //public static void assignScenesToLocations(Map map, LocationScene[] scenes) {
+    //    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    //}
       
+    public static void createMap(Game game){
+        Map map = MapControl.createMap();
+        game.setMap(map);
+    }
+    
+    //move actors to starting position in the map; the first location
+    //MapControl.moveActorsToStartingLocation(map);
     
 }
