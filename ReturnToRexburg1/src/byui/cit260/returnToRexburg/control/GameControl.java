@@ -47,8 +47,11 @@ public class GameControl {
         game.setMap(map); //save map in game
 
         //move actors to starting position in the map
-        MapControl.moveActorsToStartingLocation(map);
+        //MapControl.moveActorsToStartingLocation(map);
 
+        createMap(game);
+        
+       
     }
 
     //public static void assignScenesToLocations(Map map, LocationScene[] scenes) {

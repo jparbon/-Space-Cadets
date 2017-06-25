@@ -25,7 +25,7 @@ public class LocationView extends View {
                 + "\n---------------------------------------------"
                 + "\nE - Earn a new trophy"
                 + "\nD - Drill for fuel"
-                + "\nF - View fuel percentage"
+                + "\nF - View fuel level"
                 + "\nT - View trophy count"
                 + "\nM - Return to main menu"
                 + "\n---------------------------------------------");

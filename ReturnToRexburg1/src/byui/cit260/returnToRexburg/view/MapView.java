@@ -9,7 +9,7 @@ import byui.cit260.returnToRexburg.model.Game;
 import byui.cit260.returnToRexburg.model.LocationScene;
 import byui.cit260.returnToRexburg.model.Map;
 import returntorexburg1.ReturnToRexburg1;
-
+import byui.cit260.returnToRexburg.control.MapControl;
 /**
  *
  * @author shear
@@ -22,27 +22,19 @@ public class MapView extends View {
                 + "\n---------------------------------------------"
                 + "\nG - Return to Game Menu"
                 + "\n---------------------------------------------"
+                + "\nP - View your possible locations."
+                + "\n---------------------------------------------"
                 + "\n"
                 + "\n|   Here are the locations in the game.     |"
+                + "\n"
                 + "\n---------------------------------------------"
         );
 
     }
 
-    private void displayMap() {
-        Game game = ReturnToRexburg1.getCurrentGame();
-        Map map = game.getMap();
-        LocationScene[] locations = map.getLocations();
-
-        for (int i = 0; i < locations.length; i++) {
-            System.out.println("Locations " + locations[i].getName() + ": "
-                    + locations[i].getScene().getDescription());
-        }
-
-    }
-
-    private class Locations {
-
+    private static class Locations {
+        
+        private String possibleLocations;
         private int numberValue;
         private String stringValue;
 
@@ -66,6 +58,14 @@ public class MapView extends View {
         public String getStringValue() {
             return stringValue;
         }
+        
+        public void setPossibleLocations(String value) {
+            possibleLocations = value;
+        }
+
+        public String getPossibleLocations() {
+            return possibleLocations;
+        }
     }
 
     @Override
@@ -76,14 +76,14 @@ public class MapView extends View {
         switch (choice) {
             case "G": //Returns Player to Game Menu
                 return true;
-
+            case "P": //Displays the possible locations that the player can travel to in the game
+                this.displayPossibleLocations();
+                break;
             default:
                 System.out.println("\n*** Invalid selection. *** Please, try again!");
                 break;
         }
-
         return false;
-
     }
 
     private void returnToMainMenu() {
@@ -91,4 +91,28 @@ public class MapView extends View {
         mainMenu.display();
     }
 
+    public void displayMap() {
+        Game game = ReturnToRexburg1.getCurrentGame();
+        Map map = game.getMap();
+        LocationScene[] locations = map.getLocations();
+
+        for (int i = 0; i < locations.length; i++) {
+            System.out.println("Locations " + locations[i].getName() + ": "
+                    + locations[i].getScene().getDescription());
+        }
+    }
+
+    public void displayPossibleLocations() {
+        Game game = ReturnToRexburg1.getCurrentLocation();
+        //Map map = game.getMap();
+        //LocationScene[] locations = map.getLocations();
+        //call the createPossibleLocationsList()
+        
+        int[] mapControl = MapControl.createPossibleLocationsList();
+        
+        
+        System.out.println("Possible Locations: " + MapControl.createPossibleLocationsList() +
+                    "\nThis is where I need to figure out how to call the createPossibleLocationsList!");
+    }
 }
+

@@ -47,7 +47,7 @@ public class GameMenuView extends View {
                 this.FuelLevelView();
                 break;
             case "X": //display map     
-                this.MapView();
+                displayMap();
                 break;
             case "M": //returns player to Main Menu
                 return true;
@@ -88,6 +88,11 @@ public class GameMenuView extends View {
     private void FuelLevelView() {
         FuelLevelView fuelView = new FuelLevelView();
         fuelView.display();
+    }
+
+    private void displayMap() {
+        MapView map = new MapView();
+        map.display();
     }
 
 }

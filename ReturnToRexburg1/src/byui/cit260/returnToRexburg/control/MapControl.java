@@ -49,18 +49,36 @@ public class MapControl {
         assignScenesToLocations(location);
         return map;
     }
-
-    static void moveActorsToStartingLocation(Map map) {
-        System.out.println("This moves the actors to the starting location.");
-    }
+    
+    //method finds the locations not yet visited by the player
+    public static int[] createPossibleLocationsList() {
+        int currentLocation = 0;
+        
+        int [] possibleLocations = {1,2,3}; //initialize the array
+        int total = 0;
+        //navigate a 1D array using a for each loop with index
+        for (int location : possibleLocations){
+            total += location;
+            if (total > currentLocation){
+               return possibleLocations;
+            } 
+        }    
+        return possibleLocations;
+        
+    
+    } 
+    
+    //static void moveActorsToStartingLocation(Map map) {
+        //System.out.println("This moves the actors to the starting location.");
+    //}
 
     private static void assignScenesToLocations(LocationScene[] location) {
         System.out.println("This assigns the scenes to locations");
         //stub function until we figure out how to do this!
-    }
-    /*location[0].setScene("Neptune");
-        location[1].setScene(new LocationScene());
-        location[2].setScene(new LocationScene());
+    /*
+        location[0].setScene(new LocationScene1());
+        location[1].setScene(new LocationScene2());
+        location[2].setScene(new LocationScene3());
         location[3].setScene(new LocationScene());
         location[4].setScene(new LocationScene());
         location[5].setScene(new LocationScene());
@@ -84,6 +102,7 @@ public class MapControl {
         location[23].setScene(new LocationScene());
         location[24].setScene(new LocationScene());
         location[25].setScene(new LocationScene());
-    
-     */
+    }
+            */ 
+}
 }

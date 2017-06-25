@@ -15,7 +15,7 @@ import java.util.Objects;
  *
  * @author douglasarbon1
  */
-public class LocationScene extends RegularSceneType implements Serializable {
+public final class LocationScene extends RegularSceneType implements Serializable {
 
     //class instance variables
     private String locationName;
@@ -46,10 +46,9 @@ public class LocationScene extends RegularSceneType implements Serializable {
 
     }
 
-    //convenience constructor
-    public LocationScene(String locationName) {
-        name = locationName;
-    }
+    //public LocationScene() {
+    //    System.out.println("This creates a new scene.");
+    //}
 
     public Scene getScene() {
         return scene;

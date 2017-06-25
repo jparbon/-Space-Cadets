@@ -20,7 +20,7 @@ public class Map implements Serializable {
     //class instance variables
     private String description;
     private LocationScene[] locations;
-    private int numberOfRows;
+    private int currentLocation;
 
     //default constructor
     public Map() {
@@ -167,14 +167,22 @@ public class Map implements Serializable {
         return location;
     }
 
-    //getter
+    //getters
     public String getDescription() {
         return description;
     }
 
+    public int getCurrentLocation() {
+        return currentLocation;
+    }
+    
     //setter
     public void setDescription(String description) {
         //this.description = description;
+    }
+
+    public void setCurrentLocation(int currentLocation) {
+        this.currentLocation = currentLocation;
     }
 
     @Override
