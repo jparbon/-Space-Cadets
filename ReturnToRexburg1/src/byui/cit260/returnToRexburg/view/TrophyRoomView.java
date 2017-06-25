@@ -27,6 +27,10 @@ public class TrophyRoomView extends View {
 
     }
 
+    public TrophyRoomView(String neptune, int i, int i0, String question, String answer) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     @Override
     public boolean doAction(String choice) {
 
@@ -50,8 +54,12 @@ public class TrophyRoomView extends View {
     private void viewAcquiredTrophies() {
         System.out.println(
                 "\n**************************************************************"
-                + "\n You have collected 0 trophies"
+                + "\n You have collected 0 trophies"     
                 + "\n**************************************************************"
+          //public static void createTrophy() {
+        //create the map
+        //Trophy trophy = new Trophy();
+        //TrophyRoomView [] trophyRoom = new TrophyRoomView[20];
         );
     }
     
