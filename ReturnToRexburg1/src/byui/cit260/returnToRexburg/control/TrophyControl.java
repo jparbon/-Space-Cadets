@@ -12,6 +12,7 @@ import byui.cit260.returnToRexburg.view.TrophyRoomView;
 /**
  *
  * @author Robbie
+ * @author Natali
  */
 public class TrophyControl {
 
@@ -21,27 +22,27 @@ public class TrophyControl {
         TrophyRoomView [] trophyRoom = new TrophyRoomView[20];
         TrophyRoomView[] Trophy = null;
 
-        Trophy[0] = new TrophyRoomView("Neptune", 0, 0, "question", "answer");
-        Trophy[1] = new TrophyRoomView("Triton", 0, 0, "question", "answer");
-        Trophy[2] = new TrophyRoomView("Proteus", 0, 0, "question", "answer");
-        Trophy[3] = new TrophyRoomView("Titan", 0, 0, "question", "answer");
-        Trophy[4] = new TrophyRoomView("F-Ring", 0, 0, "question", "answer");
-        Trophy[5] = new TrophyRoomView("Rhea", 0, 0, "question", "answer");
-        Trophy[6] = new TrophyRoomView("Prometheus", 0, 0, "question", "answer");
-        Trophy[7] = new TrophyRoomView("Pandora", 0, 0, "question", "answer");
-        Trophy[8] = new TrophyRoomView("Oberon", 0, 0, "question", "answer");
-        Trophy[9] = new TrophyRoomView("Ariel", 0, 0, "question", "answer");
-        Trophy[10] = new TrophyRoomView("Wunda", 0, 0, "question", "answer");
-        Trophy[11] = new TrophyRoomView("Mab", 0, 0, "question", "answer");
-        Trophy[12] = new TrophyRoomView("Great Red Spot", 0, 0, "question", "answer");
-        Trophy[13] = new TrophyRoomView("Lo", 0, 0, "question", "answer");
-        Trophy[14] = new TrophyRoomView("Europa", 0, 0, "question", "answer");
-        Trophy[15] = new TrophyRoomView("Ganymede", 0, 0, "question", "answer");
-        Trophy[16] = new TrophyRoomView("Callisto", 0, 0, "question", "answer");
-        Trophy[17] = new TrophyRoomView("Arabia Terra", 0, 0, "question", "answer");
-        Trophy[18] = new TrophyRoomView("Planum Boreum", 0, 0, "question", "answer");
-        Trophy[19] = new TrophyRoomView("Amazonis Planitia", 0, 0, "question", "answer");
-        Trophy[20] = new TrophyRoomView("Syrtis", 0, 0, "question", "answer");
+        Trophy[0] = new TrophyRoomView("0",0,0,"", ""  );
+        Trophy[1] = new TrophyRoomView("1",0,0, "", "" );
+        Trophy[2] = new TrophyRoomView("2",0,0, "", "" );
+        Trophy[3] = new TrophyRoomView("3",0,0,"", ""  );
+        Trophy[4] = new TrophyRoomView("4",0,0,"", ""  );
+        Trophy[5] = new TrophyRoomView("5",0,0,"", ""  );
+        Trophy[6] = new TrophyRoomView("6",0,0,"", ""  );
+        Trophy[7] = new TrophyRoomView("7",0,0,"", ""  );
+        Trophy[8] = new TrophyRoomView("8",0,0,"", ""  );
+        Trophy[9] = new TrophyRoomView("9",0,0,"", ""  );
+        Trophy[10] = new TrophyRoomView("10",0,0,"", "" );
+        Trophy[11] = new TrophyRoomView("11",0,0,"", "" );
+        Trophy[12] = new TrophyRoomView("12",0,0,"", "" );
+        Trophy[13] = new TrophyRoomView("13",0,0,"", "" );
+        Trophy[14] = new TrophyRoomView("14",0,0,"", "" );
+        Trophy[15] = new TrophyRoomView("15",0,0,"", "" );
+        Trophy[16] = new TrophyRoomView("16",0,0,"", "" );
+        Trophy[17] = new TrophyRoomView("17",0,0,"", "" );
+        Trophy[18] = new TrophyRoomView("18",0,0,"", "" );
+        Trophy[19] = new TrophyRoomView("19",0,0,"", "" );
+        Trophy[20] = new TrophyRoomView("20",0,0,"", "" );
 
         assignTrophyToTrophyRoomView(trophy);
         return Trophy;
