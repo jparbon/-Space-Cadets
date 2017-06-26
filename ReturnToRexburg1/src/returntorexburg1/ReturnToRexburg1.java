@@ -39,9 +39,15 @@ public class ReturnToRexburg1 {
     public static void main(String[] args) {
     
     //create StartProgramView original and display the StartProgramView
-    StartProgramView startProgramView = new StartProgramView();
-    startProgramView.display();
-             
+        StartProgramView startProgramView = new StartProgramView();
+        try {
+            //create StartProgramView and start the program
+            startProgramView.display();
+        } catch (Throwable te) {
+            System.out.println(te.getMessage());
+            te.printStackTrace();
+            startProgramView.display();
+        }
     }
 
     public static Game getCurrentGame() {

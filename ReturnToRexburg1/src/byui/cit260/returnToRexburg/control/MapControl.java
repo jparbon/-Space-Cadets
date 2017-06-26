@@ -5,6 +5,7 @@
  */
 package byui.cit260.returnToRexburg.control;
 
+import byui.cit260.returnToRexburg.model.Actor;
 import byui.cit260.returnToRexburg.model.LocationScene;
 import byui.cit260.returnToRexburg.model.Map;
 
@@ -49,6 +50,17 @@ public class MapControl {
         assignScenesToLocations(location);
         return map;
     }
+    
+    //runtime errors
+    //public static int moveActorToLocation(Actor actor, LocationScene location ){
+    //    Map map = ReturnToRexburg1.getCurrentGame().getMap();
+    //    int location;
+        
+     //   if ()
+     //   throw new MapControlException("Cannot move actor to location " + location + "because"
+      //          + "that location has already been visited.");
+    //}
+    
     
     //method finds the locations not yet visited by the player
     public static int[] createPossibleLocationsList() {
