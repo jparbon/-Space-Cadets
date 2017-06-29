@@ -5,6 +5,8 @@
  */
 package byui.cit260.returnToRexburg.exceptions;
 
+import java.util.Random;
+
 /**
  *
  * @author douglasarbon1
@@ -29,6 +31,7 @@ public class MapControlException extends Exception{
     public MapControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
+    
     
     
 }
