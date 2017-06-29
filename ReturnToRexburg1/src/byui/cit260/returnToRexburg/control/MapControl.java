@@ -9,6 +9,8 @@ import byui.cit260.returnToRexburg.model.Actor;
 import byui.cit260.returnToRexburg.model.LocationScene;
 import byui.cit260.returnToRexburg.model.Map;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author douglasarbon1
@@ -48,6 +50,7 @@ public class MapControl {
         location[25] = new LocationScene("Earth", 0, 0, "question", "answer");
 
         assignScenesToLocations(location);
+        map.setLocations();
         return map;
     }
     
@@ -62,23 +65,27 @@ public class MapControl {
     //}
     
     
-    //method finds the locations not yet visited by the player
-    public static int[] createPossibleLocationsList() {
-        int currentLocation = 0;
+    /**
+     * Return an array of unvisited locations. Pass in the current location index and the
+     * list of all locations in the map.
+     */
+    public static LocationScene[] createPossibleLocationsList(int currentLocation, LocationScene[] allLocations){
         
-        int [] possibleLocations = {1,2,3}; //initialize the array
-        int total = 0;
-        //navigate a 1D array using a for each loop with index
-        for (int location : possibleLocations){
-            total += location;
-            if (total > currentLocation){
-               return possibleLocations;
-            } 
-        }    
-        return possibleLocations;
-        
-    
-    } 
+        // Use an arraylist so we can start with nothing and build it up
+        // as our loop progresses.
+        ArrayList<LocationScene> possibleLocations = new ArrayList<>();
+
+        // According to the test matrix description, this function returns
+        // all locations that come after the current location in the map.
+        // So our for loop can start at currentLocation + 1.
+        for (int i=currentLocation+1; i < allLocations.length; i++){
+            possibleLocations.add(allLocations[i]);
+        }
+
+        // ArrayList has a goofy way to convert itself to an Array
+        return possibleLocations.toArray(new LocationScene[0]);
+    }
+
     
     //static void moveActorsToStartingLocation(Map map) {
         //System.out.println("This moves the actors to the starting location.");

@@ -98,22 +98,26 @@ public class MapView extends View {
         LocationScene[] locations = map.getLocations();
 
         for (int i = 0; i < locations.length; i++) {
-            System.out.println("Locations " + locations[i].getName() + ": "
-                    + locations[i].getScene().getDescription());
+            System.out.println("Locations " + locations[i].getLocationName() );
         }
+
+        super.display();
+
     }
 
     public void displayPossibleLocations() {
-        Game game = ReturnToRexburg1.getCurrentLocation();
-        //Map map = game.getMap();
-        //LocationScene[] locations = map.getLocations();
-        //call the createPossibleLocationsList()
         
-        int[] mapControl = MapControl.createPossibleLocationsList();
+        // Get the map from the current game.
+        Map map = ReturnToRexburg1.getCurrentGame().getMap();
+
+        // Use the map's current location, and locations to 
+        // call the possible locations functions.
+        LocationScene[] possibleLocations = MapControl.createPossibleLocationsList(
+            map.getCurrentLocation(), map.getLocations());
         
-        
-        System.out.println("Possible Locations: " + MapControl.createPossibleLocationsList() +
-                    "\nThis is where I need to figure out how to call the createPossibleLocationsList!");
+        for (LocationScene location : possibleLocations){
+            System.out.println(location.getLocationName());
+        }
     }
 }
 

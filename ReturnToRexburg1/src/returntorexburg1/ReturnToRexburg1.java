@@ -23,7 +23,7 @@ public class ReturnToRexburg1 {
 
     private static Game currentGame = null;
     private static Player player = null;
-    private static Game currentLocation = null;
+    
     /**
      * @param args the command line arguments
      */
@@ -66,12 +66,5 @@ public class ReturnToRexburg1 {
         ReturnToRexburg1.player = player;
     }
 
-    public static Game getCurrentLocation() {   
-        return currentLocation;
-    }
-
-    public static void setCurrentLocation(LocationScene location) {
-        
-    }
 }  
     
