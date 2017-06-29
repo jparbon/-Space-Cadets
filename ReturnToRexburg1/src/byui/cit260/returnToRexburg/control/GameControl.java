@@ -10,6 +10,7 @@ import byui.cit260.returnToRexburg.model.LocationScene;
 import byui.cit260.returnToRexburg.model.Map;
 import byui.cit260.returnToRexburg.model.Player;
 import byui.cit260.returnToRexburg.model.Spaceship;
+import byui.cit260.returnToRexburg.model.Trophy;
 import returntorexburg1.ReturnToRexburg1;
 
 /**
@@ -51,7 +52,15 @@ public class GameControl {
 
         createMap(game);
         
-       
+        // Add a few trophies so we can show them later (this should be
+        // replaced when the game gets to the point of earning trophies).
+        // Add them out of order so we can see that they're sorted 
+        // correctly.
+        game.getTrophies().add(Trophy.Trophy3);
+        game.getTrophies().add(Trophy.Trophy2);
+        game.getTrophies().add(Trophy.Trophy5);
+        game.getTrophies().add(Trophy.Trophy1);
+        game.getTrophies().add(Trophy.Trophy4);
     }
 
     //public static void assignScenesToLocations(Map map, LocationScene[] scenes) {

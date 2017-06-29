@@ -50,7 +50,7 @@ public class MapControl {
         location[25] = new LocationScene("Earth", 0, 0, "question", "answer");
 
         assignScenesToLocations(location);
-        map.setLocations();
+        map.setLocations(location);
         return map;
     }
     

@@ -5,6 +5,12 @@
  */
 package byui.cit260.returnToRexburg.view;
 
+import returntorexburg1.ReturnToRexburg1;
+import java.util.ArrayList;
+
+import byui.cit260.returnToRexburg.control.TrophyControl;
+import byui.cit260.returnToRexburg.model.Trophy;
+
 /**
  *
  * @author Robbie
@@ -27,9 +33,7 @@ public class TrophyRoomView extends View {
 
     }
 
-    public TrophyRoomView(String neptune, int i, int i0, String question, String answer) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     @Override
     public boolean doAction(String choice) {
@@ -52,21 +56,24 @@ public class TrophyRoomView extends View {
     }
 
     private void viewAcquiredTrophies() {
+        ArrayList<Trophy> trophies = ReturnToRexburg1.getCurrentGame().getTrophies();
+
+
         System.out.println(
                 "\n**************************************************************"
-                + "\n You have collected 0 trophies"     
+                + "\n You have collected " + trophies.size() + " trophies"     
                 + "\n**************************************************************"
-          //public static void createTrophy() {
-        //create the map
-        //Trophy trophy = new Trophy();
-        //TrophyRoomView [] trophyRoom = new TrophyRoomView[20];
         );
-    }
-    
-     
-         private void returnToMainMenu() {
-        MainMenuView mainMenu = new MainMenuView();
-        mainMenu.display();
 
+        // Copy the list of trophies so the sorting doesn't mess with the original list.
+        ArrayList<Trophy> sortedTrophies = new ArrayList<>();
+        sortedTrophies.addAll(trophies);
+
+        TrophyControl.sortTrophyList(sortedTrophies);
+
+        for (Trophy trophy: sortedTrophies){
+            System.out.println(trophy.name() + ": "+ trophy.getDescription());
+        }
     }
+         
 }

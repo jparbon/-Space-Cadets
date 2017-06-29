@@ -9,6 +9,8 @@ import byui.cit260.returnToRexburg.view.View;
 import java.io.Serializable;
 import java.util.Objects;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author douglasarbon1
@@ -22,8 +24,11 @@ public class Game extends View implements Serializable {
     private Map map;
     private Map newMap;
 
+    private ArrayList<Trophy> trophies;
+
     //default constructor
     public Game() {
+        trophies = new ArrayList<>();
     }
 
     //getters and setters
@@ -54,6 +59,11 @@ public class Game extends View implements Serializable {
     public Map getMap() {
         return map;
     }
+
+    public ArrayList<Trophy> getTrophies(){
+        return trophies;
+    }
+
 
     @Override
     public int hashCode() {
