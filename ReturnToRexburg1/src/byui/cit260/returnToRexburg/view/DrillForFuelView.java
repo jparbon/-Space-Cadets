@@ -8,7 +8,10 @@ package byui.cit260.returnToRexburg.view;
 import java.util.Scanner;
 import byui.cit260.returnToRexburg.control.ResourceControl;
 import static byui.cit260.returnToRexburg.control.ResourceControl.fuelEarned;
+import byui.cit260.returnToRexburg.exceptions.MapControlException;
 import byui.cit260.returnToRexburg.model.LocationScene;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -57,11 +60,19 @@ public abstract class DrillForFuelView extends IntView {
     @Override
     public int doAction(int fuelEarned) {
         
-        //create a new resource control instance called resource
-        ResourceControl resource = new ResourceControl();
-        
-        //call the gatherFuel() method from the ResourceControl class
-        resource.gatherFuel(10, 5, 10, fuelEarned);  
+        try {
+            //create a new resource control instance called resource
+            ResourceControl resource = new ResourceControl();
+            
+            //call the gatherFuel() method from the ResourceControl class
+            resource.gatherFuel(10, 5, 10, fuelEarned);
+            
+            
+        } catch (MapControlException ex) {
+            Logger.getLogger(DrillForFuelView.class.getName()).log(Level.SEVERE, null, ex);
+            
+        }//finally { System.out.println("You have earned 30 fuel points");
+        //}
         return fuelEarned;
         }   
   

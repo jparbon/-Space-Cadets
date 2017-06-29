@@ -98,7 +98,7 @@ public class MapView extends View {
         LocationScene[] locations = map.getLocations();
 
         for (int i = 0; i < locations.length; i++) {
-            System.out.println("Locations " + locations[i].getLocationName() );
+            System.out.println("Location" + locations[i].getLocationName() );
         }
 
         super.display();
