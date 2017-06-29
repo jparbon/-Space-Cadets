@@ -37,8 +37,8 @@ public class MainMenuView extends View {
         switch (choice) {
 
             case "N": //display game menu
-                this.GameMenuView();
                 this.startNewGame();
+                this.GameMenuView();
                 break;
             case "R": //get and start an existing game
                 this.restoreExistingGame();

@@ -91,7 +91,8 @@ public class MapView extends View {
         mainMenu.display();
     }
 
-    public void displayMap() {
+    @Override
+    public void display() {
         Game game = ReturnToRexburg1.getCurrentGame();
         Map map = game.getMap();
         LocationScene[] locations = map.getLocations();

@@ -90,7 +90,7 @@ public class Game extends View implements Serializable {
     }
 
     public void setMap(Map map) {
-        map = newMap;
+        this.map = map;
     }
 
     public void setPlayer(Player player) {

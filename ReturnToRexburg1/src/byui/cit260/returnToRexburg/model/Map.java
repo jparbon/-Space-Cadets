@@ -21,6 +21,7 @@ public class Map implements Serializable {
     private String description;
     private LocationScene[] locations;
     private int currentLocation;
+    public int length;
 
     //default constructor
     public Map() {
