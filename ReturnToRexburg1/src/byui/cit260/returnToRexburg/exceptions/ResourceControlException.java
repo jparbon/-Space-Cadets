@@ -9,24 +9,24 @@ package byui.cit260.returnToRexburg.exceptions;
  *
  * @author douglasarbon1
  */
-public class MapControlException extends Exception{
+public class ResourceControlException extends Exception{
 
-    public MapControlException() {
+    public ResourceControlException() {
     }
 
-    public MapControlException(String message) {
+    public ResourceControlException(String message) {
         super(message);
     }
 
-    public MapControlException(String message, Throwable cause) {
+    public ResourceControlException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public MapControlException(Throwable cause) {
+    public ResourceControlException(Throwable cause) {
         super(cause);
     }
 
-    public MapControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    public ResourceControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
     

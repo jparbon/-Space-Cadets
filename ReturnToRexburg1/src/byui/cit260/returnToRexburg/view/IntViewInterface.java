@@ -19,6 +19,6 @@ public interface IntViewInterface {
     
     public void display();
     public int getInput();
-    public int doAction(int userInput);
+    public boolean doAction(int userInput);
     
 }

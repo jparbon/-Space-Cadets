@@ -6,6 +6,7 @@
 package byui.cit260.returnToRexburg.control;
 
 
+import byui.cit260.returnToRexburg.exceptions.ResourceControlException;
 import java.util.Random;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -24,7 +25,7 @@ public class ResourceControlTest {
      * Test of gatherFuel method, of class ResourceControl.
      */
     @Test
-    public void testGatherFuel() {
+    public void testGatherFuel() throws ResourceControlException {
         System.out.println("gatherFuel");
         
 
