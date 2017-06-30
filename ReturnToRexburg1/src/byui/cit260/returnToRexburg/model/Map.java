@@ -215,4 +215,8 @@ public class Map implements Serializable {
     public String toString() {
         return "Map{" + "description=" + description + '}';
     }
+
+    public void setLocations() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
