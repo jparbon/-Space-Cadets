@@ -5,6 +5,7 @@
  */
 package byui.cit260.returnToRexburg.control;
 
+import byui.cit260.returnToRexburg.exceptions.GameControlException;
 import byui.cit260.returnToRexburg.model.Game;
 import byui.cit260.returnToRexburg.model.LocationScene;
 import byui.cit260.returnToRexburg.model.Map;
@@ -19,16 +20,17 @@ import returntorexburg1.ReturnToRexburg1;
  */
 public class GameControl {
 
-    public static Player createPlayer(String name) {
+    public static Player createPlayer(String name) throws GameControlException {
 
         if (name == null) {
-            return null;
+        //    return null;
+        throw new GameControlException ("Value cannot be blank. Please enter your name.");
         }
 
         Player player = new Player();
         player.setName(name);
 
-        ReturnToRexburg1.setPlayer(player); //save the player
+        //ReturnToRexburg1.getCurrentGame().setPlayer(player); //save the player
 
         return player;
     }

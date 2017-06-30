@@ -6,6 +6,8 @@
 package byui.cit260.returnToRexburg.view;
 
 import byui.cit260.returnToRexburg.control.GameControl;
+import byui.cit260.returnToRexburg.exceptions.GameControlException;
+import byui.cit260.returnToRexburg.model.Player;
 import java.util.Scanner;
 import returntorexburg1.ReturnToRexburg1;
 
@@ -61,12 +63,19 @@ public class MainMenuView extends View {
     }
 
     private void startNewGame() {
-        //create new game
-        GameControl.createNewGame(ReturnToRexburg1.getPlayer());
 
-        //display the game menu
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.display();
+        String name = ReturnToRexburg1.getPlayerName();
+        try {
+            Player player = GameControl.createPlayer(name);
+
+            GameControl.createNewGame(player);
+
+            //display the game menu
+            GameMenuView gameMenu = new GameMenuView();
+            gameMenu.display();
+        } catch (GameControlException gce){
+          System.out.println(gce.getMessage());  
+        }
     }
 
     private void restoreExistingGame() {

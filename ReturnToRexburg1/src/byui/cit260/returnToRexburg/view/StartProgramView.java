@@ -9,6 +9,7 @@ import byui.cit260.returnToRexburg.control.GameControl;
 import byui.cit260.returnToRexburg.model.Player;
 import static java.awt.SystemColor.menu;
 import java.util.Scanner;
+import returntorexburg1.ReturnToRexburg1;
 
 /**
  *
@@ -50,11 +51,11 @@ public class StartProgramView extends View {
         );
     }
 
-    private void displayNextView(Player player) {
+    private void displayNextView() {
 
         //display a custom welcome message
         System.out.println("\n==========================================="
-                + "\n Welcome to the game, " + player.getName() + "."
+                + "\n Welcome to the game, " + ReturnToRexburg1.getPlayerName() + "."
                 + "\n We hope you can Return to Rexburg!"
                 + "\n==========================================="
         );
@@ -69,9 +70,9 @@ public class StartProgramView extends View {
 
     @Override
     public boolean doAction(String choice) {
-        Player player = new Player();
-        player.setName(choice);
-        displayNextView(player);
+        //Player player = new Player();
+        ReturnToRexburg1.setPlayerName(choice);
+        displayNextView();
         return true;
     }
 

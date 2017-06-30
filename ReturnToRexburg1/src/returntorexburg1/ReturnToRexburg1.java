@@ -22,7 +22,8 @@ import byui.cit260.returnToRexburg.view.StartProgramView;
 public class ReturnToRexburg1 {
 
     private static Game currentGame = null;
-    private static Player player = null;
+    private static String playerName = null;
+    //private static Player player = null;
     
     /**
      * @param args the command line arguments
@@ -58,12 +59,12 @@ public class ReturnToRexburg1 {
         ReturnToRexburg1.currentGame = currentGame;
     }
 
-    public static Player getPlayer() {
-        return player;
+    public static String getPlayerName() {
+        return playerName;
     }
 
-    public static void setPlayer(Player player) {
-        ReturnToRexburg1.player = player;
+    public static void setPlayerName(String name) {
+       ReturnToRexburg1.playerName = name;
     }
 
 }  
