@@ -92,7 +92,7 @@ public class MapControl {
     //}
 
     private static void assignScenesToLocations(LocationScene[] location) {
-        System.out.println("This assigns the scenes to locations");
+        //System.out.println("This assigns the scenes to locations");
         //stub function until we figure out how to do this!
     /*
         location[0].setScene(new LocationScene1());

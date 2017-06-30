@@ -104,7 +104,7 @@ public class Game extends View implements Serializable {
     }
 
     public void setPlayer(Player player) {
-        System.out.println("This set the player.");
+     //   System.out.println("This set the player.");
     }
 
 }
