@@ -21,16 +21,17 @@ public class MapView extends View {
         super("\n"
                 + "\n---------------------------------------------"
                 + "\nG - Return to Game Menu"
-                + "\n---------------------------------------------"
-                + "\nP - View your possible locations."
-                + "\n---------------------------------------------"
                 + "\n"
-                + "\n|   Here are the locations in the game.     |"
+                + "\nP - View your possible locations."
+                + "\n"
+                + "\nL - Lift Off! Travel to the next location."
                 + "\n"
                 + "\n---------------------------------------------"
         );
 
     }
+
+   
 
     private static class Locations {
         
@@ -79,6 +80,9 @@ public class MapView extends View {
             case "P": //Displays the possible locations that the player can travel to in the game
                 this.displayPossibleLocations();
                 break;
+            case "L": //Lift-Off! Moves the player to the next desired location
+                this.movePlayerToNewLocation();
+                break;    
             default:
                 System.out.println("\n*** Invalid selection. *** Please, try again!");
                 break;
@@ -119,5 +123,10 @@ public class MapView extends View {
             System.out.println(location.getLocationName());
         }
     }
+    
+ private void movePlayerToNewLocation() {
+        System.out.println("This moves the player to a new location.");
+    }   
+    
 }
 

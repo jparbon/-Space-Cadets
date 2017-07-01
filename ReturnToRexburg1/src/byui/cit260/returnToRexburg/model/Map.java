@@ -138,32 +138,32 @@ public class Map implements Serializable {
 
         LocationScene[] location = new LocationScene[26];
 
-        location[0] = new LocationScene("Neptune", 0, 0, "question", "answer");
-        location[1] = new LocationScene("Triton", 0, 0, "question", "answer");
-        location[2] = new LocationScene("Proteus", 0, 0, "question", "answer");
-        location[3] = new LocationScene("Titan", 0, 0, "question", "answer");
-        location[4] = new LocationScene("F-Ring", 0, 0, "question", "answer");
-        location[5] = new LocationScene("Rhea", 0, 0, "question", "answer");
-        location[6] = new LocationScene("Prometheus", 0, 0, "question", "answer");
-        location[7] = new LocationScene("Pandora", 0, 0, "question", "answer");
-        location[8] = new LocationScene("Oberon", 0, 0, "question", "answer");
-        location[9] = new LocationScene("Ariel", 0, 0, "question", "answer");
-        location[10] = new LocationScene("Wunda", 0, 0, "question", "answer");
-        location[11] = new LocationScene("Mab", 0, 0, "question", "answer");
-        location[12] = new LocationScene("Great Red Spot", 0, 0, "question", "answer");
-        location[13] = new LocationScene("Lo", 0, 0, "question", "answer");
-        location[14] = new LocationScene("Europa", 0, 0, "question", "answer");
-        location[15] = new LocationScene("Ganymede", 0, 0, "question", "answer");
-        location[16] = new LocationScene("Callisto", 0, 0, "question", "answer");
-        location[17] = new LocationScene("Arabia Terra", 0, 0, "question", "answer");
-        location[18] = new LocationScene("Planum Boreum", 0, 0, "question", "answer");
-        location[19] = new LocationScene("Amazonis Planitia", 0, 0, "question", "answer");
-        location[20] = new LocationScene("Syrtis", 0, 0, "question", "answer");
-        location[21] = new LocationScene("Tharsis", 0, 0, "question", "answer");
-        location[22] = new LocationScene("Phobos", 0, 0, "question", "answer");
-        location[23] = new LocationScene("Aitken", 0, 0, "question", "answer");
-        location[24] = new LocationScene("Montes Rook", 0, 0, "question", "answer");
-        location[25] = new LocationScene("Earth", 0, 0, "question", "answer");
+        location[0] = new LocationScene("0-Neptune", 0, 0, "question", "answer");
+        location[1] = new LocationScene("1-Triton", 0, 0, "question", "answer");
+        location[2] = new LocationScene("2-Proteus", 0, 0, "question", "answer");
+        location[3] = new LocationScene("3-Titan", 0, 0, "question", "answer");
+        location[4] = new LocationScene("4-F-Ring", 0, 0, "question", "answer");
+        location[5] = new LocationScene("5-Rhea", 0, 0, "question", "answer");
+        location[6] = new LocationScene("6-Prometheus", 0, 0, "question", "answer");
+        location[7] = new LocationScene("7-Pandora", 0, 0, "question", "answer");
+        location[8] = new LocationScene("8-Oberon", 0, 0, "question", "answer");
+        location[9] = new LocationScene("9-Ariel", 0, 0, "question", "answer");
+        location[10] = new LocationScene("10-Wunda", 0, 0, "question", "answer");
+        location[11] = new LocationScene("11-Mab", 0, 0, "question", "answer");
+        location[12] = new LocationScene("12-Great Red Spot", 0, 0, "question", "answer");
+        location[13] = new LocationScene("13-Lo", 0, 0, "question", "answer");
+        location[14] = new LocationScene("14-Europa", 0, 0, "question", "answer");
+        location[15] = new LocationScene("15-Ganymede", 0, 0, "question", "answer");
+        location[16] = new LocationScene("16-Callisto", 0, 0, "question", "answer");
+        location[17] = new LocationScene("17-Arabia Terra", 0, 0, "question", "answer");
+        location[18] = new LocationScene("18-Planum Boreum", 0, 0, "question", "answer");
+        location[19] = new LocationScene("19-Amazonis Planitia", 0, 0, "question", "answer");
+        location[20] = new LocationScene("20-Syrtis", 0, 0, "question", "answer");
+        location[21] = new LocationScene("21-Tharsis", 0, 0, "question", "answer");
+        location[22] = new LocationScene("22-Phobos", 0, 0, "question", "answer");
+        location[23] = new LocationScene("23-Aitken", 0, 0, "question", "answer");
+        location[24] = new LocationScene("24-Montes Rook", 0, 0, "question", "answer");
+        location[25] = new LocationScene("25-Earth", 0, 0, "question", "answer");
 
         return location;
     }
