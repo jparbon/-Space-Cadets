@@ -25,7 +25,7 @@ public class MapControl {
         LocationScene[] location = new LocationScene[26];
 
         location[0] = new LocationScene("  0 - Neptune", 0, 0, "question", "answer");
-        location[1] = new LocationScene("  1 - Triton", 0, 0, "question", "answer");
+        location[1] = new LocationScene("  1 - Triton", 5, 10, "question", "answer");
         location[2] = new LocationScene("  2 - Proteus", 0, 0, "question", "answer");
         location[3] = new LocationScene("  3 - Titan", 0, 0, "question", "answer");
         location[4] = new LocationScene("  4 - F-Ring", 0, 0, "question", "answer");
@@ -57,7 +57,7 @@ public class MapControl {
     }
     
     //runtime errors
-    public static void moveActorToLocation(Actor actor, LocationScene location) throws MapControlException{
+    public static void moveActorToNewLocation(Actor actor, LocationScene location) throws MapControlException{
         Map map = ReturnToRexburg1.getCurrentGame().getMap();
         int newLocation = -1;
         

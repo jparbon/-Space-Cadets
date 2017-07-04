@@ -81,7 +81,7 @@ public class MapView extends View {
                 this.displayPossibleLocations();
                 break;
             case "L": //Lift-Off! Moves the player to the next desired location
-                this.movePlayerToNewLocation();
+                this.moveActorToNewLocation();
                 break;    
             default:
                 System.out.println("\n*** Invalid selection. *** Please, try again!");
@@ -124,8 +124,8 @@ public class MapView extends View {
         }
     }
     
- private void movePlayerToNewLocation() {
-        System.out.println("This moves the player to a new location.");
+ private void moveActorToNewLocation() {
+        //System.out.println("This moves the player to a new location.");
     }   
     
 }
