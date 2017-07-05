@@ -12,6 +12,8 @@ import byui.cit260.returnToRexburg.model.Map;
 import byui.cit260.returnToRexburg.model.Player;
 import byui.cit260.returnToRexburg.model.Spaceship;
 import byui.cit260.returnToRexburg.model.Trophy;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import returntorexburg1.ReturnToRexburg1;
 
 /**
@@ -75,4 +77,18 @@ public class GameControl {
 
     //move actors to starting position in the map; the first location
     //MapControl.moveActorsToStartingLocation(map);
-}
+
+    public static void saveGame(Game currentGame, String filePath) 
+            throws GameControlException {
+       
+        //try(FileOutputStream fops = new FileOutputStream(filepath)) {
+            //ObjectOutputStream output = new ObjectOutputStream (fops);
+            
+            //output.writeObject(game); //write the game object out to file
+        //}
+        //catch(Exception e) {
+            //throw new GameControlException(e.getMessage());
+        }
+    }
+ //}
+

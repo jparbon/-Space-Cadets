@@ -23,10 +23,10 @@ public class MainMenuView extends View {
                 + "\n---------------------------------------------"
                 + "\n| Main Menu                                 |"
                 + "\n---------------------------------------------"
-                + "\nN - Start New Game"
-                + "\nR - Restore Existing Game"
-                + "\nH - Help on How to Play the Game"
-                + "\nS - Save Game"
+                + "\nN - Start new game"
+                + "\nR - Get and start saved game"
+                + "\nH - Get help on how to play the game"
+                + "\nS - Save game"
                 + "\nQ - Quit"
                 + "\n---------------------------------------------");
     }
@@ -54,7 +54,8 @@ public class MainMenuView extends View {
             case "Q": //quits the game
                 return true;
             default:
-                System.out.println("\n*** Invalid selection. *** Please, try again!");
+                ErrorView.display("MainMenuView", 
+                                  "*** Invalid selection *** Try again!");
                 break;
         }
 
@@ -83,7 +84,18 @@ public class MainMenuView extends View {
     }
 
     private void saveGame() {
-        System.out.println("save the current game?");
+        //prompt for and get the name of the file to save the game
+        this.console.println("\n\nEnter the file path for  file where the game "
+                + "is to be saved.");
+        String filePath = this.getInput();
+        
+        try {
+            //save the game to the specified file
+            GameControl.saveGame(ReturnToRexburg1.getCurrentGame(), filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        } 
+        
     }
 
     private void displayHelpMenu() {
