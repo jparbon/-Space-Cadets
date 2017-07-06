@@ -37,7 +37,7 @@ public class GameMenuView extends View {
             case "A": //display alien menu
                 this.AlienMenuView();
                 break;
-            case "L": //display location menu    
+            case "L": //display location menu 
                 this.LocationView();
                 break;
             case "T": //display trophy room menu    
