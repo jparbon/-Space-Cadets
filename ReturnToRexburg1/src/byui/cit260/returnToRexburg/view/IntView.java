@@ -5,8 +5,11 @@
  */
 package byui.cit260.returnToRexburg.view;
 
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import returntorexburg1.ReturnToRexburg1;
 
 /**
  *
@@ -16,6 +19,9 @@ public abstract class IntView implements IntViewInterface {
 
     protected String displayMessage;
 
+    protected final BufferedReader keyboard = ReturnToRexburg1.getInFile();
+    protected final PrintWriter console = ReturnToRexburg1.getOutFile();
+    
     public IntView() {
     }
 
@@ -52,13 +58,14 @@ public abstract class IntView implements IntViewInterface {
     @Override
     public int getInput() {
 
-        Scanner userInputScanner = new Scanner(System.in);
+        Scanner userInputScanner = new Scanner(keyboard);
         int value = 0;
         boolean valid = false; //initialize to not valid
 
         while (!valid) { //loop while an invalid value is entered
             System.out.println("\n" + displayMessage);
             value = userInputScanner.nextInt();
+            
             if (value < 1) {  //value is blank
                 System.out.println("\n Invalid entry. Please enter a number between 1 and 10.");
                 continue;
