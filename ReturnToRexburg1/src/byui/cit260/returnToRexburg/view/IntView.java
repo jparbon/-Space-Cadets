@@ -47,6 +47,7 @@ public abstract class IntView implements IntViewInterface {
                     continue; //continues prompting for correct input
                 }
             } catch (InputMismatchException nf) {
+                System.out.println("\n Invalid entry. Please enter a number between 1 and 10.");
                 continue;
             }
             
