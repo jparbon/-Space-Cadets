@@ -23,13 +23,8 @@ public final class LocationScene extends RegularSceneType implements Serializabl
     private int planetDepth;
     private String locationQuestion;
     private String locationAnswer;
-    private String location;
-    private int hardness;
-    private int depth;
-    private int question;
-    private int answer;
     private Scene scene;
-    private String name;
+   
 
     //default constructor
     public LocationScene(String locationName, int surfaceHardness, int planetDepth, String locationQuestion, String locationAnswer) {
@@ -145,45 +140,7 @@ public final class LocationScene extends RegularSceneType implements Serializabl
         this.locationAnswer = locationAnswer;
     }
 
-    public String getLocation() {
-        return location;
-    }
 
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public int getHardness() {
-        return hardness;
-    }
-
-    public void setHardness(int hardness) {
-        this.hardness = hardness;
-    }
-
-    public int getDepth() {
-        return depth;
-    }
-
-    public void setDepth(int depth) {
-        this.depth = depth;
-    }
-
-    public int getQuestion() {
-        return question;
-    }
-
-    public void setQuestion(int question) {
-        this.question = question;
-    }
-
-    public int getAnswer() {
-        return answer;
-    }
-
-    public void setAnswer(int answer) {
-        this.answer = answer;
-    }
 
     @Override
     public int hashCode() {
@@ -193,11 +150,7 @@ public final class LocationScene extends RegularSceneType implements Serializabl
         hash = 89 * hash + this.planetDepth;
         hash = 89 * hash + Objects.hashCode(this.locationQuestion);
         hash = 89 * hash + Objects.hashCode(this.locationAnswer);
-        hash = 89 * hash + Objects.hashCode(this.location);
-        hash = 89 * hash + this.hardness;
-        hash = 89 * hash + this.depth;
-        hash = 89 * hash + this.question;
-        hash = 89 * hash + this.answer;
+     
         return hash;
     }
 
@@ -219,18 +172,7 @@ public final class LocationScene extends RegularSceneType implements Serializabl
         if (this.planetDepth != other.planetDepth) {
             return false;
         }
-        if (this.hardness != other.hardness) {
-            return false;
-        }
-        if (this.depth != other.depth) {
-            return false;
-        }
-        if (this.question != other.question) {
-            return false;
-        }
-        if (this.answer != other.answer) {
-            return false;
-        }
+  
         if (!Objects.equals(this.locationName, other.locationName)) {
             return false;
         }
@@ -240,27 +182,17 @@ public final class LocationScene extends RegularSceneType implements Serializabl
         if (!Objects.equals(this.locationAnswer, other.locationAnswer)) {
             return false;
         }
-        if (!Objects.equals(this.location, other.location)) {
-            return false;
-        }
+        
         return true;
     }
 
     @Override
     public String toString() {
-        return "LocationScene{" + "locationName=" + locationName + ", surfaceHardness=" + surfaceHardness + ", planetDepth=" + planetDepth + ", locationQuestion=" + locationQuestion + ", locationAnswer=" + locationAnswer + ", location=" + location + ", hardness=" + hardness + ", depth=" + depth + ", question=" + question + ", answer=" + answer + '}';
+        return "LocationScene{" + "locationName=" + locationName + ", surfaceHardness=" + 
+                surfaceHardness + ", planetDepth=" + planetDepth + ", locationQuestion=" + 
+                locationQuestion + ", locationAnswer=" + locationAnswer +  '}';
     }
 
-    void setRow(int row) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void setVisited(boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public String getName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
 }

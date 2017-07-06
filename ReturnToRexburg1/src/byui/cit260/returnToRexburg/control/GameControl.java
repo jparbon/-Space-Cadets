@@ -12,7 +12,9 @@ import byui.cit260.returnToRexburg.model.Map;
 import byui.cit260.returnToRexburg.model.Player;
 import byui.cit260.returnToRexburg.model.Spaceship;
 import byui.cit260.returnToRexburg.model.Trophy;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import returntorexburg1.ReturnToRexburg1;
 
@@ -81,14 +83,32 @@ public class GameControl {
     public static void saveGame(Game currentGame, String filePath) 
             throws GameControlException {
        
-        //try(FileOutputStream fops = new FileOutputStream(filepath)) {
-            //ObjectOutputStream output = new ObjectOutputStream (fops);
+        try(FileOutputStream fops = new FileOutputStream(filePath)) {
+            ObjectOutputStream output = new ObjectOutputStream (fops);
             
-            //output.writeObject(game); //write the game object out to file
-        //}
-        //catch(Exception e) {
-            //throw new GameControlException(e.getMessage());
+            output.writeObject(currentGame); //write the game object out to file
+        }
+        catch(Exception e) {
+            throw new GameControlException(e.getMessage());
         }
     }
- //}
+
+    public static void getSavedGame(String filePath) 
+                        throws GameControlException {
+        Game game = null;
+        
+        try(FileInputStream fips = new FileInputStream(filePath)) {
+            ObjectInputStream input = new ObjectInputStream(fips);
+            
+            game = (Game) input.readObject(); //read the game object from file
+        }
+        catch(Exception e) {
+            throw new GameControlException(e.getMessage());
+        }
+        
+        //close the output file
+        ReturnToRexburg1.setCurrentGame(game); //save in ReturnToRexburg1
+    }
+   
+ }
 

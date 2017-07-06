@@ -43,7 +43,7 @@ public class MainMenuView extends View {
                 this.GameMenuView();
                 break;
             case "R": //get and start an existing game
-                this.restoreExistingGame();
+                this.startSavedGame();
                 break;
             case "H": //display help menu
                 this.displayHelpMenu();
@@ -79,8 +79,24 @@ public class MainMenuView extends View {
         }
     }
 
-    private void restoreExistingGame() {
-        System.out.println("So you want to keep playing the game?");
+    private void startSavedGame() {
+        //System.out.println("So you want to keep playing the game?");
+        //prompt for and get the name of the file to save the game in
+        this.console.println("\nEnter the file path for file where the game "
+                            + "is to be saved.");
+        
+        String filePath = this.getInput();
+        
+        try {
+            //start a saved game
+            GameControl.getSavedGame(filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+        
+        //display the game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();   
     }
 
     private void saveGame() {

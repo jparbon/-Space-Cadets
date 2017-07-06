@@ -7,7 +7,6 @@ package byui.cit260.returnToRexburg.view;
 
 import java.util.Scanner;
 import byui.cit260.returnToRexburg.control.ResourceControl;
-import static byui.cit260.returnToRexburg.control.ResourceControl.fuelEarned;
 import byui.cit260.returnToRexburg.exceptions.ResourceControlException;
 import byui.cit260.returnToRexburg.model.LocationScene;
 import java.util.logging.Level;
@@ -23,24 +22,24 @@ public class DrillForFuelView extends IntView {
 
         super("\nEnter a number between 1 and 10.");
         //display the banner when the view is created
-        displayBanner("Mars", 10, 5);
+        displayBanner("Mars", 10, 10);
     }
 
-    public void displayBanner(String name, int depth, int hardness) {
+    public static void displayBanner(String locationName, int planetDepth, int surfaceHardness) {
             
         LocationScene location = new LocationScene();
-        //location.setName(name);
+        location.setLocationName(locationName);
         
-        //LocationScene planetDepth = new LocationScene();
-        //depth.setDepth(depth);
+        LocationScene depth = new LocationScene();
+        depth.setPlanetDepth(planetDepth);
         
-        //LocationScene surfaceHardness = new LocationScene();
-        //hardness.setHardness(hardness);
+        LocationScene hardness = new LocationScene();
+        hardness.setSurfaceHardness(surfaceHardness);
         
         System.out.println(
                "\n*****************************************************"
                 + "\n"
-                + "\n You have safely landed on " + name + "!"
+                + "\n You have safely landed on " + location + "!"
                 + "\n The Planet Depth is " + depth + "."
                 + "\n The Surface Hardness is " + hardness + "."
                 + "\n"

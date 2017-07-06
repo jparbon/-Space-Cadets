@@ -43,10 +43,15 @@ public abstract class IntView implements IntViewInterface {
                 userInput = getInput();
                 if (userInput >= 11 || userInput < 1) { //user enters invalid number
 
-                    System.out.println("\n Invalid entry. Please enter a number between 1 and 10.");
+                    //System.out.println("\n Invalid entry. Please enter a number between 1 and 10.");
+                    ErrorView.display(this.getClass().getName(),
+                                        "You must enter a value.");
                     continue; //continues prompting for correct input
                 }
             } catch (InputMismatchException nf) {
+                //System.out.println("\n Invalid entry. Please enter a number between 1 and 10.");
+                ErrorView.display(this.getClass().getName(),
+                                        "Error reading input: " + nf.getMessage());
                 continue;
             }
             
@@ -60,16 +65,20 @@ public abstract class IntView implements IntViewInterface {
 
         Scanner userInputScanner = new Scanner(keyboard);
         int value = 0;
+        String selection = null;
+        
         boolean valid = false; //initialize to not valid
 
         while (!valid) { //loop while an invalid value is entered
             System.out.println("\n" + displayMessage);
-            value = userInputScanner.nextInt();
             
-            if (value < 1) {  //value is blank
-                System.out.println("\n Invalid entry. Please enter a number between 1 and 10.");
-                continue;
-            }
+            value = userInputScanner.nextInt();
+            //selection = userInputScanner.readLine();
+            //selection = selection.trim();
+            
+            //if (value < 1) {  //value is blank
+            //    continue;
+            //}
             break; //end the loop
 
         }
