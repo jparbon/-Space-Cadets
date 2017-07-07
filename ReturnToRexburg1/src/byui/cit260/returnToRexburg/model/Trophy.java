@@ -1,6 +1,9 @@
 package byui.cit260.returnToRexburg.model;
 
-public enum Trophy {
+import java.io.Serializable;
+
+public enum Trophy implements Serializable {
+    
     Trophy1("This is a description of Trophy1"),
     Trophy2("This is a description of Trophy2"),
     Trophy3("This is a description of Trophy3"),

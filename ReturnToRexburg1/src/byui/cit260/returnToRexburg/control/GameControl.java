@@ -72,6 +72,7 @@ public class GameControl {
     //public static void assignScenesToLocations(Map map, LocationScene[] scenes) {
     //    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     //}
+    
     public static void createMap(Game game) {
         Map map = MapControl.createMap();
         game.setMap(map);
@@ -89,7 +90,7 @@ public class GameControl {
             output.writeObject(currentGame); //write the game object out to file
         }
         catch(Exception e) {
-            throw new GameControlException(e.getMessage());
+            throw new GameControlException(e);
         }
     }
 

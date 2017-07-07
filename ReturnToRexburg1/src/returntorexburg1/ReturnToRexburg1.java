@@ -13,6 +13,7 @@ import byui.cit260.returnToRexburg.model.Map;
 import byui.cit260.returnToRexburg.model.Spaceship;
 import byui.cit260.returnToRexburg.model.LocationScene;
 import byui.cit260.returnToRexburg.model.RegularSceneType;
+import byui.cit260.returnToRexburg.view.ErrorView;
 import byui.cit260.returnToRexburg.view.StartProgramView;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -64,7 +65,8 @@ public class ReturnToRexburg1 {
             
             } catch (Exception e) {
 
-            System.out.println("Exception:  " + e.toString() +
+            ErrorView.display(ReturnToRexburg1.class.getName(),
+                                "Exception:  " + e.toString() +
                                "\nCause:  " + e.getCause() +
                                "\nMessage:  " + e.getMessage());   
             }
@@ -76,7 +78,8 @@ public class ReturnToRexburg1 {
 
         } catch (Throwable e) {
 
-            System.out.println("Exception:  " + e.toString() +
+            ErrorView.display(ReturnToRexburg1.class.getName(),
+                                "Exception:  " + e.toString() +
                                "\nCause:  " + e.getCause() +
                                "\nMessage:  " + e.getMessage());
 
@@ -98,7 +101,8 @@ public class ReturnToRexburg1 {
                 }
 
             } catch (IOException ex) {
-                System.out.println("Error closing files");
+                ErrorView.display(ReturnToRexburg1.class.getName(),
+                        "Error closing files");
                 return;
             }
         }
