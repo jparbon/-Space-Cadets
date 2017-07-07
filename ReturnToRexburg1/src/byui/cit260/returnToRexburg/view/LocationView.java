@@ -55,7 +55,7 @@ public class LocationView extends View {
             case "M": //returns player to Main Menu
                 return true;
             default:
-                System.out.println("\n*** Invalid selection. *** Please, try again!");
+                ErrorView.display(this.getClass().getName(), "\n*** Invalid selection. *** Please, try again!");
                 break;
         }
 
@@ -65,7 +65,7 @@ public class LocationView extends View {
 
     //Stub functions and returnToMainMenu() called
     private void viewTrophyQuestion() {
-        System.out.println("\n This calls earn trophy view.");
+        this.console.println("\n This calls earn trophy view.");
     }
 
     private void viewDrillForFuel() {
@@ -74,11 +74,11 @@ public class LocationView extends View {
     }
 
     private void viewFuelLevel() {
-        System.out.println("\n This calls the fuel level view.");
+        this.console.println("\n This calls the fuel level view.");
     }
 
     private void viewTrophyCount() {
-        System.out.println("\n This calls the trophy room view.");
+        this.console.println("\n This calls the trophy room view.");
     }
 
     private void returnToMainMenu() {

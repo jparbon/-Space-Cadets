@@ -48,24 +48,23 @@ public class EncounterAlienView extends View {
             case "M": //returns player to Alien Menu
                 return true;
             default:
-                System.out.println("\n*** Invalid selection. *** Please, try again!");
+                ErrorView.display(this.getClass().getName(), "\n*** Invalid selection. *** Please, try again!");
                 break;
         }
 
         return false;
-
-    }
+}
 
     private void checkAnswer(boolean answer) {
         if (answer) {
-            System.out.println(
+            this.console.println(
                     "\n**************************************************************"
                     + "\n Correct! You won a trophy and 25% of fuel."
                     + "\n**************************************************************"
             );
         } //true case
         else {
-            System.out.println(
+            this.console.println(
                     "\n**************************************************************"
                     + "\n Incorrect! You failed to get the question right."
                     + "\n**************************************************************"

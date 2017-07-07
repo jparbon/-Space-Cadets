@@ -47,7 +47,7 @@ public class TrophyRoomView extends View {
             case "M": //Returns Player to Game Menu
                 return true;
             default:
-                System.out.println("\n*** Invalid selection. *** Please, try again!");
+                ErrorView.display(this.getClass().getName(), "\n*** Invalid selection. *** Please, try again!");
                 break;
         }
 
@@ -59,7 +59,7 @@ public class TrophyRoomView extends View {
         ArrayList<Trophy> trophies = ReturnToRexburg1.getCurrentGame().getTrophies();
 
 
-        System.out.println(
+        this.console.println(
                 "\n**************************************************************"
                 + "\n You have collected " + trophies.size() + " trophies"     
                 + "\n**************************************************************"
@@ -72,7 +72,7 @@ public class TrophyRoomView extends View {
         TrophyControl.sortTrophyList(sortedTrophies);
 
         for (Trophy trophy: sortedTrophies){
-            System.out.println(trophy.name() + ": "+ trophy.getDescription());
+            this.console.println(trophy.name() + ": "+ trophy.getDescription());
         }
     }
          

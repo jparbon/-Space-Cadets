@@ -52,7 +52,7 @@ public class GameMenuView extends View {
             case "M": //returns player to Main Menu
                 return true;
             default:
-                System.out.println("\n*** Invalid selection. *** Please, try again!");
+                ErrorView.display(this.getClass().getName(),"\n*** Invalid selection. *** Please, try again!");
                 break;
         }
 

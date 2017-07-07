@@ -46,7 +46,7 @@ public class AlienMenuView extends View {
             case "M": //returns player to Game Menu
                 return true;
             default:
-                System.out.println("\n*** Invalid selection. *** Please, try again!");
+                ErrorView.display(this.getClass().getName(),"\n*** Invalid selection. *** Please, try again!");
                 break;
         }
 
@@ -55,7 +55,7 @@ public class AlienMenuView extends View {
     }
 
     private void viewPassbyalien() {
-        System.out.println(
+        this.console.println(
                 "\n**************************************************************"
                 + "\n You have passed by the alien safely"
                 + "\n**************************************************************"

@@ -39,7 +39,7 @@ public class FuelLevelView extends View{
             case "M": //Returns Player to Game Menu
                 return true;
             default:
-                System.out.println("\nInvalid selection. Please, try again!");
+                ErrorView.display(this.getClass().getName(), "\nInvalid selection. Please, try again!");
                 break;
         }
 
@@ -48,7 +48,7 @@ public class FuelLevelView extends View{
     }
 
     private void viewFuelLevel() {
-        System.out.println(
+        this.console.println(
                 "\n**************************************************************"
                 + "\n Your fuel level is at 100%"
                 + "\n**************************************************************"

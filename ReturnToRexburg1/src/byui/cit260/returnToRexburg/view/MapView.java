@@ -83,7 +83,7 @@ public class MapView extends View {
                 this.moveActorToNewLocation();
                 break;
             default:
-                System.out.println("\n*** Invalid selection. *** Please, try again!");
+                ErrorView.display(this.getClass().getName(), "\n*** Invalid selection. *** Please, try again!");
                 break;
         }
         return false;
@@ -101,7 +101,7 @@ public class MapView extends View {
         LocationScene[] locations = map.getLocations();
 
         for (int i = 0; i < locations.length; i++) {
-            System.out.println("Location" + locations[i].getLocationName());
+            this.console.println("Location" + locations[i].getLocationName());
         }
 
         super.display();
@@ -119,7 +119,7 @@ public class MapView extends View {
                 map.getCurrentLocation(), map.getLocations());
 
         for (LocationScene location : possibleLocations) {
-            System.out.println(location.getLocationName());
+            this.console.println(location.getLocationName());
         }
     }
 

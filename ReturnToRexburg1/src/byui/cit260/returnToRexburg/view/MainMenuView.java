@@ -75,15 +75,16 @@ public class MainMenuView extends View {
             GameMenuView gameMenu = new GameMenuView();
             gameMenu.display();
         } catch (GameControlException gce){
-          System.out.println(gce.getMessage());  
+          this.console.println(gce.getMessage());  
         }
     }
 
     private void startSavedGame() {
         //System.out.println("So you want to keep playing the game?");
         //prompt for and get the name of the file to save the game in
-        this.console.println("\nEnter the file path for file where the game "
-                            + "is to be saved.");
+        this.console.println("\n\nEnter the file path for file where the game "
+                            + "was"
+                + " saved.");
         
         String filePath = this.getInput();
         
@@ -99,10 +100,11 @@ public class MainMenuView extends View {
         gameMenu.display();   
     }
 
+ 
     private void saveGame() {
         //prompt for and get the name of the file to save the game
-        this.console.println("\n\nEnter the file path for  file where the game "
-                + "is to be saved.");
+        this.console.println("\n\nEnter the file path for the file where the game "
+                            + "is to be saved.");
         String filePath = this.getInput();
         
         try {

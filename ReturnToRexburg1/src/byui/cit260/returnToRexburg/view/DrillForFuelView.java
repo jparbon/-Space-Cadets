@@ -25,7 +25,7 @@ public class DrillForFuelView extends IntView {
         displayBanner("Mars", 10, 10);
     }
 
-    public static void displayBanner(String locationName, int planetDepth, int surfaceHardness) {
+    public void displayBanner(String locationName, int planetDepth, int surfaceHardness) {
             
         LocationScene location = new LocationScene();
         location.setLocationName(locationName);
@@ -36,12 +36,12 @@ public class DrillForFuelView extends IntView {
         LocationScene hardness = new LocationScene();
         hardness.setSurfaceHardness(surfaceHardness);
         
-        System.out.println(
+        this.console.println(
                "\n*****************************************************"
                 + "\n"
-                + "\n You have safely landed on " + location + "!"
-                + "\n The Planet Depth is " + depth + "."
-                + "\n The Surface Hardness is " + hardness + "."
+                + "\n You have safely landed on " + locationName + "!"
+                + "\n The Planet Depth is " + planetDepth + "."
+                + "\n The Surface Hardness is " + surfaceHardness + "."
                 + "\n"
                 + "\n In order to drill for more fuel, you will need to use"
                 + "\n the drills on your spaceship. The power of the drills"
@@ -66,7 +66,7 @@ public class DrillForFuelView extends IntView {
             //call the gatherFuel() method from the ResourceControl class
             int fuelEarned = resource.gatherFuel(userInput, 5, 10, 0);
             //to do: we need to save the fuel into the game class.
-            System.out.println("You have earned " + fuelEarned + " points");
+            this.console.println("You have earned " + fuelEarned + " points");
             
         } catch (ResourceControlException ex) {
             Logger.getLogger(DrillForFuelView.class.getName()).log(Level.SEVERE, null, ex);

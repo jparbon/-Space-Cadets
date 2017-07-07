@@ -54,7 +54,7 @@ public class HelpMenuView extends View {
             case "M": //returns player to Main Menu
                 return true;
             default:
-                System.out.println("\n*** Invalid selection. *** Please, try again!");
+                ErrorView.display(this.getClass().getName(), "\n*** Invalid selection. *** Please, try again!");
                 break;
         }
 
@@ -63,7 +63,7 @@ public class HelpMenuView extends View {
     }
 
     private void viewGoalOfGame() {
-        System.out.println(
+        this.console.println(
                 "\n**************************************************************"
                 + "\n The goal of the game is to return to Earth safely"
                 + "\n by navigating your way through space. When you land on a new"
@@ -82,7 +82,7 @@ public class HelpMenuView extends View {
     }
 
     private void viewHowToMove() {
-        System.out.println(
+        this.console.println(
                 "\n**************************************************************"
                 + "\n You will be provided with a map of possible "
                 + "\n destinations, and will be prompted to select your next"
@@ -96,7 +96,7 @@ public class HelpMenuView extends View {
     }
 
     private void viewFuelLevel() {
-        System.out.println(
+        this.console.println(
                 "\n**************************************************************"
                 + "\n While you journey through space, you should "
                 + "\n periodically check your fuel percentage to ensure that you"

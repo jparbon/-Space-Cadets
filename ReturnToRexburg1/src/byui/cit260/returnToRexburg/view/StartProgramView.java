@@ -26,7 +26,7 @@ public class StartProgramView extends View {
     }
 
     public void displayBanner() {
-        System.out.println(
+        this.console.println(
                 "\n*******************************************************************"
                 + "\n*                                                                 *"
                 + "\n* You awaken to find yourself on Triton, one of Neptune’s moons.  *"
@@ -54,7 +54,7 @@ public class StartProgramView extends View {
     private void displayNextView() {
 
         //display a custom welcome message
-        System.out.println("\n==========================================="
+        this.console.println("\n==========================================="
                 + "\n Welcome to the game, " + ReturnToRexburg1.getPlayerName() + "."
                 + "\n We hope you can Return to Rexburg!"
                 + "\n==========================================="
