@@ -5,17 +5,14 @@
  */
 package byui.cit260.returnToRexburg.view;
 
-import byui.cit260.returnToRexburg.control.GameControl;
 import byui.cit260.returnToRexburg.model.Game;
 import byui.cit260.returnToRexburg.model.LocationScene;
 import byui.cit260.returnToRexburg.model.Map;
 import returntorexburg1.ReturnToRexburg1;
 import byui.cit260.returnToRexburg.control.MapControl;
-import static byui.cit260.returnToRexburg.model.LocationScene.location;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -161,7 +158,7 @@ public class MapView extends View {
             Game game = ReturnToRexburg1.getCurrentGame();
             Map map = game.getMap();
             LocationScene[] locations = map.getLocations();
-            
+             
             out.println(); //blank line
             out.println("Location Information");
             out.println(); //blank line

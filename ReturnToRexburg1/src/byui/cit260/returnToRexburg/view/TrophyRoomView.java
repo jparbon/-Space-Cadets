@@ -28,7 +28,7 @@ public class TrophyRoomView extends View {
                 + "\n| Trophy Room Menu                          |"
                 + "\n---------------------------------------------"
                 + "\nV - View Acquired Trophies"
-                + "\nM - Return to Game Menu"
+                + "\nM - Return to Game Menu"       
                 + "\n---------------------------------------------");
 
     }

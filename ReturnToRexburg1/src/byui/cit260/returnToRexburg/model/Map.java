@@ -22,6 +22,15 @@ public class Map implements Serializable {
     public LocationScene[] locations;
     private int currentLocation;
     public int length;
+    public Actor[] actors;
+
+    public Actor[] getActors() {
+        return actors;
+    }
+
+    public void setActors(Actor[] actors) {
+        this.actors = actors;
+    }
 
     //default constructor
     public Map() {
