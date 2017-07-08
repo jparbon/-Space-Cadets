@@ -21,7 +21,7 @@ public class Actor implements Serializable {
     private String difficulty;
 
     //default constructor  
-    public Actor(String name) {  
+   /* public Actor(String name) {  
         currentLocation = new String(currentLocation);
         this.name = name;
     }
@@ -30,7 +30,7 @@ public class Actor implements Serializable {
     public Actor(String currentLocation, String name) {
         setCurrentLocation(currentLocation);
         setName(name);
-    } 
+    } */
 
     public Actor(String currentLocation, String name, String difficulty) {
         setCurrentLocation(currentLocation);
@@ -38,7 +38,7 @@ public class Actor implements Serializable {
         setDifficulty(difficulty);
     }
 
-        public static Actor[] createActorList() {
+      /*  public static Actor[] createActorList() {
         // create array(list) of actor
 
         Actor[] actor = new Actor[26];
@@ -72,7 +72,7 @@ public class Actor implements Serializable {
         actor[25] = new Actor("Earth", "Rexburg", "expert");
 
         return actor;
-    }
+    }*/
         
     public String getCurrentLocation() {
         return currentLocation;

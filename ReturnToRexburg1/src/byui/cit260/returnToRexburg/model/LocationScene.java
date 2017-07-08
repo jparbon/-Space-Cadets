@@ -19,6 +19,7 @@ import java.util.Objects;
 public final class LocationScene extends RegularSceneType implements Serializable {
 
     public static ArrayList<LocationScene> location;
+    public static ArrayList<LocationScene> actor;
 
     //class instance variables
     private String locationName;
@@ -27,6 +28,33 @@ public final class LocationScene extends RegularSceneType implements Serializabl
     private String locationQuestion;
     private String locationAnswer;
     private Scene scene;
+    private String currentLocation;
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    private String difficulty;
+
+    public String getCurrentLocation() {
+        return currentLocation;
+    }
+
+    public void setCurrentLocation(String currentLocation) {
+        this.currentLocation = currentLocation;
+    }
+
+    public String getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(String difficulty) {
+        this.difficulty = difficulty;
+    }
    
 
     //default constructor
@@ -57,7 +85,7 @@ public final class LocationScene extends RegularSceneType implements Serializabl
 
     }
 
-   /* public static Actor[] createActorList() {
+   /*public static Actor[] createActorList() {
         // create array(list) of actor
 
         Actor[] actor = new Actor[26];

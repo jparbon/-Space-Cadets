@@ -96,12 +96,12 @@ public class AlienMenuView extends View {
         //get file path entered by the user
         String filePath = this.getInput();
       
-        PrintWriter alienWriter = new PrintWriter("alien.txt");
+        PrintWriter actorWriter = new PrintWriter("alien.txt");
         try (PrintWriter out = new PrintWriter(filePath)) {
             
             Game game = ReturnToRexburg1.getCurrentGame();
             Map map = game.getMap();
-            Actor[] actors = map.getActors();
+            LocationScene[] actors = map.getActors();
             
             out.println(); //blank line
             out.println("Alien Information");
@@ -110,8 +110,8 @@ public class AlienMenuView extends View {
             out.println(String.format("%-20s %-14s %-14s", "Planet Home", "Alien Species", "Level of Difficulty"));
             out.println(String.format("%-20s %-14s %-14s", "-------------", "------------", "----------------"));
  
-            for (Actor actor : actors) {   //lines 161, 162, 163 are the getters that lead up to the LocationScene
-                out.println(String.format("%-20s %-14d %-14d",  //s for Strings, d for integers
+            for (LocationScene actor : actors) {   //lines 161, 162, 163 are the getters that lead up to the LocationScene
+                out.println(String.format("%-20s %-14s %-14s",  //s for Strings, d for integers
                         actor.getCurrentLocation(),
                         actor.getName(),
                         actor.getDifficulty()));
@@ -130,7 +130,7 @@ public class AlienMenuView extends View {
         }
         
         //locationOut.writeObject(location);
-        alienWriter.close();
+        actorWriter.close();
 
         
 
