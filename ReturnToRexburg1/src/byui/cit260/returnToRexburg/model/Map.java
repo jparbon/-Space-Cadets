@@ -19,7 +19,7 @@ public class Map implements Serializable {
 
     //class instance variables
     private String description;
-    private LocationScene[] locations;
+    public LocationScene[] locations;
     private int currentLocation;
     public int length;
 

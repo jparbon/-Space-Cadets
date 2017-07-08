@@ -9,6 +9,7 @@ package byui.cit260.returnToRexburg.model;
 
 import byui.cit260.returnToRexburg.view.Scene;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -16,6 +17,8 @@ import java.util.Objects;
  * @author douglasarbon1
  */
 public final class LocationScene extends RegularSceneType implements Serializable {
+
+    public static ArrayList<LocationScene> location;
 
     //class instance variables
     private String locationName;
