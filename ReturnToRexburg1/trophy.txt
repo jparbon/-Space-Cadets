@@ -1,6 +1,0 @@
-
-Location Information
-
-
-Location Name        Planet Depth Surface Hardness
--------------        ------------ ----------------
