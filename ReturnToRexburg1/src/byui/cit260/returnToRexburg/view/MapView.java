@@ -13,10 +13,7 @@ import returntorexburg1.ReturnToRexburg1;
 import byui.cit260.returnToRexburg.control.MapControl;
 import static byui.cit260.returnToRexburg.model.LocationScene.location;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -138,8 +135,8 @@ public class MapView extends View {
         // call the possible locations' functions.
         LocationScene[] possibleLocations = MapControl.createPossibleLocationsList(
                 map.getCurrentLocation(), map.getLocations());
-
-        for (LocationScene location : possibleLocations) {
+  
+      for (LocationScene location : possibleLocations) {
             this.console.println(location.getLocationName());
         }
     }
@@ -156,34 +153,41 @@ public class MapView extends View {
         //output stream (PrintWriter) to write to the file, and use a for statement to go through
         //the list of items to be displayed.
         //The report must include a title, column headings and at least TWO
-        //columns of date for each item in the list.
-        //Title= locations; Column headings= Location, Planet Depth, Surface Hardness
+        //columns for each location in the list.
+      
         PrintWriter locationWriter = new PrintWriter("locations.txt");
         try (PrintWriter out = new PrintWriter(filePath)) {
+            
+            Game game = ReturnToRexburg1.getCurrentGame();
+            Map map = game.getMap();
+            LocationScene[] locations = map.getLocations();
             
             out.println(); //blank line
             out.println("Location Information");
             out.println(); //blank line
             out.println(); //blank line
-            out.println(String.format("%-20s %-4s %-8s", "Location Name", "Planet Depth", "Surface Hardness"));
-            out.println(String.format("%-20s %-4s %-8s", "-------------", "------------", "----------------"));
-
-            for (LocationScene location : location) {
-                out.println(String.format("%-20s %-4d %-8d",  //s for Strings, d for integers
+            out.println(String.format("%-20s %-14s %-14s", "Location Name", "Planet Depth", "Surface Hardness"));
+            out.println(String.format("%-20s %-14s %-14s", "-------------", "------------", "----------------"));
+ 
+            for (LocationScene location  : locations) {   //lines 161, 162, 163 are the getters that lead up to the LocationScene
+                out.println(String.format("%-20s %-14d %-14d",  //s for Strings, d for integers
                         location.getLocationName(),
                         location.getPlanetDepth(),
                         location.getSurfaceHardness()));
                 
-                locationWriter.flush();
-            }
+                out.flush();
             
-        //display a SUCCESS message to the console if the report was printed
-        locationWriter.println("SUCCESS! The report was printed sucessfully!");
-        
+                
+            }
+          //display a SUCCESS message to the console if the report was printed
+          out.println(); //blank line  
+          out.println("SUCCESS! The report was printed sucessfully!");
+                
         } catch (IOException ex) {
             ErrorView.display("MainMenuView", ex.getMessage());
+        
         }
-
+        
         //locationOut.writeObject(location);
         locationWriter.close();
 
