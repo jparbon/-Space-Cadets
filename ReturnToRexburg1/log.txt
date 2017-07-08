@@ -1,3 +1,0 @@
-returntorexburg1.ReturnToRexburg1 - Exception:  java.lang.NullPointerException
-Cause:  null
-Message:  null
