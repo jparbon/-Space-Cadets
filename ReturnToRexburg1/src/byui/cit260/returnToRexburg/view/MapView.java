@@ -5,6 +5,7 @@
  */
 package byui.cit260.returnToRexburg.view;
 
+import byui.cit260.returnToRexburg.control.GameControl;
 import byui.cit260.returnToRexburg.model.Game;
 import byui.cit260.returnToRexburg.model.LocationScene;
 import byui.cit260.returnToRexburg.model.Map;
@@ -25,12 +26,16 @@ public class MapView extends View {
                 + "\n"
                 + "\nP - View your possible locations."
                 + "\n"
+                + "\nI - Print the report of locations."
+                + "\n"
                 + "\nL - Lift off and travel to the next location."
                 + "\n"
                 + "\n---------------------------------------------"
         );
 
     }
+
+  
 
     private static class Locations {
 
@@ -79,6 +84,9 @@ public class MapView extends View {
             case "P": //Displays the possible locations that the player can travel to in the game
                 this.displayPossibleLocations();
                 break;
+            case "I": //Prints a list of locations with information for each location
+                this.printLocationsReport();
+                break;    
             case "L": //Lift-Off and travel to the next location!
                 this.moveActorToNewLocation();
                 break;
@@ -109,7 +117,6 @@ public class MapView extends View {
     }
 
     public void displayPossibleLocations() {
-
         // Get the map from the current game.
         Map map = ReturnToRexburg1.getCurrentGame().getMap();
 
@@ -123,6 +130,50 @@ public class MapView extends View {
         }
     }
 
+     private void printLocationsReport() {
+        //prompt the user for a file path of where the report is to be printed
+        this.console.println("\n\nEnter the file path for where the report"
+                            + " should be printed.");
+        //get file path entered by the user
+        String filePath = this.getInput();
+        
+        System.out.println(); //blank line
+        System.out.println("Locations\n\n");
+        System.out.println(String.format("%-20s %-4s %-8s", "Location Name", "Planet Depth", "Surface Hardness"));
+        System.out.println(String.format("%-20s %-4s %-8s", "-------------", "------------", "----------------"));
+
+            //for (LocationScene location : ?????
+                //System.out.println(String.format("%-20s %-4s %-8s",
+                //location.getLocationName(), location.getPlanetDepth(), location.getSurfaceHardness()));
+        
+        
+        
+        
+        
+    }
+
+        
+        //call another View Layer function that prints the report using a character 
+        //output stream to write to the file, and use a for statement to go through
+        //the list of items to be displayed.
+     
+     
+     
+        //The report must include a title, column headings and at least TWO
+        //columns of date for each item in the list.
+        //Title= locations; Column headings= Location, Planet Depth, Surface Hardness
+     
+     
+     
+        //display a SUCCESS message to the console if the report was printed
+        //successfully to the specified file path.
+        //Catch all runtime exceptions thrown during the execution of this story.
+        //For each exception, call the ErrorView.display() method to display 
+        //the message to the console and print the message to the log file-> log.txt
+         
+         
+    
+     
     private void moveActorToNewLocation() {
 
         //Move the actor to the next location on the map
@@ -131,3 +182,16 @@ public class MapView extends View {
     }
 
 }
+
+
+/*
+System.out.println(); //blank line
+System.out.println("Locations");
+System.out.println(String.format("%-20s %-4s %-8s", "locationName", "planetDepth", "surfaceHardness"));
+System.out.println(String.format("%-20s %-4s %-8s", "--------------", "-----------", "------------"));
+
+for (LocationScene location : ?????
+    System.out.println(String.format("%-20s %-4s %-8s",
+        location.getLocationName(), location.getPlanetDepth(), location.getSurfaceHardness()));
+
+*/
