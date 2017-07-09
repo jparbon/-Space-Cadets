@@ -85,7 +85,7 @@ public final class LocationScene extends RegularSceneType implements Serializabl
 
     }
 
-   /*public static Actor[] createActorList() {
+   public static Actor[] createActorList() {
         // create array(list) of actor
 
         Actor[] actor = new Actor[26];
@@ -119,7 +119,7 @@ public final class LocationScene extends RegularSceneType implements Serializabl
         actor[25] = new Actor("Earth", "Rexburg", "expert");
 
         return actor;
-    }*/
+    }
 
     //convenience constructor
     public LocationScene() {

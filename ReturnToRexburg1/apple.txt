@@ -1,0 +1,34 @@
+
+Location Information
+
+
+Location Name        Planet Depth   Surface Hardness
+-------------        ------------   ----------------
+  0 - Neptune        0              0             
+  1 - Triton         10             5             
+  2 - Proteus        10             10            
+  3 - Titan          6              15            
+  4 - F-Ring         9              8             
+  5 - Rhea           2              3             
+  6 - Prome          11             5             
+  7 - Pandora        10             20            
+  8 - Oberon         2              3             
+  9 - Ariel          10             20            
+ 10 - Wunda          4              20            
+ 11 - Mab            5              10            
+ 12 - Red            5              2             
+ 13 - Lo             8              7             
+ 14 - Europa         12             16            
+ 15 - Ganymede       3              15            
+ 16 - Callisto       4              18            
+ 17 - Arabia         1              15            
+ 18 - Boreum         4              21            
+ 19 - Amazonis       16             15            
+ 20 - Syrtis         8              2             
+ 21 - Tharsis        20             9             
+ 22 - Phobos         10             5             
+ 23 - Aitken         10             2             
+ 24 - Montes         10             20            
+ 25 - Earth          0              0             
+
+SUCCESS! The report was printed sucessfully!

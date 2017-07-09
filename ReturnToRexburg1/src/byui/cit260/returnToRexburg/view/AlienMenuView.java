@@ -107,11 +107,11 @@ public class AlienMenuView extends View {
             out.println("Alien Information");
             out.println(); //blank line
             out.println(); //blank line
-            out.println(String.format("%-20s %-14s %-14s", "Planet Home", "Alien Species", "Level of Difficulty"));
-            out.println(String.format("%-20s %-14s %-14s", "-------------", "------------", "----------------"));
+            out.println(String.format("Actor", "Planet Home", "Alien Species", "Level of Difficulty"));
+            out.println(String.format("Actor", "-------------", "------------", "----------------"));
  
-            for (LocationScene actor : actors) {   //lines 161, 162, 163 are the getters that lead up to the LocationScene
-                out.println(String.format("%-20s %-14s %-14s",  //s for Strings, d for integers
+            for (LocationScene actor : actors) {   
+                out.println(String.format("Actor",
                         actor.getCurrentLocation(),
                         actor.getName(),
                         actor.getDifficulty()));
