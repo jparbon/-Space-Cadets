@@ -201,18 +201,5 @@ public class MapView extends View {
         //LocationScene newLocation = new LocationScene();
         //newLocation.
     }
-
 }
 
-
-/*
-System.out.println(); //blank line
-System.out.println("Locations");
-System.out.println(String.format("%-20s %-4s %-8s", "locationName", "planetDepth", "surfaceHardness"));
-System.out.println(String.format("%-20s %-4s %-8s", "--------------", "-----------", "------------"));
-
-for (LocationScene location : ?????
-    System.out.println(String.format("%-20s %-4s %-8s",
-        location.getLocationName(), location.getPlanetDepth(), location.getSurfaceHardness()));
-
- */
