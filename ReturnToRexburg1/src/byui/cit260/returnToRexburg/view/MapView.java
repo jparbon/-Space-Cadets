@@ -178,7 +178,7 @@ public class MapView extends View {
             }
           //display a SUCCESS message to the console if the report was printed
           out.println(); //blank line  
-          out.println("SUCCESS! The report was printed sucessfully!");
+          out.println("SUCCESS! The report was printed successfully!");
                 
         } catch (IOException ex) {
             ErrorView.display("MainMenuView", ex.getMessage());

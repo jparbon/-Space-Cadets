@@ -18,8 +18,8 @@ import java.util.Objects;
  */
 public final class LocationScene extends RegularSceneType implements Serializable {
 
-    public static ArrayList<LocationScene> location;
-    public static ArrayList<LocationScene> actor;
+    public static ArrayList<LocationScene> location; //static variables remain constant and do not go anywhere and are loaded into runtime memory for use later!
+    public static ArrayList<LocationScene> actor; //static variables ARE NOT instances or copies and exist long-term!
 
     //class instance variables
     private String locationName;
@@ -86,7 +86,7 @@ public final class LocationScene extends RegularSceneType implements Serializabl
     }
 
    public static Actor[] createActorList() {
-        // create array(list) of actor
+        // create array of actors
 
         Actor[] actor = new Actor[26];
 

@@ -5,7 +5,7 @@
  */
 package byui.cit260.returnToRexburg.view;
 
-import java.util.Scanner;
+
 import byui.cit260.returnToRexburg.control.ResourceControl;
 import byui.cit260.returnToRexburg.exceptions.ResourceControlException;
 import byui.cit260.returnToRexburg.model.LocationScene;
@@ -16,13 +16,13 @@ import java.util.logging.Logger;
  *
  * @author douglasarbon1
  */
-public class DrillForFuelView extends IntView {
+public final class DrillForFuelView extends IntView {
 
     public DrillForFuelView() {
 
         super("\nEnter a number between 1 and 10.");
         //display the banner when the view is created
-        displayBanner("Mars", 10, 10);
+        displayBanner("Mars", 10, 4);
     }
 
     public void displayBanner(String locationName, int planetDepth, int surfaceHardness) {
@@ -30,18 +30,23 @@ public class DrillForFuelView extends IntView {
         LocationScene location = new LocationScene();
         location.setLocationName(locationName);
         
-        LocationScene depth = new LocationScene();
-        depth.setPlanetDepth(planetDepth);
-        
         LocationScene hardness = new LocationScene();
         hardness.setSurfaceHardness(surfaceHardness);
         
+        LocationScene depth = new LocationScene();
+        depth.setPlanetDepth(planetDepth);
+        
+        //use for to iterate over a list of items
+        //for (int i = 0; i < myArrayList.size(); i++) {
+            
+           // Integer integer = myArrayList.get(i);
+       
         this.console.println(
                "\n*****************************************************"
                 + "\n"
                 + "\n You have safely landed on " + locationName + "!"
-                + "\n The Planet Depth is " + planetDepth + "."
-                + "\n The Surface Hardness is " + surfaceHardness + "."
+                + "\n The Planet Depth is " + surfaceHardness + "."
+                + "\n The Surface Hardness is " + planetDepth + "."
                 + "\n"
                 + "\n In order to drill for more fuel, you will need to use"
                 + "\n the drills on your spaceship. The power of the drills"
@@ -52,6 +57,7 @@ public class DrillForFuelView extends IntView {
                 + "\n"
                 + "\n******************************************************"
         );
+       
     }
 
     

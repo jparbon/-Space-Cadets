@@ -46,7 +46,7 @@ public abstract class IntView implements IntViewInterface {
                     ErrorView.display(this.getClass().getName(), "\n Invalid entry. Please enter a number between 1 and 10.");
                     continue; //continues prompting for correct input
                 }
-            } catch (InputMismatchException nf) {
+            } catch (InputMismatchException | NumberFormatException nfe) {
                 ErrorView.display(this.getClass().getName(), "\n Invalid entry. Please enter a number between 1 and 10.");
                 continue;
             }

@@ -67,6 +67,7 @@ public class MainMenuView extends View {
 
         String name = ReturnToRexburg1.getPlayerName();
         try {
+            //create new game
             Player player = GameControl.createPlayer(name);
 
             GameControl.createNewGame(player);
@@ -77,6 +78,10 @@ public class MainMenuView extends View {
         } catch (GameControlException gce){
           this.console.println(gce.getMessage());  
         }
+        
+        //display the game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
 
     private void startSavedGame() {
