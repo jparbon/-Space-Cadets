@@ -60,15 +60,15 @@ public final class LocationScene extends RegularSceneType implements Serializabl
     //default constructor
     public LocationScene(String locationName, int surfaceHardness, int planetDepth, String locationQuestion, String locationAnswer) {
         locationName = new String(locationName);
-        this.locationName = locationName;
+        locationName = null;
         surfaceHardness = new Integer(surfaceHardness);
-        this.SURFACE_HARDNESS = surfaceHardness;
+        surfaceHardness = 0;
         planetDepth = new Integer(planetDepth);
-        this.PLANET_DEPTH = planetDepth;
+        planetDepth =  0;
         locationQuestion = new String(locationQuestion);
-        this.locationQuestion = locationQuestion;
+        locationQuestion = null;
         locationAnswer = new String(locationAnswer);
-        this.locationAnswer = locationAnswer;
+        locationAnswer = null;
 
     }
 
@@ -142,8 +142,8 @@ public final class LocationScene extends RegularSceneType implements Serializabl
         return SURFACE_HARDNESS;
     }
 
-    public void setSurfaceHardness(int surfaceHardness) {
-        this.SURFACE_HARDNESS = surfaceHardness;
+    public final static void setSurfaceHardness(int surfaceHardness) {
+        SURFACE_HARDNESS = surfaceHardness;
     }
 
     public int getPlanetDepth() {
@@ -151,7 +151,7 @@ public final class LocationScene extends RegularSceneType implements Serializabl
     }
 
     public void setPlanetDepth(int planetDepth) {
-        this.PLANET_DEPTH = planetDepth;
+        PLANET_DEPTH = planetDepth;
     }
 
     public String getLocationQuestion() {

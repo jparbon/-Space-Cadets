@@ -89,7 +89,7 @@ public class Map implements Serializable {
             14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26};
         
         //create and define ArrayList by adding integers for all locations; use ArrayList to add more locations later, if necessary.
-        ArrayList<Integer> myArrayList = new ArrayList<>(); //ArrayList<dataType> variableName 
+        ArrayList<Integer> myArrayList = new ArrayList<Integer>(); //ArrayList<dataType> variableName 
 
         myArrayList.add(1);  //index 0
         myArrayList.add(2);   //index 1
@@ -118,6 +118,9 @@ public class Map implements Serializable {
         myArrayList.add(25);  //index 24
         myArrayList.add(26);   //index 25
         myArrayList.add(27);  //index 26
+        
+        //myArrayList.add(27, 28);
+         
 
         LocationScene[] location = new LocationScene[26]; //use new to call the constructor
 
