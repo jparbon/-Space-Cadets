@@ -8,7 +8,6 @@ package byui.cit260.returnToRexburg.view;
 import byui.cit260.returnToRexburg.control.GameControl;
 import byui.cit260.returnToRexburg.exceptions.GameControlException;
 import byui.cit260.returnToRexburg.model.Player;
-import java.util.Scanner;
 import returntorexburg1.ReturnToRexburg1;
 
 /**
@@ -55,7 +54,7 @@ public class MainMenuView extends View {
                 return true;
             default:
                 ErrorView.display("MainMenuView", 
-                                  "*** Invalid selection *** Try again!");
+                                  "*** Invalid selection. *** Try again!");
                 break;
         }
 

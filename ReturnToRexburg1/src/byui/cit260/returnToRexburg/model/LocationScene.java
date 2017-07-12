@@ -23,8 +23,8 @@ public final class LocationScene extends RegularSceneType implements Serializabl
 
     //class instance variables
     private String locationName;
-    private int surfaceHardness;
-    private int planetDepth;
+    private static int SURFACE_HARDNESS; //CONSTANTS are static because their value cannot be changed. 
+    private static int PLANET_DEPTH; //There is only ONE copy of this value across all objects of the class.
     private String locationQuestion;
     private String locationAnswer;
     private Scene scene;
@@ -62,9 +62,9 @@ public final class LocationScene extends RegularSceneType implements Serializabl
         locationName = new String(locationName);
         this.locationName = locationName;
         surfaceHardness = new Integer(surfaceHardness);
-        this.surfaceHardness = surfaceHardness;
+        this.SURFACE_HARDNESS = surfaceHardness;
         planetDepth = new Integer(planetDepth);
-        this.planetDepth = planetDepth;
+        this.PLANET_DEPTH = planetDepth;
         locationQuestion = new String(locationQuestion);
         this.locationQuestion = locationQuestion;
         locationAnswer = new String(locationAnswer);
@@ -86,8 +86,7 @@ public final class LocationScene extends RegularSceneType implements Serializabl
     }
 
    public static Actor[] createActorList() {
-        // create array of actors
-
+        // create array (list) of actors
         Actor[] actor = new Actor[26];
 
         //list of actors
@@ -124,8 +123,8 @@ public final class LocationScene extends RegularSceneType implements Serializabl
     //convenience constructor
     public LocationScene() {
         setLocationName(locationName);
-        setSurfaceHardness(surfaceHardness);
-        setPlanetDepth(planetDepth);
+        setSurfaceHardness(SURFACE_HARDNESS);
+        setPlanetDepth(PLANET_DEPTH);
         setLocationQuestion(locationQuestion);
         setLocationAnswer(locationAnswer);
 
@@ -140,19 +139,19 @@ public final class LocationScene extends RegularSceneType implements Serializabl
     }
 
     public int getSurfaceHardness() {
-        return surfaceHardness;
+        return SURFACE_HARDNESS;
     }
 
     public void setSurfaceHardness(int surfaceHardness) {
-        this.surfaceHardness = surfaceHardness;
+        this.SURFACE_HARDNESS = surfaceHardness;
     }
 
     public int getPlanetDepth() {
-        return planetDepth;
+        return PLANET_DEPTH;
     }
 
     public void setPlanetDepth(int planetDepth) {
-        this.planetDepth = planetDepth;
+        this.PLANET_DEPTH = planetDepth;
     }
 
     public String getLocationQuestion() {
@@ -177,8 +176,8 @@ public final class LocationScene extends RegularSceneType implements Serializabl
     public int hashCode() {
         int hash = 7;
         hash = 89 * hash + Objects.hashCode(this.locationName);
-        hash = 89 * hash + this.surfaceHardness;
-        hash = 89 * hash + this.planetDepth;
+        hash = 89 * hash + this.SURFACE_HARDNESS;
+        hash = 89 * hash + this.PLANET_DEPTH;
         hash = 89 * hash + Objects.hashCode(this.locationQuestion);
         hash = 89 * hash + Objects.hashCode(this.locationAnswer);
      
@@ -197,10 +196,10 @@ public final class LocationScene extends RegularSceneType implements Serializabl
             return false;
         }
         final LocationScene other = (LocationScene) obj;
-        if (this.surfaceHardness != other.surfaceHardness) {
+        if (this.SURFACE_HARDNESS != other.SURFACE_HARDNESS) {
             return false;
         }
-        if (this.planetDepth != other.planetDepth) {
+        if (this.PLANET_DEPTH != other.PLANET_DEPTH) {
             return false;
         }
   
@@ -220,7 +219,7 @@ public final class LocationScene extends RegularSceneType implements Serializabl
     @Override
     public String toString() {
         return "LocationScene{" + "locationName=" + locationName + ", surfaceHardness=" + 
-                surfaceHardness + ", planetDepth=" + planetDepth + ", locationQuestion=" + 
+                SURFACE_HARDNESS + ", planetDepth=" + PLANET_DEPTH + ", locationQuestion=" + 
                 locationQuestion + ", locationAnswer=" + locationAnswer +  '}';
     }
 

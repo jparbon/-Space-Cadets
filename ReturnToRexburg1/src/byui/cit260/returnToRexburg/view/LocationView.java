@@ -9,7 +9,6 @@ package byui.cit260.returnToRexburg.view;
  *
  * @author douglasarbon1
  */
-import java.util.Scanner;
 
 /**
  *
@@ -31,28 +30,25 @@ public class LocationView extends View {
                 + "\n---------------------------------------------");
     }
 
-    //void displayMenu() {
-    //    System.out.println(menu);
-    //}
     @Override
     public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); //convert choice to uppercase
 
         switch (choice) {
-            case "E": //displays question to earn a new trophy scene
+            case "E": //displays question to earn a new trophy
                 this.viewTrophyQuestion();
                 break;
-            case "D": //display gather fuel scene
+            case "D": //displays gather fuel scene
                 this.viewDrillForFuel();
                 break;
-            case "F": //display current fuel level scene
+            case "F": //displays current fuel level scene
                 this.viewFuelLevel();
                 break;
-            case "T": //display current trophy count scene
+            case "T": //displays current trophy count scene
                 this.viewTrophyCount();
                 break;
-            case "M": //returns player to Main Menu
+            case "M": //returns player to Main Menu; lines 84 - 86)
                 return true;
             default:
                 ErrorView.display(this.getClass().getName(), "\n*** Invalid selection. *** Please, try again!");
@@ -65,7 +61,7 @@ public class LocationView extends View {
 
     //Stub functions and returnToMainMenu() called
     private void viewTrophyQuestion() {
-        this.console.println("\n This calls earn trophy view.");
+        this.console.println("\n This calls the earn trophy view.");
     }
 
     private void viewDrillForFuel() {

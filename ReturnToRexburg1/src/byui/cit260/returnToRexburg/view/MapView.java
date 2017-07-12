@@ -132,8 +132,8 @@ public class MapView extends View {
         // call the possible locations' functions.
         LocationScene[] possibleLocations = MapControl.createPossibleLocationsList(
                 map.getCurrentLocation(), map.getLocations());
-  
-      for (LocationScene location : possibleLocations) {
+
+        for (LocationScene location : possibleLocations) {
             this.console.println(location.getLocationName());
         }
     }
@@ -146,53 +146,41 @@ public class MapView extends View {
         //get file path entered by the user
         String filePath = this.getInput();
 
-        //call another View Layer function that prints the report using a character 
-        //output stream (PrintWriter) to write to the file, and use a for statement to go through
-        //the list of items to be displayed.
-        //The report must include a title, column headings and at least TWO
-        //columns for each location in the list.
-      
+        //call another View Layer method that prints the report using a character 
+        //stream (PrintWriter), and use a for statement to go through list
         PrintWriter locationWriter = new PrintWriter("locations.txt");
         try (PrintWriter out = new PrintWriter(filePath)) {
-            
+
             Game game = ReturnToRexburg1.getCurrentGame();
             Map map = game.getMap();
             LocationScene[] locations = map.getLocations();
-             
+
             out.println(); //blank line
             out.println("Location Information");
             out.println(); //blank line
             out.println(); //blank line
             out.println(String.format("%-20s %-14s %-14s", "Location Name", "Planet Depth", "Surface Hardness"));
             out.println(String.format("%-20s %-14s %-14s", "-------------", "------------", "----------------"));
- 
-            for (LocationScene location  : locations) {   //lines 161, 162, 163 are the getters that lead up to the LocationScene
-                out.println(String.format("%-20s %-14d %-14d",  //s for Strings, d for integers
+
+            for (LocationScene location : locations) {   //lines 161, 162, 163 are the getters that lead up to the LocationScene
+                out.println(String.format("%-20s %-14d %-14d", //s for Strings, d for integers
                         location.getLocationName(),
                         location.getPlanetDepth(),
                         location.getSurfaceHardness()));
-                
+
                 out.flush();
-            
-                
+
             }
-          //display a SUCCESS message to the console if the report was printed
-          out.println(); //blank line  
-          out.println("SUCCESS! The report was printed successfully!");
-                
+            //display a SUCCESS message to the console if the report was printed
+            out.println(); //blank line  
+            out.println("SUCCESS! The report was printed successfully!");
+
         } catch (IOException ex) {
             ErrorView.display("MainMenuView", ex.getMessage());
-        
         }
-        
-        //locationOut.writeObject(location);
+
+        //locationOut.writeObject(location); close the output stream
         locationWriter.close();
-
-        
-
-        //Catch all runtime exceptions thrown during the execution of this story.
-        //For each exception, call the ErrorView.display() method to display 
-        //the message to the console and print the message to the log file-> log.txt
     }
 
     private void moveActorToNewLocation() {
@@ -202,4 +190,3 @@ public class MapView extends View {
         //newLocation.
     }
 }
-

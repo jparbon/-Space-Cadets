@@ -72,70 +72,7 @@ public class Map implements Serializable {
     public Map() {
     }
 
-    /*//one-dimensional map; list of locations
-    public Map(int numberOfRows){
-        if (numberOfRows < 1) {
-            System.out.println("The number of rows must be > zero.");
-            return;
-        }
     
-        this.numberOfRows = numberOfRows;
-        
-        //create 1-D array for location objects
-        this.locations = new LocationScene[numberOfRows];
-        
-        for (int row = 0; row < numberOfRows; row++) {
-           //create and initialize new LocationScene object instance 
-           LocationScene location = new LocationScene();
-           location.setRow(row);
-           location.setVisited(false);
-           
-           //assign the Location object to the current position in array
-           locations[row] = location;
-        } 
-    }
-       
-    private static LocationScene[] createScenes() {
-        LocationScene[] location = new LocationScene[Map.locationScene().length];
-        
-        LocationScene startingScene = new LocationScene();
-        startingScene.setDescription(
-                  "You have landed on Neptune."
-                + "\n......"
-        );
-        startingScene.setMapSymbol("1");
-        location[RegularSceneType.start.ordinal()] = location;
-        
-        LocationScene finishScene = new LocationScene();
-        finishScene.setDescription(
-                 "Congratulations!"
-                +"----"
-        );
-        finishScene.setMapSymbol("");  
-        
-        return location;
-        
-    }
-    
-    private static void assignScenesToLocations(Map map, Scene[] scenes){
-        Location[] locations = map.getLocations();
-        
-        //start point
-        locations[0].setScene(scenes[SceneType.])
-    
-    }
-    
-    public static Map createMap() {
-        //create the map
-        Map map = new Map();
-        //create the scenes for the game
-        LocationScene[] scenes = createScenes();
-        //assign scenes to locations
-        GameControl.assignScenesToLocations(map, scenes);
-        
-        return map;
-    }    
-     */
     //create Array(list) of locations and information for each location
     public LocationScene[] getLocations() {
         return locations;
@@ -146,12 +83,13 @@ public class Map implements Serializable {
     }
 
     public static LocationScene[] createLocationList() {
-        // create array(list) of 25 locations
-
+        
+        //create an array (list) of 25 locations
         int[] myIntList = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
             14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26};
-
-        ArrayList<Integer> myArrayList = new ArrayList<>();
+        
+        //create and define ArrayList by adding integers for all locations; use ArrayList to add more locations later, if necessary.
+        ArrayList<Integer> myArrayList = new ArrayList<>(); //ArrayList<dataType> variableName 
 
         myArrayList.add(1);  //index 0
         myArrayList.add(2);   //index 1
@@ -181,7 +119,7 @@ public class Map implements Serializable {
         myArrayList.add(26);   //index 25
         myArrayList.add(27);  //index 26
 
-        LocationScene[] location = new LocationScene[26];
+        LocationScene[] location = new LocationScene[26]; //use new to call the constructor
 
         location[0] = new LocationScene("  0 - Neptune", 0, 0, "question", "answer");
         location[1] = new LocationScene("  1 - Triton", 5, 10, "question", "answer");
@@ -265,3 +203,68 @@ public class Map implements Serializable {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
+
+/*//one-dimensional map; list of locations
+    public Map(int numberOfRows){
+        if (numberOfRows < 1) {
+            System.out.println("The number of rows must be > zero.");
+            return;
+        }
+    
+        this.numberOfRows = numberOfRows;
+        
+        //create 1-D array for location objects
+        this.locations = new LocationScene[numberOfRows];
+        
+        for (int row = 0; row < numberOfRows; row++) {
+           //create and initialize new LocationScene object instance 
+           LocationScene location = new LocationScene();
+           location.setRow(row);
+           location.setVisited(false);
+           
+           //assign the Location object to the current position in array
+           locations[row] = location;
+        } 
+    }
+       
+    private static LocationScene[] createScenes() {
+        LocationScene[] location = new LocationScene[Map.locationScene().length];
+        
+        LocationScene startingScene = new LocationScene();
+        startingScene.setDescription(
+                  "You have landed on Neptune."
+                + "\n......"
+        );
+        startingScene.setMapSymbol("1");
+        location[RegularSceneType.start.ordinal()] = location;
+        
+        LocationScene finishScene = new LocationScene();
+        finishScene.setDescription(
+                 "Congratulations!"
+                +"----"
+        );
+        finishScene.setMapSymbol("");  
+        
+        return location;
+        
+    }
+    
+    private static void assignScenesToLocations(Map map, Scene[] scenes){
+        Location[] locations = map.getLocations();
+        
+        //start point
+        locations[0].setScene(scenes[SceneType.])
+    
+    }
+    
+    public static Map createMap() {
+        //create the map
+        Map map = new Map();
+        //create the scenes for the game
+        LocationScene[] scenes = createScenes();
+        //assign scenes to locations
+        GameControl.assignScenesToLocations(map, scenes);
+        
+        return map;
+    }    
+     */

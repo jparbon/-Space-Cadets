@@ -31,8 +31,8 @@ public class ReturnToRexburg1 {
     private static Game currentGame = null;
     private static String playerName = null;
 
-    private static PrintWriter outFile = null;
-    private static BufferedReader inFile = null;
+    private static PrintWriter outFile = null; //writes all output to the console
+    private static BufferedReader inFile = null; //reads all end user input from the keyboard
     
     private static PrintWriter logFile = null;
     
@@ -49,7 +49,10 @@ public class ReturnToRexburg1 {
         System.out.println(playerInfo);
         
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) {  //declared with a static modifier so that
+                                              //main can be executed by the interpreter
+                                              //without instantiating an object
+                                              //from the class that contains main.
 
         try {
 

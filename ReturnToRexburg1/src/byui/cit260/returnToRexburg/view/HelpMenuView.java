@@ -9,9 +9,6 @@ package byui.cit260.returnToRexburg.view;
  *
  * @author douglasarbon1
  */
-import byui.cit260.returnToRexburg.control.GameControl;
-import java.util.Scanner;
-import returntorexburg1.ReturnToRexburg1;
 
 /**
  *

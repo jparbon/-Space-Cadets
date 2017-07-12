@@ -25,16 +25,16 @@ public final class DrillForFuelView extends IntView {
         displayBanner("Mars", 10, 4);
     }
 
-    public void displayBanner(String locationName, int planetDepth, int surfaceHardness) {
+    public void displayBanner(String locationName, int PLANET_DEPTH, int SURFACE_HARDNESS) {
             
         LocationScene location = new LocationScene();
         location.setLocationName(locationName);
         
         LocationScene hardness = new LocationScene();
-        hardness.setSurfaceHardness(surfaceHardness);
+        hardness.setSurfaceHardness(SURFACE_HARDNESS);
         
         LocationScene depth = new LocationScene();
-        depth.setPlanetDepth(planetDepth);
+        depth.setPlanetDepth(PLANET_DEPTH);
         
         //use for to iterate over a list of items
         //for (int i = 0; i < myArrayList.size(); i++) {
@@ -45,8 +45,8 @@ public final class DrillForFuelView extends IntView {
                "\n*****************************************************"
                 + "\n"
                 + "\n You have safely landed on " + locationName + "!"
-                + "\n The Planet Depth is " + surfaceHardness + "."
-                + "\n The Surface Hardness is " + planetDepth + "."
+                + "\n The Planet Depth is " + SURFACE_HARDNESS + "."
+                + "\n The Surface Hardness is " + PLANET_DEPTH + "."
                 + "\n"
                 + "\n In order to drill for more fuel, you will need to use"
                 + "\n the drills on your spaceship. The power of the drills"

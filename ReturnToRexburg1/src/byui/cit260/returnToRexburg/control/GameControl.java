@@ -7,7 +7,6 @@ package byui.cit260.returnToRexburg.control;
 
 import byui.cit260.returnToRexburg.exceptions.GameControlException;
 import byui.cit260.returnToRexburg.model.Game;
-import byui.cit260.returnToRexburg.model.LocationScene;
 import byui.cit260.returnToRexburg.model.Map;
 import byui.cit260.returnToRexburg.model.Player;
 import byui.cit260.returnToRexburg.model.Spaceship;

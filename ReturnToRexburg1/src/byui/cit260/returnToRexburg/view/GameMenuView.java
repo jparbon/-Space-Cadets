@@ -15,7 +15,7 @@ public class GameMenuView extends View {
 
     //default constructor initialized with text to be displayed
     public GameMenuView() {
-        super("\n"
+        super("\nCongratulations! You have started a new game."
                 + "\n---------------------------------------------"
                 + "\n| Game Menu                                 |"
                 + "\n---------------------------------------------"
@@ -52,7 +52,7 @@ public class GameMenuView extends View {
             case "M": //returns player to Main Menu
                 return true;
             default:
-                ErrorView.display(this.getClass().getName(),"\n*** Invalid selection. *** Please, try again!");
+                ErrorView.display(this.getClass().getName(), "\n*** Invalid selection. *** Please, try again!");
                 break;
         }
 
@@ -65,11 +65,6 @@ public class GameMenuView extends View {
         alienMenuView.display();
     }
 
-    private void returnToMainMenu() {
-        MainMenuView mainMenu = new MainMenuView();
-        mainMenu.display();
-    }
-
     private void LocationView() {
         LocationView location = new LocationView();
         location.display();
@@ -78,11 +73,6 @@ public class GameMenuView extends View {
     private void TrophyRoomView() {
         TrophyRoomView roomView = new TrophyRoomView();
         roomView.display();
-    }
-
-    private void MapView() {
-        MapView mapLocation = new MapView();
-        mapLocation.display();
     }
 
     private void FuelLevelView() {
@@ -95,4 +85,8 @@ public class GameMenuView extends View {
         map.display();
     }
 
+    private void returnToMainMenu() {
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.display();
+    }
 }
